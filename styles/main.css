@@ -1,0 +1,237 @@
+/* clamp generated with: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case */
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/inter-v3-latin-regular.woff2') format('woff2'),
+       url('../fonts/inter-v3-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/Inter-Italic-stripped.woff2') format('woff2'),
+       url('../fonts/Inter-Italic-stripped.woff') format('woff');
+  unicode-range: U+0020-007E;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/inter-v3-latin-600.woff2') format('woff2'),
+       url('../fonts/inter-v3-latin-600.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'iA Writer Duo';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/iA-Writer-Duo-S-Italic-stripped.woff2') format('woff2'),
+       url('../fonts/iAWriterDuoS-Italic-stripped.woff') format('woff');
+  unicode-range: U+0020-2044;
+}
+
+body, input, button { font-family: "Inter", "Roboto", "Segoe UI", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif; }
+
+body {
+  font-weight: 400;
+  background: #EAEAEA;
+  overflow-y: scroll;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+#gradient-bg {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 50%, #EAEAEA 100%);
+  padding: 0.5% 0 3.5%;
+  max-height: 560px;
+}
+
+header {
+  max-width: 610px;
+  margin: 0 auto;
+}
+
+#logo {
+  background: url("../assets/logo.svg") no-repeat center;
+  padding: 17%;
+  margin: 2.5% 12.5% 1.5%;
+}
+
+#desc {
+  font-family: "iA Writer Duo", "Roboto Mono", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-size: clamp(1.025rem, 0.8000rem + 1.1429vw, 1.4rem);
+  font-style: italic;
+  text-align: center;
+  padding: 10px 16px;
+}
+
+#download-link {
+  background: #192891;
+  color: #fff;
+  max-width: 60%;
+  display: block;
+  margin: 2.5% auto 3.5%;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: clamp(1.05rem, 0.9071rem + 0.6531vw, 1.25rem);
+  border-radius: 20px;
+}
+
+#download-link:hover, #download-link:active { background: #0f1857; }
+
+#info-links { text-align: center; }
+
+#info-links a, footer a {
+  border-bottom: 4px solid;
+  color: #191919;
+  font-weight: bold;
+}
+
+#info-links p { line-height: 1; }
+
+.link-purble { border-bottom-color: #7457b9 !important; }
+.link-blue   { border-bottom-color: #5163e1 !important; }
+.link-green  { border-bottom-color: #afd75f !important; }
+.link-black  { border-bottom-color: rgba(0,0,0,0.6) !important; }
+
+.link-purble:hover, .link-purble:active { border-bottom-color: #512DA8 !important; }
+.link-blue:hover, .link-blue:active     { border-bottom-color: #263CD9 !important; }
+.link-green:hover, .link-green:active   { border-bottom-color: #8fc02b !important; }
+.link-black:hover, .link-black:active   { border-bottom-color: #000000 !important; }
+
+#search-bar {
+  position: sticky;
+  top: 0;
+  padding: 10px 0;
+  background: linear-gradient(180deg, rgb(183 181 181) 0%, rgba(196, 196, 196, 0.5) 100%);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #979595;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+#search-functions {
+  display: grid;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 20px;
+  grid-template-columns: 1fr auto;
+  column-gap: 10px;
+  white-space: nowrap;
+}
+
+.search {
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #606060;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+
+.search:focus {
+  border: 2px solid #263CD9;
+  box-shadow: 0 0 5px rgba(38,60,217,0.75);
+  outline: transparent;
+}
+
+.reset {
+  background: linear-gradient(180deg, rgba(255, 82, 82, 0.8) 0%, rgba(156, 36, 36, 0.8) 100%);
+  color: #fff;
+  border: 1px solid #3c3c3c;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  padding: 0 10px;
+}
+
+.reset:active {
+  background: linear-gradient(180deg, rgba(156, 36, 36, 0.8) 0%, rgba(255, 82, 82, 0.8) 100%);
+}
+
+#primary, #variations, #generic, #outdated {
+  max-width: 1500px;
+  margin: 45px auto 0;
+  padding: 0 20px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+.list:empty {
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.list:empty::after {
+  content: "No results, try different keyword.";
+  white-space: nowrap;
+}
+
+.icon-box {
+  background: #fff;
+  height: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
+
+.icon-box:active, .icon-box:focus { box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 6px rgba(38, 60, 217, 0.85); }
+
+.icon {
+  margin: 0 auto;
+  padding: 20px 10px 0 10px;
+  width: 150px;
+  height: 150px;
+  user-select: none;
+}
+
+.name {
+  padding: 0 10px;
+  text-align: center;
+  line-height: 1.25rem;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 20px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+img[src="/assets/github.svg"] {
+  margin: 0 3px 4px 0;
+  height: 17px;
+}
+
+#disclaimer {
+  font-style: italic;
+  font-size: 0.725rem;
+  color: rgba(0,0,0,0.7);
+}
+
+.link-black + #disclaimer { margin-top: 25px; }
+
+.small-links {
+  font-size: 0.775rem;
+}

@@ -1,0 +1,24 @@
+exclude:
+ - get_icons.bat
+ 
+defaults:
+  - scope:
+      path: "icons/primary"
+    values:
+      image: true
+      is_primary: true
+  - scope:
+      path: "icons/variations"
+    values:
+      image: true
+      is_variation: true
+  - scope:
+      path: "icons/generic"
+    values:
+      image: true
+      is_generic: true
+  - scope:
+      path: "icons/outdated"
+    values:
+      image: true
+      is_outdated: true

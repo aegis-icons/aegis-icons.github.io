@@ -1,0 +1,199 @@
+---
+title: aegis-icons – Unofficial 2FA entry icons for open source Android authenticator Aegis
+---
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="preload" href="/fonts/inter-v3-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v3-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/iA-Writer-Duo-S-Italic-stripped.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/styles/main.css" as="style">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+  <title>{{ page.title }}</title>
+  <script src="scripts/jquery-3.6.0.slim.min.js"></script>
+  <script src="scripts/list.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/styles/sanitize.css">
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- <link rel="alternate icon" href="/favicon.ico"> -->
+  <link rel="alternative icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="alternative icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#263cd9">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="aegis-icons">
+  <meta name="application-name" content="aegis-icons">
+  <meta name="msapplication-TileColor" content="#263cd9">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <div id="gradient-bg">
+    <header>
+      <div id="logo"></div>
+      
+      <div id="desc">Unofficial monochrome-styled 2FA icons for open source Android authenticator Aegis</div>
+      
+      <a id="download-link" href="https://github.com/aegis-icons/aegis-icons/releases/latest">
+        Download iconpack<br>
+        <b>(updated monthly)</b>
+      </a>
+      
+      <div id="info-links">
+        <p><a class="link-purble" href="https://github.com/aegis-icons/aegis-icons/issues/new/choose">Request new icons on Github</a></p>
+        
+        <p>
+          <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/CONTRIBUTING.md">Contributing</a> • 
+          <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/FAQ.md">FAQ</a> • 
+          <a class="link-blue" href="https://www.buymeacoffee.com/krisu">Tip us</a>
+        </p>
+        
+        <p><a class="link-green" href="https://getaegis.app/">Download Aegis for Android!</a></p>
+      </div>
+    </header>
+  </div>
+  
+  <div id="search-bar">
+    <div id="search-functions">
+      <input class="search" placeholder="Search for icon">
+      <button class="reset">Clear</button>
+      <noscript>
+        <style>
+          #search-bar { position: inherit; }
+
+          #search-functions input, #search-functions button { display: none; }
+
+          noscript div {
+            color: #fff;
+            text-align: center;
+            font-weight: 600;
+            background: rgb(255, 82, 82);
+            padding: 6px 0;
+            border-radius: 10px;
+          }
+        </style>
+        <div>Please enable JavaScript to use search function!</div>
+      </noscript>
+    </div>
+  </div>
+
+  <div id="primary">
+    <h2>Sites & Apps</h2>
+    <div class="list">
+      {% assign image_files = site.static_files | where: "is_primary", true %}
+      {% for myimage in image_files %}
+      <a href="{{ myimage.path }}" download>
+        <div class="icon-box">
+          <div class="icon">
+            <img src="{{ myimage.path }}" loading="lazy" decoding="async">
+          </div>
+          <p class="name">{{ myimage.basename }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div id="variations">
+    <h2>Variations & Alternatives</h2>
+    <div class="list">
+      {% assign image_files = site.static_files | where: "is_variation", true %}
+      {% for myimage in image_files %}
+      <a href="{{ myimage.path }}" download>
+        <div class="icon-box">
+          <div class="icon">
+            <img src="{{ myimage.path }}" loading="lazy" decoding="async">
+          </div>
+          <p class="name">{{ myimage.basename }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div id="generic">
+    <h2>Generic</h2>
+    <div class="list">
+      {% assign image_files = site.static_files | where: "is_generic", true %}
+      {% for myimage in image_files %}
+      <a href="{{ myimage.path }}" download>
+        <div class="icon-box">
+          <div class="icon">
+            <img src="{{ myimage.path }}" loading="lazy" decoding="async">
+          </div>
+          <p class="name">{{ myimage.basename }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <div id="outdated">
+    <h2>Outdated</h2>
+    <div class="list">
+      {% assign image_files = site.static_files | where: "is_outdated", true %}
+      {% for myimage in image_files %}
+      <a href="{{ myimage.path }}" download>
+        <div class="icon-box">
+          <div class="icon">
+            <img src="{{ myimage.path }}" loading="lazy" decoding="async">
+          </div>
+          <p class="name">{{ myimage.basename }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <footer>
+    <a class="link-black" href="https://github.com/aegis-icons/aegis-icons">
+      <img src="/assets/github.svg"> Github
+    </a>
+  
+    <p id="disclaimer">
+      Aegis-icons includes material that may be protected as a trademark in some jurisdictions. Trademarks seen here in does not indicate endorsement to the brands. If you want to use icon(s) publicly, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights. Please do not use brand based icons for any purpose except to represent the company, product, or service to which they refer.
+    </p>
+    
+    <p id="disclaimer">We don't make icons for general purpose, we only focus on userbase of Aegis, the Android app.</p>
+    
+    <p class="small-links">
+      <a class="link-black" href="https://github.com/aegis-icons/aegis-icons/blob/master/messageme.md">Takedown info</a> • <a class="link-black" href="https://github.com/aegis-icons/aegis-icons/blob/master/LICENSE.md">License</a>
+    </p>
+  </footer>
+  
+  <script>
+  <!-- List.js search function -->
+    var options_1 = { valueNames: ['name'] };
+    var options_2 = { valueNames: ['name'] };
+    var options_3 = { valueNames: ['name'] };
+    var options_4 = { valueNames: ['name'] };
+
+    var list1 = new List("primary",    options_1);
+    var list2 = new List("variations", options_2);
+    var list3 = new List("generic",    options_3);
+    var list4 = new List("outdated",   options_4);
+
+    $(".search").keyup(function(){
+      list1.search($(this).val());
+      list2.search($(this).val());
+      list3.search($(this).val());
+      list4.search($(this).val());
+    }); 
+  </script>
+  
+  <script>
+  <!-- Reset button function and List.js search clearing -->
+    $('button.reset').click(function(){
+      $('input.search').val('');
+      list1.search();
+      list2.search();
+      list3.search();
+      list4.search();
+    });
+  </script>
+  
+</body>
+</html>
