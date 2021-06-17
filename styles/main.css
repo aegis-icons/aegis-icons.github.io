@@ -44,6 +44,8 @@
 
 body, input, button { font-family: "Inter", "Roboto", "Segoe UI", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif; }
 
+button, .icon { user-select: none; -webkit-user-select: none; } 
+
 body {
   font-weight: 400;
   background: #EAEAEA;
@@ -203,7 +205,6 @@ header {
   padding: 20px 10px 0 10px;
   width: 150px;
   height: 150px;
-  user-select: none;
 }
 
 .name {
