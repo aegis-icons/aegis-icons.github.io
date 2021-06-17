@@ -1,5 +1,6 @@
 exclude:
  - get_icons.bat
+ - styles/sanitize.css
  
 defaults:
   - scope:
