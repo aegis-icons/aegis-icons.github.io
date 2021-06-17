@@ -167,9 +167,12 @@ header {
 
 #primary, #variations, #generic, #outdated {
   max-width: 1500px;
-  margin: 45px auto 0;
   padding: 0 20px;
 }
+
+#primary { margin: min(1500px, 5%, 50px) auto 0; }
+
+#variations, #generic, #outdated { margin: min(1000px, 7%, 50px) auto 0; }
 
 .list {
   display: grid;
