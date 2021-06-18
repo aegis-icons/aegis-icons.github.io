@@ -301,7 +301,6 @@ img[src="/assets/github.svg"] {
   position: relative;
   padding: 1.5em;
   background: #eee;
-  max-height: 95vh;
   overflow-y: auto;
   border-radius: 20px;
 }
