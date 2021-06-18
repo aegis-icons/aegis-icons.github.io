@@ -292,11 +292,12 @@ img[src="/assets/github.svg"] {
 
 .lightbox figure {
   position: fixed;
-  margin: 0 20px;
+  margin: 20px;
 }
 
 .lightbox figcaption {
   max-width: 1160px;
+  max-height: 80vh;
   position: relative;
   padding: 1.5em;
   background: #eee;
