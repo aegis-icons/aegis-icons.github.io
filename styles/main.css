@@ -46,6 +46,10 @@ body, input, button { font-family: "Inter", "Roboto", "Segoe UI", system, -apple
 
 button, .icon { user-select: none; -webkit-user-select: none; } 
 
+ol { margin-left: -5px; }
+
+ol ul li { margin-left: -7.5px; }
+
 body {
   font-weight: 400;
   background: #EAEAEA;
@@ -99,7 +103,7 @@ header {
 
 #info-links { text-align: center; }
 
-#info-links a, footer a {
+#info-links a, footer a, .lightbox a {
   border-bottom: 4px solid;
   color: #191919;
   font-weight: bold;
@@ -107,15 +111,16 @@ header {
 
 #info-links p { line-height: 1; }
 
-.link-purble { border-bottom-color: #7457b9 !important; }
-.link-blue   { border-bottom-color: #5163e1 !important; }
-.link-green  { border-bottom-color: #afd75f !important; }
-.link-black  { border-bottom-color: rgba(0,0,0,0.6) !important; }
+.link-blue, figcaption a { border-bottom-color: #5768e2 !important; }
+.link-purble { border-bottom-color: #775bbb !important; }
+.link-green  { border-bottom-color: #95c336 !important; }
+.link-black  { border-bottom-color: rgba(0,0,0,0.65) !important; }
 
+.link-blue:hover, .link-blue:active,
+figcaption a:hover, figcaption a:active { border-bottom-color: #263CD9 !important; }
 .link-purble:hover, .link-purble:active { border-bottom-color: #512DA8 !important; }
-.link-blue:hover, .link-blue:active     { border-bottom-color: #263CD9 !important; }
-.link-green:hover, .link-green:active   { border-bottom-color: #8fc02b !important; }
-.link-black:hover, .link-black:active   { border-bottom-color: #000000 !important; }
+.link-green:hover,  .link-green:active  { border-bottom-color: #7aa325 !important; }
+.link-black:hover,  .link-black:active  { border-bottom-color: #000000 !important; }
 
 #search-bar {
   position: sticky;
@@ -238,4 +243,100 @@ img[src="/assets/github.svg"] {
 
 .small-links {
   font-size: 0.775rem;
+}
+
+/* ------- */
+
+#please-read {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: .67em 0;
+}
+
+.accept {
+  text-align: center;
+  margin: 30px 0 20px 0;
+}
+
+.accept a {
+  border: 0 !important;
+  background: #388E3C;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.accept a:hover, .accept a:active { background: #1B5E20; }
+
+.note {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ------- */
+
+.lightbox {
+  display: none;
+}
+
+.lightbox:target {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox figure {
+  position: fixed;
+  margin: 0 20px;
+}
+
+.lightbox figcaption {
+  max-width: 1160px;
+  position: relative;
+  padding: 1.5em;
+  background: #eee;
+  max-height: 95vh;
+  overflow-y: auto;
+  border-radius: 20px;
+}
+
+.lightbox .close {
+  position: relative;
+  display: block;
+}
+
+.lightbox .close::after {
+  left: -1rem;
+  top: -0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: #c13838;
+  border-radius: 50%;
+  color: white;
+  content: "×";
+  cursor: pointer;
+  font-size: 1.7rem;
+  padding-bottom: 3px;
+}
+
+.lightbox .close::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0,0,0,.8);
+  content: "";
+  cursor: default;
+  backdrop-filter: blur(10px);
 }

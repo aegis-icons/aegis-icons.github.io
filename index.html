@@ -43,7 +43,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       </a>
       
       <div id="info-links">
-        <p><a class="link-purble" href="https://github.com/aegis-icons/aegis-icons/issues/new/choose">Request new icons on Github</a></p>
+        <p><a class="link-purble" href="#issue-guidelines">Request new icons on Github</a></p>
         
         <p>
           <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/CONTRIBUTING.md">Contributing</a> • 
@@ -170,6 +170,27 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
     </p>
   </footer>
   
+  <div class="lightbox" id="issue-guidelines">
+    <figure>
+      <a href="#" class="close"></a>
+      <figcaption>
+        <p id="please-read">Before making any requests, please read our <b>issue guidelines!</b></p>
+        
+        {% capture md-include1 %}
+        {% include issue-guidelines.md %}
+        {% endcapture %}
+        
+        {{ md-include1 | markdownify }}
+        
+        <p class="accept">
+          <a href="https://github.com/aegis-icons/aegis-icons/issues/new/choose">Accept the guidelines</a>
+        </span>
+        
+        <p class="note">For making issues, you need <a href="https://github.com/join">Github account</a>.</p>
+      </figcaption>
+    </figure>
+  </div>
+    
   <script>
   <!-- List.js search function -->
     var options_1 = { valueNames: ['name'] };
