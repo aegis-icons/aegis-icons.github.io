@@ -1,5 +1,6 @@
 exclude:
  - get_icons.bat
+ - start_jekyll_server.bat
  - styles/sanitize.css
  - scripts/
  
