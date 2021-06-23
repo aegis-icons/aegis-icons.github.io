@@ -273,6 +273,8 @@ img[src="/assets/github.svg"] {
   font-size: 0.85rem;
 }
 
+figcaption li { margin-bottom: 7px; }
+
 /* ------- */
 
 .lightbox {
@@ -297,7 +299,7 @@ img[src="/assets/github.svg"] {
 
 .lightbox figcaption {
   max-width: 1160px;
-  max-height: 82.5vh;
+  max-height: 82vh;
   position: relative;
   padding: 1.5em;
   background: #eee;
