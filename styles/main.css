@@ -273,7 +273,13 @@ img[src="/assets/github.svg"] {
   font-size: 0.85rem;
 }
 
-figcaption li { margin-bottom: 7px; }
+figcaption li    { margin-bottom: 4px; }
+figcaption li ul { margin-top:    4px; }
+
+@media (max-width: 1000px) {
+  figcaption li    { margin-bottom: 8px; }
+  figcaption li ul { margin-top:    8px; }
+}
 
 /* ------- */
 
