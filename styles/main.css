@@ -1,4 +1,7 @@
-/* clamp generated with: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case */
+/* 
+- Clamp generated with: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
+- Good font stripper tool: https://transfonter.org/
+*/
 
 @font-face {
   font-display: swap;
@@ -39,7 +42,6 @@
   src: local(''),
        url('../fonts/iA-Writer-Duo-S-Italic-stripped.woff2') format('woff2'),
        url('../fonts/iAWriterDuoS-Italic-stripped.woff') format('woff');
-  unicode-range: U+0020-2044;
 }
 
 body, input, button { font-family: "Inter", "Roboto", "Segoe UI", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif; }
@@ -49,6 +51,8 @@ button, .icon { user-select: none; -webkit-user-select: none; }
 ol { margin-left: -5px; }
 
 ol ul li { margin-left: -7.5px; }
+
+h2 { font-size: clamp(1.45rem, -0.1500rem + 8.0000vw, 1.5rem); }
 
 body {
   font-weight: 400;
@@ -64,7 +68,7 @@ a {
 #gradient-bg {
   background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 50%, #EAEAEA 100%);
   padding: 0.5% 0 3.5%;
-  max-height: 560px;
+  max-height: 545px;
 }
 
 header {
@@ -74,8 +78,9 @@ header {
 
 #logo {
   background: url("../assets/logo.svg") no-repeat center;
-  padding: 17%;
+  padding: 16.2%;
   margin: 2.5% 12.5% 1.5%;
+  min-height: 110px;
 }
 
 #desc {
@@ -95,7 +100,7 @@ header {
   text-align: center;
   text-decoration: none;
   padding: 10px 15px;
-  font-size: clamp(1.05rem, 0.9071rem + 0.6531vw, 1.25rem);
+  font-size: clamp(1.05rem, 0.8064rem + 1.1636vw, 1.25rem);
   border-radius: 20px;
 }
 
@@ -176,9 +181,11 @@ figcaption a:hover, figcaption a:active { border-bottom-color: #263CD9 !importan
   padding: 0 20px;
 }
 
-#primary { margin: min(1500px, 5%, 50px) auto 0; }
+#primary
+{ margin: min(1500px, 5%, 42px) auto 0; }
 
-#variations, #generic, #outdated { margin: min(1000px, 7%, 50px) auto 0; }
+#variations, #generic, #outdated
+{ margin: min(1000px, 7%, 42px) auto 0; }
 
 .list {
   display: grid;
@@ -207,12 +214,12 @@ figcaption a:hover, figcaption a:active { border-bottom-color: #263CD9 !importan
   padding-bottom: 5px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 /* https://web.dev/content-visibility/ */
   .icon-box {
     content-visibility: auto;
     contain-intrinsic-size: 237px;
-    /* ^^-- Average of a[href^="/icons/"] height with 1 to 4 lines of text. Calc is bad idea for `contain-intrinsic-size`. */
+    /* Average of a[href^="/icons/"] height with 1 to 4 lines of text. Calc is bad idea for `contain-intrinsic-size`. */
   }
 }
 
