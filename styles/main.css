@@ -94,6 +94,7 @@ header {
 #download-link {
   background: #192891;
   color: #fff;
+  min-width: 220px;
   max-width: 60%;
   display: block;
   margin: 2.5% auto 3.5%;
