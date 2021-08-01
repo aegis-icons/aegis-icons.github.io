@@ -1,4 +1,5 @@
 
+<!-- LEAVE LINE 1 AS LINE BREAK! Without it, Jekyll doesn't include this correctly for some reason -->
 1. App / site icon related requests has to have Aegis supported 2FA support one way or another, this project does not make icons outside of Aegis usage.
 2. Check that icon you're about to request doesn't already exist here by using search or requested in the [issues](https://github.com/krisu5/aegis-icons/issues).
 3. Read the issue template and fill **at least** required parts.

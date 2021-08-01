@@ -1,6 +1,6 @@
 {
-    "name": "Aegis-icons",
-    "short_name": "Aegis-icons",
+    "name": "aegis-icons",
+    "short_name": "aegis-icons",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
