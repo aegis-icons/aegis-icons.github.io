@@ -80,7 +80,8 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
             padding: 0 5px;
           }
 
-          #search-functions input, #search-functions button { display: none; }
+          #search-functions input, #search-functions button, #icon-total
+          { display: none; }
 
           noscript div {
             font-size: clamp(0.78rem, 0.2826rem + 2.5507vw, 1rem);
@@ -166,6 +167,10 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   </div>
   
   <footer>
+    <p id="icon-total">
+      Currently, we have total of <b id="icon-amount">...</b> icons!
+    </p>
+  
     <a class="link-black" href="https://github.com/aegis-icons/aegis-icons">
       <img src="/assets/github.svg"> Github
     </a>
@@ -178,7 +183,6 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
     
     <p class="small-links">
       <a class="link-black" href="https://github.com/aegis-icons/aegis-icons/blob/master/messageme.md">Takedown info</a> • <a class="link-black" href="https://github.com/aegis-icons/aegis-icons/blob/master/LICENSE.md">License</a> • <a class="link-black" href="https://github.com/aegis-icons/aegis-icons/#credits">Credits</a>
-    </p>
     </p>
   </footer>
   
@@ -230,6 +234,9 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       list3.search();
       list4.search();
     });
+    
+  <!-- Count the icons and print the results (replace content of p#icon-amount) -->
+    document.getElementById("icon-amount").innerHTML = document.querySelectorAll('.icon-box').length;
   </script>
   
   <script data-goatcounter="https://aegis-icons.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

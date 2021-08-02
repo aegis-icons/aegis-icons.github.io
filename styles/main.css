@@ -52,7 +52,7 @@ ol { margin-left: -5px; }
 
 ol ul li { margin-left: -7.5px; }
 
-h2 { font-size: clamp(1.45rem, -0.1500rem + 8.0000vw, 1.5rem); }
+h2 { font-size: clamp(1.3rem, 0.6905rem + 3.0476vw, 1.5rem); }
 
 body {
   font-weight: 400;
@@ -197,7 +197,7 @@ figcaption a:hover, figcaption a:active { border-bottom-color: #263CD9 !importan
 
 .list:empty {
   background: #fff;
-  padding: 10px 20px;
+  padding: 10px 17.5px;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -245,6 +245,8 @@ footer {
   max-width: 1300px;
   margin: 0 auto;
 }
+
+#icon-total { font-size: 0.925rem; }
 
 img[src="/assets/github.svg"] {
   margin: 0 3px 4px 0;
