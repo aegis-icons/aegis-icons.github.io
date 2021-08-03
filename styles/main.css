@@ -215,12 +215,13 @@ figcaption a:hover, figcaption a:active { border-bottom-color: #263CD9 !importan
   padding-bottom: 5px;
 }
 
-@media (max-width: 768px) {
-/* https://web.dev/content-visibility/ */
+/* https://css-irl.info/detecting-hover-capable-devices/ */
+@media (hover: none) and (pointer: coarse) {
   .icon-box {
+    /* https://web.dev/content-visibility/ */
     content-visibility: auto;
-    contain-intrinsic-size: 237px;
     /* Average of a[href^="/icons/"] height with 1 to 4 lines of text. Calc is bad idea for `contain-intrinsic-size`. */
+    contain-intrinsic-size: 237px;
   }
 }
 
