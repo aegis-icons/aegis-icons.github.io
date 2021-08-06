@@ -13,7 +13,6 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }}</title>
   {% include sanitize.css.html %}
-  {% include jquery.slim.min.js.html %}
   {% include list.js.html %}
   <link rel="stylesheet" type="text/css" href="/styles/main.css">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -208,35 +207,32 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   </div>
     
   <script>
-  <!-- List.js search function -->
-    var options_1 = { valueNames: ['name'] };
-    var options_2 = { valueNames: ['name'] };
-    var options_3 = { valueNames: ['name'] };
-    var options_4 = { valueNames: ['name'] };
+    <!-- List.js search function -->
+      var listNames = ['primary', 'variations', 'generic', 'outdated'];
 
-    var list1 = new List("primary",    options_1);
-    var list2 = new List("variations", options_2);
-    var list3 = new List("generic",    options_3);
-    var list4 = new List("outdated",   options_4);
+      var lists = listNames.map(function (name) {
+        return new List(name, { valueNames: ['name'] });
+      });
 
-    $(".search").keyup(function(){
-      list1.search($(this).val());
-      list2.search($(this).val());
-      list3.search($(this).val());
-      list4.search($(this).val());
-    }); 
-    
-  <!-- Reset button function and List.js search clearing -->
-    $('button.reset').click(function(){
-      $('input.search').val('');
-      list1.search();
-      list2.search();
-      list3.search();
-      list4.search();
-    });
-    
-  <!-- Count the icons and print the results (replace content of p#icon-amount) -->
-    document.getElementById("icon-amount").innerHTML = document.querySelectorAll('.icon-box').length;
+      var search = document.querySelector('.search');
+      search.addEventListener('keyup', function () {
+        var searchValue = this.value;
+        lists.forEach(function (list) {
+          list.search(searchValue);
+        });
+      });
+
+    <!-- Reset button function and List.js search clearing -->
+      var resetButton = document.querySelector('button.reset');
+      resetButton.addEventListener('click', function () {
+        search.value = '';
+        lists.forEach(function (list) {
+          list.search();
+        });
+      });
+      
+    <!-- Count the icons and print the results (replace content of p#icon-amount) -->
+      document.getElementById("icon-amount").innerHTML = document.querySelectorAll('.icon-box').length;
   </script>
   
   <script data-goatcounter="https://aegis-icons.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
