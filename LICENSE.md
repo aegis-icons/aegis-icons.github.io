@@ -1,0 +1,1 @@
+All rights reserved, except for copying small parts of code (**NOT** copying full source code and making slight edits, this is not a freely usable template for your websites) or for forking to improve code and sending that as pull request here in [aegis-icons.github.io repo](https://github.com/aegis-icons/aegis-icons.github.io).
