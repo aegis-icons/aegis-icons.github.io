@@ -213,7 +213,7 @@ figcaption a:hover, figcaption a:active { border-bottom-color: #263CD9 !importan
   height: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 2.5px;
 }
 
 /* https://css-irl.info/detecting-hover-capable-devices/ */
@@ -221,7 +221,7 @@ figcaption a:hover, figcaption a:active { border-bottom-color: #263CD9 !importan
 @media (hover: none) and (pointer: coarse) {
   .icon-box {
     content-visibility: auto;
-    contain-intrinsic-size: 246.033px; /* <-- Average of a[href^="/icons/"] height with 1 to 5 lines of text. Calc is bad idea for `contain-intrinsic-size`. */
+    contain-intrinsic-size: 243.533px; /* <-- Average of a[href^="/icons/"] height with 1 to 5 lines of text. Calc doesn't work well for `contain-intrinsic-size`. */
   }
 }
 
@@ -297,8 +297,12 @@ figcaption li    { margin-bottom: 4px; }
 figcaption li ul { margin-top:    4px; }
 
 @media (max-width: 1000px) {
-  figcaption li    { margin-bottom: 8px; }
-  figcaption li ul { margin-top:    8px; }
+  figcaption li {
+    margin-bottom: 8px;
+    line-height: 25.5px;
+  }
+  
+  figcaption li ul { margin-top: 8px; }
 }
 
 /* ------- */
