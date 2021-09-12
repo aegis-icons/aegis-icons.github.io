@@ -265,7 +265,7 @@ img[src="/assets/github.svg"] {
 
 .small-links { font-size: 0.775rem; }
 
-/* ------- */
+/* --- Issue guidelines related (for lightbox) --- */
 
 #please-read {
   font-size: 1.4rem;
@@ -305,11 +305,9 @@ figcaption li ul { margin-top:    4px; }
   figcaption li ul { margin-top: 8px; }
 }
 
-/* ------- */
+/* --- Lightbox CSS --- */
 
-.lightbox {
-  display: none;
-}
+.lightbox { display: none; }
 
 .lightbox:target {
   position: absolute;
@@ -372,4 +370,43 @@ figcaption li ul { margin-top:    4px; }
   content: "";
   cursor: default;
   backdrop-filter: blur(10px);
+}
+
+.lightbox .close-mobile { display: none; }
+
+/* --- Lightbox tweaks for mobile devices --- */
+
+@media (max-width: 550px) {
+  .lightbox:target { align-items: start;}
+  
+  .lightbox figure { margin: 0; }
+  
+  .lightbox figcaption {
+    max-height: 100vh;
+    border-radius: 0;
+    padding: 1.25em;
+  }
+  
+  .lightbox .close, .lightbox .close-mobile { display: unset; }
+  
+  .lightbox .close::before {
+    backdrop-filter: unset;
+    background-color: unset;
+  }
+  
+  .lightbox .close::after { display: none; }
+
+  .lightbox .close-mobile {
+    border: 0;
+    margin: 0 auto 25px;
+    display: block;
+    color: #fff;
+    background-color: #c13838;
+    border-radius: 20px;
+    width: 85vw;
+    text-align: center;
+    padding: 5px 0;
+  }
+  
+  p.note { margin-bottom: 100px; }
 }
