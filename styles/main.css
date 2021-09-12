@@ -94,7 +94,7 @@ header {
 #download-link {
   background: #192891;
   color: #fff;
-  min-width: 220px;
+  min-width: 235px;
   max-width: 60%;
   display: block;
   margin: 2.5% auto 3.5%;
@@ -265,46 +265,6 @@ img[src="/assets/github.svg"] {
 
 .small-links { font-size: 0.775rem; }
 
-/* --- Issue guidelines related (for lightbox) --- */
-
-#please-read {
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin: .67em 0;
-}
-
-.accept {
-  text-align: center;
-  margin: 30px 0 20px 0;
-}
-
-.accept a {
-  border: 0 !important;
-  background: #388E3C;
-  padding: 10px 20px;
-  color: #fff;
-  border-radius: 10px;
-}
-
-.accept a:hover, .accept a:active { background: #1B5E20; }
-
-.note {
-  text-align: center;
-  font-size: 0.85rem;
-}
-
-figcaption li    { margin-bottom: 4px; }
-figcaption li ul { margin-top:    4px; }
-
-@media (max-width: 1000px) {
-  figcaption li {
-    margin-bottom: 8px;
-    line-height: 25.5px;
-  }
-  
-  figcaption li ul { margin-top: 8px; }
-}
-
 /* --- Lightbox CSS --- */
 
 .lightbox { display: none; }
@@ -376,7 +336,7 @@ figcaption li ul { margin-top:    4px; }
 
 /* --- Lightbox tweaks for mobile devices --- */
 
-@media (max-width: 550px) {
+@media (max-width: 800px) and (hover: none) and (pointer: coarse) {
   .lightbox:target { align-items: start; }
   
   .lightbox figure { margin: 0; }
@@ -386,30 +346,64 @@ figcaption li ul { margin-top:    4px; }
     border-radius: 0;
     padding: 1.25em;
   }
-  
-  .lightbox .close, .lightbox .close-mobile { display: unset; }
-  
-  .lightbox .close::before {
-    backdrop-filter: unset;
-    background-color: unset;
-  }
-  
-  .lightbox .close::after { display: none; }
+
+  .lightbox .close { display: none; }
 
   .lightbox .close-mobile {
+    display: unset;
     border: 0;
     margin: 0 auto 25px;
     display: block;
     color: #fff;
     background-color: #c13838;
-    border-radius: 20px;
-    width: 85vw;
+    border-radius: 50px;
+    width: 80vw;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
   }
   
   p.note {
-    margin-bottom: 100px;
+    margin-bottom: 125px;
     font-size: clamp(0.8rem, -0.5333rem + 6.6667vw, 0.85rem);
   }
+}
+
+/* --- Issue guidelines related (for lightbox) --- */
+
+#please-read {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: .67em 0;
+}
+
+.accept {
+  text-align: center;
+  margin: 30px 0 25px 0;
+}
+
+.accept a {
+  border: 0 !important;
+  background: #388E3C;
+  padding: 12px 30px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.accept a:hover, .accept a:active { background: #1B5E20; }
+
+.note {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+figcaption li    { margin-bottom: 4px; }
+figcaption li ul { margin-top:    4px; }
+
+@media (max-width: 1000px) {
+  figcaption li {
+    margin-bottom: 8px;
+    line-height: 25.5px;
+  }
+  
+  figcaption li ul { margin-top: 8px; }
 }
