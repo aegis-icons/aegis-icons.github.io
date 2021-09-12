@@ -377,7 +377,7 @@ figcaption li ul { margin-top:    4px; }
 /* --- Lightbox tweaks for mobile devices --- */
 
 @media (max-width: 550px) {
-  .lightbox:target { align-items: start;}
+  .lightbox:target { align-items: start; }
   
   .lightbox figure { margin: 0; }
   
@@ -408,5 +408,8 @@ figcaption li ul { margin-top:    4px; }
     padding: 5px 0;
   }
   
-  p.note { margin-bottom: 100px; }
+  p.note {
+    margin-bottom: 100px;
+    font-size: clamp(0.8rem, -0.5333rem + 6.6667vw, 0.85rem);
+  }
 }
