@@ -362,6 +362,13 @@ img[src="/assets/github.svg"] {
     padding: 10px 0;
   }
   
+  .lightbox .close-mobile::before {
+    content: "×";
+    padding-right: 12px;
+    font-size: 20px;
+    line-height: 0;
+  }
+  
   p.note {
     margin-bottom: 125px;
     font-size: clamp(0.8rem, -0.5333rem + 6.6667vw, 0.85rem);
