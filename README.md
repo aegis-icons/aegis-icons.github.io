@@ -3,7 +3,7 @@
 Website for our icon set that has very basic Jekyll setup.
 
 1. [Install Ruby and Jekyll with guides here.](https://jekyllrb.com/docs/installation/#guides)
-2. Do `jekyll serve` in terminal or alternatively use [Windows BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/start_jekyll_server.bat) (note that BAT launches site to Firefox if installed).
+2. Do `jekyll serve` in terminal or alternatively use [Windows BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/start_jekyll_server.bat).
 
 ## Credits
 
