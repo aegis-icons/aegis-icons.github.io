@@ -19,8 +19,8 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Inter-Italic-stripped.woff2') format('woff2'),
-       url('../fonts/Inter-Italic-stripped.woff') format('woff');
+       url('../fonts/Inter-Italic-win-hint_stripped.woff2') format('woff2'),
+       url('../fonts/Inter-Italic-win-hint_stripped.woff') format('woff');
   unicode-range: U+0020-007E;
 }
 
