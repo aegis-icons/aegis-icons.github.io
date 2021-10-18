@@ -1,7 +1,7 @@
 exclude:
  - get_icons.bat
  - start_jekyll_server.bat
- - styles/sanitize.css
+ - styles/sanitize_original.css
  - scripts/
  
 defaults:
