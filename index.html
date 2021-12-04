@@ -7,8 +7,9 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
 <head>
   <link rel="preload" href="/fonts/inter-v3-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/inter-v3-latin-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/iA-Writer-Duo-S-Italic-stripped.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="prefetch" href="/fonts/iA-Writer-Duo-S-Italic-stripped.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/styles/main.css" as="style">
+  <link rel="prefetch" href="https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest" as="fetch" crossorigin>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }}</title>
@@ -48,8 +49,10 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       
       <a id="download-link" href="https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip">
         Download icon pack<br>
-        <b>(updated monthly)</b>
+        <b>(updated monthly)</b><br>
       </a>
+      
+      <div id="release">Latest release date: <span id="release-date">...</span></div>
       
       <div id="info-links">
         <p><a class="link-purble" href="#issue-guidelines">Request new icons on Github</a></p>
@@ -232,6 +235,17 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
           list.search();
         });
       });
+      
+    <!-- Parse JSON and print latest release date via repo tag -->
+      function successListener() {  
+        var data = JSON.parse(this.responseText);  
+        document.getElementById("release-date").innerHTML = ""+data.tag_name
+      }
+      
+      var request = new XMLHttpRequest();  
+      request.onload = successListener;    
+      request.open('get','https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest',true);  
+      request.send();
       
     <!-- Count the icons and print the results (replace content of b#icon-amount) -->
       document.getElementById("icon-amount").innerHTML = document.querySelectorAll('.icon-box').length;

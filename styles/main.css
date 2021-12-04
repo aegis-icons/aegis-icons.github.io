@@ -67,8 +67,8 @@ a {
 
 #gradient-bg {
   background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 50%, #EAEAEA 100%);
-  padding: 0.5% 0 3.5%;
-  max-height: 550px;
+  padding: 7px 0 14px;
+  max-height: 580px;
 }
 
 header {
@@ -97,7 +97,7 @@ header {
   min-width: 235px;
   max-width: 60%;
   display: block;
-  margin: 2.5% auto 3.5%;
+  margin: 2.5% auto 15px;
   text-align: center;
   text-decoration: none;
   padding: 10px 15px;
@@ -106,6 +106,20 @@ header {
 }
 
 #download-link:hover, #download-link:active { background: #0f1857; }
+
+#release {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #fff;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.79rem;
+  border-radius: 7px;
+  padding: 3px 20px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+#release-date { font-weight: bold; }
 
 #info-links { text-align: center; }
 
