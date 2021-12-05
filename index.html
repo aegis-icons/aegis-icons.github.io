@@ -52,7 +52,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
         <b>(updated monthly)</b><br>
       </a>
       
-      <div id="release">Latest release date: <span id="release-date">...</span></div>
+      <div id="release">Latest release: <b id="release-date">...</b></div>
       
       <div id="info-links">
         <p><a class="link-purble" href="#issue-guidelines">Request new icons on Github</a></p>
@@ -238,7 +238,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
         });
       });
       
-    <!-- Parse JSON and print latest release date via repo tag -->
+    <!-- Parse JSON and print latest release version via repo tag -->
       function successListener() {  
         var data = JSON.parse(this.responseText);  
         document.getElementById("release-date").innerHTML = ""+data.tag_name
