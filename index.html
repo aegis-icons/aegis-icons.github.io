@@ -103,7 +103,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   </div>
 
   <div id="primary">
-    <h2>Sites & Apps</h2>
+    <h2>Apps & Sites</h2>
     <div class="list">
       {% assign image_files = site.static_files | where: "is_primary", true %}
       {% for myimage in image_files %}
@@ -172,10 +172,11 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   
   <footer>
     <p id="icon-total">
-      Currently, we have total of <b id="icon-amount">...</b> icons!
+      Currently, we have total of <b id="icon-amount-all">...</b> icons!<br />
+      <b id="icon-amount-primary">...</b> of those are from "Apps & Sites".
     </p>
   
-    <a class="link-black" href="https://github.com/aegis-icons/aegis-icons">
+    <a href="https://github.com/aegis-icons/aegis-icons">
       <img src="/assets/github.svg"> Github
     </a>
   
@@ -183,10 +184,10 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       Aegis-icons includes material that may be protected as a trademark in some jurisdictions. Trademarks seen in here does not indicate endorsement to the brands. If you want to use icon(s) publicly, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights. Please do not use brand based icons for any purpose except to represent the company, product, or service to which they refer.
     </p>
     
-    <p id="disclaimer">We don't make icons for general purpose, we only focus on userbase of Aegis, the Android app.</p>
+    <p id="disclaimer">We don't make icons for general purpose, we only focus on userbase of Aegis, the Android app. Check out <a href="https://simpleicons.org/">Simple Icons</a> instead!</p>
     
     <p class="small-links">
-      <a class="link-black" href="https://github.com/aegis-icons/aegis-icons/blob/master/messageme.md">Takedown info</a> • <a class="link-black" href="https://github.com/aegis-icons/aegis-icons/blob/master/LICENSE.md">License</a> • <a class="link-black" href="https://github.com/aegis-icons/aegis-icons/#credits">Credits</a>
+      <a href="https://github.com/aegis-icons/aegis-icons/blob/master/messageme.md">Takedown info</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/LICENSE.md">License</a> • <a href="https://github.com/aegis-icons/aegis-icons/#credits">Credits</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/CREDITS-TO-CONTRIBUTORS.md">Contributors</a>
     </p>
   </footer>
   
@@ -249,8 +250,9 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       request.open('get','https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest',true);  
       request.send();
       
-    <!-- Count the icons and print the results (replace content of b#icon-amount) -->
-      document.getElementById("icon-amount").innerHTML = document.querySelectorAll('.icon-box').length;
+    <!-- Count the icons and print the results -->
+      document.getElementById("icon-amount-all").innerHTML = document.querySelectorAll('.icon-box').length;
+      document.getElementById("icon-amount-primary").innerHTML = document.querySelectorAll('#primary .icon-box').length;
   </script>
   
   <script data-goatcounter="https://aegis-icons.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

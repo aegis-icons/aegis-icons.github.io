@@ -132,16 +132,16 @@ header {
 #info-links p { line-height: 1; }
 
 .link-blue,
-figcaption a { border-bottom-color: #5768e2 !important; }
-.link-purble { border-bottom-color: #775bbb !important; }
-.link-green  { border-bottom-color: #95c336 !important; }
-.link-black  { border-bottom-color: rgba(0,0,0,0.65) !important; }
+figcaption a  { border-bottom-color: #5768e2 !important; }
+.link-purble  { border-bottom-color: #775bbb !important; }
+.link-green   { border-bottom-color: #95c336 !important; }
+footer a      { border-bottom-color: rgba(0,0,0,0.65) !important; font-style: normal !important; }
 
 .link-blue:hover, .link-blue:active,
-figcaption a:hover, figcaption a:active { border-bottom-color: #263CD9 !important; }
-.link-purble:hover, .link-purble:active { border-bottom-color: #512DA8 !important; }
-.link-green:hover,  .link-green:active  { border-bottom-color: #7aa325 !important; }
-.link-black:hover,  .link-black:active  { border-bottom-color: #000000 !important; }
+figcaption a:hover, figcaption a:active  { border-bottom-color: #263CD9 !important; }
+.link-purble:hover, .link-purble:active  { border-bottom-color: #512DA8 !important; }
+.link-green:hover, .link-green:active    { border-bottom-color: #7aa325 !important; }
+footer a:hover, footer a:active          { border-bottom-color: #000000 !important; }
 
 #search-bar {
   position: sticky;
@@ -282,7 +282,7 @@ img[src="/assets/github.svg"] {
   color: rgba(0,0,0,0.7);
 }
 
-.link-black + #disclaimer { margin-top: 25px; }
+a + #disclaimer { margin-top: 25px; }
 
 .small-links { font-size: 0.775rem; }
 
