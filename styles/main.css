@@ -269,22 +269,27 @@ footer {
   margin: 0 auto;
 }
 
-#icon-total { font-size: 0.925rem; }
+#icon-total {
+  font-size: 0.925rem;
+  margin: 12px 0 0 0;
+}
+
+.small { font-size: 0.775rem; }
+
+#icon-total + .small { margin-top: 0; }
 
 img[src="/assets/github.svg"] {
   margin: 0 3px 4px 0;
   height: 17px;
 }
 
-#disclaimer {
+a + .disclaimer { margin-top: 25px; }
+
+.disclaimer {
   font-style: italic;
   font-size: 0.725rem;
   color: rgba(0,0,0,0.7);
 }
-
-a + #disclaimer { margin-top: 25px; }
-
-.small-links { font-size: 0.775rem; }
 
 /* --- Lightbox CSS --- */
 
