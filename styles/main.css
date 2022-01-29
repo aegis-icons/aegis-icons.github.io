@@ -1,9 +1,12 @@
 /* 
 - `Clamp` values generated with: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
   - New alternative: https://modern-fluid-typography.vercel.app/
-  
 - Good font stripper tool: https://transfonter.org/
 */
+
+:root {
+  --blur: blur(10px);
+}
 
 @font-face {
   font-display: swap;
@@ -148,16 +151,9 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   top: 0;
   z-index: 1;
   padding: 10px 0;
-  background: linear-gradient(180deg, rgb(183 181 181) 0%, rgba(196, 196, 196, 0.9) 100%);
+  background: linear-gradient(180deg, rgb(183 181 181) 0%, rgba(196,196,196,0.9) 100%);
   border-top: 1px solid #979595;
   border-bottom: 1px solid rgba(0,0,0,0.25);
-}
-
-@supports (backdrop-filter: blur(1px)) {
-  #search-bar {
-    background: linear-gradient(180deg, rgb(183 181 181) 0%, rgba(196, 196, 196, 0.5) 100%);
-    backdrop-filter: blur(10px);
-  }
 }
 
 #search-functions {
@@ -186,7 +182,7 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 }
 
 .reset {
-  background: linear-gradient(180deg, rgba(255, 82, 82, 0.8) 0%, rgba(156, 36, 36, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(255,82,82,0.8) 0%, rgba(156,36,36,0.8) 100%);
   color: #fff;
   border: 1px solid #3c3c3c;
   border-radius: 10px;
@@ -195,7 +191,7 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 }
 
 .reset:active {
-  background: linear-gradient(180deg, rgba(156, 36, 36, 0.8) 0%, rgba(255, 82, 82, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(156,36,36,0.8) 0%, rgba(255,82,82,0.8) 100%);
 }
 
 #primary, #variations, #generic, #outdated {
@@ -220,7 +216,7 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   background: #fff;
   padding: 10px 17.5px;
   border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 }
 
 .list:empty::after {
@@ -231,7 +227,7 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 .icon-box {
   background: #fff;
   height: 100%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
   border-radius: 10px;
   padding-bottom: 2.5px;
   transition: box-shadow 0.125s ease;
@@ -246,7 +242,7 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   }
 }
 
-.icon-box:active, .icon-box:focus { box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 6px rgba(38, 60, 217, 0.85); }
+.icon-box:active, .icon-box:focus { box-shadow: 0px 4px 4px rgba(0,0,0,0.25), inset 0px 0px 0px 6px rgba(38,60,217,0.85); }
 
 .icon {
   margin: 0 auto;
@@ -352,7 +348,7 @@ a + .disclaimer { margin-top: 25px; }
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,0.8);
   content: "";
   cursor: default;
   backdrop-filter: blur(10px);
@@ -439,4 +435,44 @@ figcaption li ul { margin-top:    4px; }
   }
   
   figcaption li ul { margin-top: 8px; }
+}
+
+/* --- "Scroll to the top" button --- */
+
+#scroll-to-top {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  background: linear-gradient(180deg, rgba(183,181,181,0.7) 0%, rgba(196,196,196,0.5) 100%);
+  backdrop-filter: var(--blur);
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+  position: fixed;
+  padding: 12px;
+  right: 15px;
+  bottom: 15px;
+  width: 54px;
+  height: 54px;
+}
+
+#scroll-to-top img {
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+.show {
+  visibility: unset !important;
+  opacity: 1 !important;
+}
+
+/* --- @supports --- */
+
+@supports (backdrop-filter: blur(1px)) {
+  #search-bar {
+    background: linear-gradient(180deg, rgb(183 181 181) 0%, rgba(196, 196, 196, 0.5) 100%);
+    backdrop-filter: var(--blur);
+  }
 }

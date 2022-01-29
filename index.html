@@ -74,8 +74,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       <button class="reset">Clear</button>
       <noscript>
         <style>
-          #release, #search-functions input, #search-functions button, #icon-total
-          { display: none !important; }
+          #release, #search-functions input, #search-functions button, #icon-total, #scroll-to-top { display: none !important; }
           
           #download-link { margin-bottom: 20px; }
           
@@ -218,8 +217,12 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       </figcaption>
     </figure>
   </div>
+  
+  <button id="scroll-to-top">
+    <img src="/assets/arrow-line-up.svg">
+  </button>
     
-  <script>
+  <script>      
     <!-- List.js search function -->
       var listNames = ['primary', 'variations', 'generic', 'outdated'];
 
@@ -243,6 +246,24 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
           list.search();
         });
       });
+  
+    <!-- Count the icons and print the results -->
+      document.getElementById("icon-amount-all").innerHTML = document.querySelectorAll('.icon-box').length;
+      document.getElementById("icon-amount-primary").innerHTML = document.querySelectorAll('#primary .icon-box').length;
+
+    <!-- "Scroll to the top" button function and show it at 3000px Y axis mark -->      
+      scrollToTopBtn = document.getElementById("scroll-to-top");
+      
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 3000) { scrollToTopBtn.className = "show" }
+        else { scrollToTopBtn.className = "" }
+      };
+      
+      var rootElement = document.documentElement;
+      function scrollToTop() { rootElement.scrollTo({ top: 0 }); }
+      window.addEventListener("scroll", myScrollFunc);
+      scrollToTopBtn.addEventListener("click", scrollToTop);
       
     <!-- Parse JSON and print latest release version via repo tag -->
       function successListener() {  
@@ -251,13 +272,9 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       }
       
       var request = new XMLHttpRequest();  
-      request.onload = successListener;    
+      request.onload = successListener;
       request.open('get','https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest',true);  
       request.send();
-      
-    <!-- Count the icons and print the results -->
-      document.getElementById("icon-amount-all").innerHTML = document.querySelectorAll('.icon-box').length;
-      document.getElementById("icon-amount-primary").innerHTML = document.querySelectorAll('#primary .icon-box').length;
   </script>
   
   <script data-goatcounter="https://aegis-icons.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
