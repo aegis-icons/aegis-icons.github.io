@@ -13,31 +13,11 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }}</title>
-  {% include sanitize.css.html %}
-  {% include list.js.html %}
+  <style>{% include sanitize.css %}</style>
+  <script>{% include list.js %}</script>
   <link rel="stylesheet" type="text/css" href="/styles/main.css">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#263cd9">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="apple-mobile-web-app-title" content="aegis-icons">
-  <meta name="application-name" content="aegis-icons">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="title" content="aegis-icons">
-  <meta name="description" content="Unofficial 2FA entry icons for open source Android authenticator Aegis">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aegis-icons.github.io/">
-  <meta property="og:title" content="aegis-icons">
-  <meta property="og:description" content="Unofficial 2FA entry icons for open source Android authenticator Aegis">
-  <meta property="og:image" content="https://aegis-icons.github.io/metatag-image.png">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://aegis-icons.github.io/">
-  <meta property="twitter:title" content="aegis-icons">
-  <meta property="twitter:description" content="Unofficial 2FA entry icons for open source Android authenticator Aegis">
-  <meta property="twitter:image" content="https://aegis-icons.github.io/metatag-image.png">
+  {% include _favicon-stuff.txt %}
+  {% include _metadata-stuff.txt %}
 </head>
 
 <body>
@@ -73,29 +53,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       <input class="search" placeholder="Search for icon">
       <button class="reset">Clear</button>
       <noscript>
-        <style>
-          #release, #search-functions input, #search-functions button, #icon-total, #scroll-to-top { display: none !important; }
-          
-          #download-link { margin-bottom: 20px; }
-          
-          #search-bar { position: inherit; }
-          
-          #search-functions {
-            display: inherit;
-            padding: 0 5px;
-          }
-
-          noscript div {
-            font-size: clamp(0.78rem, 0.2826rem + 2.5507vw, 1rem);
-            color: #fff;
-            text-align: center;
-            font-weight: 600;
-            background: rgb(255, 82, 82);
-            padding: 6px 0;
-            border-radius: 10px;
-          }
-        </style>
-        
+        <style>{% include _noscript-style.css %}</style>
         <div>Please enable JavaScript to use search function!</div>
       </noscript>
     </div>
@@ -169,31 +127,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
     </div>
   </div>
   
-  <footer>
-    <p id="icon-total">
-      Currently, we have total of <b id="icon-amount-all">...</b> icons!<br />
-    </p>
-    
-    <p class="small">
-      <b id="icon-amount-primary">...</b> of those are from "Apps & Sites".
-    </p>
-    
-    <a href="https://github.com/aegis-icons/aegis-icons">
-      <img src="/assets/github.svg"> Github
-    </a>
-  
-    <p class="disclaimer">
-      Aegis-icons includes material that may be protected as a trademark in some jurisdictions. Trademarks seen in here does not indicate endorsement to the brands. If you want to use icon(s) publicly, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights. Please do not use brand based icons for any purpose except to represent the company, product, or service to which they refer.
-    </p>
-    
-    <p class="disclaimer">
-      We don't make icons for general purpose, we only focus on userbase of Aegis, the Android app. Check out <a href="https://simpleicons.org/">Simple Icons</a> instead!
-    </p>
-    
-    <p class="small">
-      <a href="https://github.com/aegis-icons/aegis-icons/blob/master/messageme.md">Takedown info</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/LICENSE.md">License</a> • <a href="https://github.com/aegis-icons/aegis-icons/#credits">Credits</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/CREDITS-TO-CONTRIBUTORS.md">Contributors</a>
-    </p>
-  </footer>
+  <footer>{% include _footer.txt %}</footer>
   
   <div class="lightbox" id="issue-guidelines">
     <figure>
@@ -204,7 +138,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
         <p id="please-read">Before making any requests, please read our <b>issue guidelines!</b></p>
         
         {% capture md-include1 %}
-        {% include issue-guidelines.md %}
+        {% include _issue-guidelines.md %}
         {% endcapture %}
         
         {{ md-include1 | markdownify }}
@@ -225,69 +159,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
     </svg>
   </button>
     
-  <script>      
-    <!-- List.js search function -->
-      var listNames = ['primary', 'variations', 'generic', 'outdated'];
-
-      var lists = listNames.map(function (name) {
-        return new List(name, { valueNames: ['name'] });
-      });
-
-      var search = document.querySelector('.search');
-      search.addEventListener('keyup', function () {
-        var searchValue = this.value;
-        lists.forEach(function (list) {
-          list.search(searchValue);
-        });
-      });
-
-    <!-- Reset button function and List.js search clearing -->
-      var resetButton = document.querySelector('button.reset');
-      resetButton.addEventListener('click', function () {
-        search.value = '';
-        lists.forEach(function (list) {
-          list.search();
-        });
-      });
-  
-    <!-- Count the icons and print the results -->
-      document.getElementById("icon-amount-all").innerHTML = document.querySelectorAll('.icon-box').length;
-      document.getElementById("icon-amount-primary").innerHTML = document.querySelectorAll('#primary .icon-box').length;
-
-    <!-- "Scroll to the top" button -->
-      scrollToTopBtn = document.getElementById("scroll-to-top");
-      
-      // At 1200px Y axis mark, add class for button (else, remove / do nothing)
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 1200) { scrollToTopBtn.classList.add("show"); }
-        else { scrollToTopBtn.classList.remove("show"); }
-      };
-      
-      // Scroll to the top function
-      var rootElement = document.documentElement;
-      function scrollToTop() { rootElement.scrollTo({ top: 0 }); }
-      window.addEventListener("scroll", myScrollFunc);
-      scrollToTopBtn.addEventListener("click", scrollToTop);
-      
-      // If at the bottom of page, add class (so it's possible to hide it for mobile with CSS)
-      window.onscroll = function(event) {
-        if ((window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight)
-        { scrollToTopBtn.classList.add("hide-mobile"); }
-        else { scrollToTopBtn.classList.remove("hide-mobile"); }
-      };
-      
-    <!-- Parse JSON and print latest release version via repo tag -->
-      function successListener() {  
-        var data = JSON.parse(this.responseText);  
-        document.getElementById("release-date").innerHTML = ""+data.tag_name
-      }
-      
-      var request = new XMLHttpRequest();  
-      request.onload = successListener;
-      request.open('get','https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest',true);  
-      request.send();
-  </script>
+  <script>{% include _bottom-scripts.js %}</script>
   
   <script data-goatcounter="https://aegis-icons.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   

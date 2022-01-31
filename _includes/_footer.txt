@@ -1,0 +1,23 @@
+<p id="icon-total">
+  Currently, we have total of <b id="icon-amount-all">...</b> icons!<br />
+</p>
+
+<p class="small">
+  <b id="icon-amount-primary">...</b> of those are from "Apps & Sites".
+</p>
+
+<a href="https://github.com/aegis-icons/aegis-icons">
+  <img src="/assets/github.svg"> Github
+</a>
+
+<p class="disclaimer">
+  Aegis-icons includes material that may be protected as a trademark in some jurisdictions. Trademarks seen in here does not indicate endorsement to the brands. If you want to use icon(s) publicly, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights. Please do not use brand based icons for any purpose except to represent the company, product, or service to which they refer.
+</p>
+
+<p class="disclaimer">
+  We don't make icons for general purpose, we only focus on userbase of Aegis, the Android app. Check out <a href="https://simpleicons.org/">Simple Icons</a> instead!
+</p>
+
+<p class="small">
+  <a href="https://github.com/aegis-icons/aegis-icons/blob/master/messageme.md">Takedown info</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/LICENSE.md">License</a> • <a href="https://github.com/aegis-icons/aegis-icons/#credits">Credits</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/CREDITS-TO-CONTRIBUTORS.md">Contributors</a>
+</p>
