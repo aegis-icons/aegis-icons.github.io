@@ -1,5 +1,5 @@
 <p id="icon-total">
-  Currently, we have total of <b id="icon-amount-all">...</b> icons!<br />
+  Currently, we have total of <b id="icon-amount-all">...</b> icons!
 </p>
 
 <p class="small">

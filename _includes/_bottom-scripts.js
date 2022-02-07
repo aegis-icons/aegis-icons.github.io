@@ -13,7 +13,7 @@
     });
   });
 
-<!-- Reset button function and List.js search clearing -->
+// ==== Reset button function and List.js search clearing ====
   var resetButton = document.querySelector('button.reset');
   resetButton.addEventListener('click', function () {
     search.value = '';
