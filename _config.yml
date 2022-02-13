@@ -1,8 +1,6 @@
 exclude:
  - get_icons.bat
  - start_jekyll_server.bat
- - styles/sanitize_original.css
- - scripts/
  
 defaults:
   - scope:
@@ -25,3 +23,6 @@ defaults:
     values:
       image: true
       is_outdated: true
+
+sass:
+  style: compressed

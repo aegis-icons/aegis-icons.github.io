@@ -1,0 +1,26 @@
+---
+layout: html_minifier
+---
+
+<!DOCTYPE HTML>
+<html> 
+<head>
+  <link rel="preload" href="/fonts/inter-v3-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v3-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="prefetch" href="/fonts/iA-Writer-Duo-S-Italic-stripped.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/css/main.css" as="style">
+  <link rel="prefetch" href="https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest" as="fetch" crossorigin>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <style>{% include sanitize.css %}</style>
+  <script>{% include list.js %}</script>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  {% include _favicon-stuff.txt %}
+  {% include _metadata-stuff.txt %}
+</head>
+
+<body>
+  {{ content }}
+</body>
+</html>

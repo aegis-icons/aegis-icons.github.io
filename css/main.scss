@@ -1,8 +1,16 @@
-/* 
-- `Clamp` values generated with: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#for-those-who-dont-mind-that-edge-case
-  - New alternative: https://modern-fluid-typography.vercel.app/
-- Good font stripper tool: https://transfonter.org/
-*/
+---
+# SASS file
+---
+
+// /*
+// - `Clamp` values generated with: https://codesandbox.io/embed/clamp-linear-intepolation-based-on-viewport-width-builder-xgkft?view=preview
+//   (from: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#aa-for-those-who-dont-mind-that-edge-case)
+//   - Alternatives:
+//     - https://modern-fluid-typography.vercel.app/
+//     - https://royalfig.github.io/fluid-typography-calculator/
+// - Good font stripper tool: https://transfonter.org/
+// - unquote("code") is for SASS ignoring things that it doesn't understand and errors.
+// */
 
 :root {
   --blur: blur(10px);
@@ -57,7 +65,7 @@ ol { margin-left: -5px; }
 
 ol ul li { margin-left: -7.5px; }
 
-h2 { font-size: clamp(1.3rem, 0.6905rem + 3.0476vw, 1.5rem); }
+h2 { font-size: unquote("clamp(1.3rem, 0.6905rem + 3.0476vw, 1.5rem)"); }
 
 body {
   font-weight: 400;
@@ -90,7 +98,7 @@ header {
 
 #desc {
   font-family: "iA Writer Duo", "Roboto Mono", "SF Mono", Consolas, "Lucida Console", "DejaVu Sans Mono", "Liberation Mono", "Courier New", Courier, monospace;
-  font-size: clamp(1.025rem, 0.8000rem + 1.1429vw, 1.4rem);
+  font-size: unquote("clamp(1.025rem, 0.8000rem + 1.1429vw, 1.4rem)");
   font-style: italic;
   text-align: center;
   padding: 10px 16px;
@@ -106,7 +114,7 @@ header {
   text-align: center;
   text-decoration: none;
   padding: 10px 15px;
-  font-size: clamp(1.05rem, 0.8064rem + 1.1636vw, 1.25rem);
+  font-size: unquote("clamp(1.05rem, 0.8064rem + 1.1636vw, 1.25rem)");
   border-radius: 20px;
 }
 
@@ -151,7 +159,7 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   top: 0;
   z-index: 1;
   padding: 10px 0;
-  background: linear-gradient(180deg, rgb(183 181 181) 0%, rgba(196,196,196,0.9) 100%);
+  background: linear-gradient(180deg, rgb(183,181,181) 0%, rgba(196,196,196,0.9) 100%);
   border-top: 1px solid #979595;
   border-bottom: 1px solid rgba(0,0,0,0.25);
 }
@@ -200,10 +208,10 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 }
 
 #primary
-{ margin: min(1500px, 5%, 42px) auto 0; }
+{ margin: unquote("min(1500px, 5%, 42px) auto 0"); }
 
 #variations, #generic, #outdated
-{ margin: min(1000px, 7%, 42px) auto 0; }
+{ margin: unquote("min(1000px, 7%, 42px) auto 0"); }
 
 .list {
   display: grid;
@@ -233,12 +241,16 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   transition: box-shadow 0.125s ease;
 }
 
-/* https://css-irl.info/detecting-hover-capable-devices/ */
-/* https://web.dev/content-visibility/ */
+// /*
+// https://css-irl.info/detecting-hover-capable-devices/ 
+// https://web.dev/content-visibility/
+// Average of a[href^="/icons/"] height with 1 to 5 lines of text. Calc doesn't work well for `contain-intrinsic-size`.
+// */
+
 @media (hover: none) and (pointer: coarse) {
   .icon-box {
     content-visibility: auto;
-    contain-intrinsic-size: 243.533px; /* <-- Average of a[href^="/icons/"] height with 1 to 5 lines of text. Calc doesn't work well for `contain-intrinsic-size`. */
+    contain-intrinsic-size: 243.533px; 
   }
 }
 
@@ -287,7 +299,7 @@ a + .disclaimer { margin-top: 25px; }
   color: rgba(0,0,0,0.7);
 }
 
-/* --- Lightbox CSS --- */
+// /* --- Lightbox CSS --- */
 
 .lightbox { display: none; }
 
@@ -356,7 +368,7 @@ a + .disclaimer { margin-top: 25px; }
 
 .lightbox .close-mobile { display: none; }
 
-/* --- Issue guidelines related (for lightbox) --- */
+// /* --- Issue guidelines related (for lightbox) --- */
 
 #please-read {
   font-size: 1.4rem;
@@ -396,7 +408,7 @@ figcaption li ul { margin-top:    4px; }
   figcaption li ul { margin-top: 8px; }
 }
 
-/* --- "Scroll to the top" button --- */
+// /* --- "Scroll to the top" button --- */
 
 #scroll-to-top {
   visibility: hidden;
@@ -425,7 +437,7 @@ figcaption li ul { margin-top:    4px; }
   opacity: 1 !important;
 }
 
-/* --- Mobile tweaks --- */
+// /* --- Mobile tweaks --- */
 
 @media (max-width: 845px) and (hover: none) and (pointer: coarse) {
   .lightbox:target { align-items: start; }
@@ -462,7 +474,7 @@ figcaption li ul { margin-top:    4px; }
   
   p.note {
     margin-bottom: 125px;
-    font-size: clamp(0.8rem, -0.5333rem + 6.6667vw, 0.85rem);
+    font-size: unquote("clamp(0.8rem, -0.5333rem + 6.6667vw, 0.85rem)");
   }
     
   .hide-mobile {
@@ -471,11 +483,11 @@ figcaption li ul { margin-top:    4px; }
   }
 }
 
-/* --- If browser supports feature --- */
+// /* --- If browser supports feature --- */
 
 @supports (backdrop-filter: blur(0)) {
   #search-bar {
-    background: linear-gradient(180deg, rgb(183 181 181) 0%, rgba(196, 196, 196, 0.5) 100%);
+    background: linear-gradient(180deg, rgb(183,181,181) 0%, rgba(196,196,196,0.5) 100%);
     backdrop-filter: var(--blur);
   }
   

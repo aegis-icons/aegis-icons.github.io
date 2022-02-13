@@ -1,167 +1,146 @@
 ---
+layout: default
 title: aegis-icons – Unofficial 2FA entry icons for open source Android authenticator Aegis
 ---
 
-<!DOCTYPE HTML>
-<html> 
-<head>
-  <link rel="preload" href="/fonts/inter-v3-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/inter-v3-latin-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="prefetch" href="/fonts/iA-Writer-Duo-S-Italic-stripped.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/styles/main.css" as="style">
-  <link rel="prefetch" href="https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest" as="fetch" crossorigin>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }}</title>
-  <style>{% include sanitize.css %}</style>
-  <script>{% include list.js %}</script>
-  <link rel="stylesheet" type="text/css" href="/styles/main.css">
-  {% include _favicon-stuff.txt %}
-  {% include _metadata-stuff.txt %}
-</head>
-
-<body>
-  <div id="gradient-bg">
-    <header>
-      <div id="logo"></div>
-      
-      <div id="desc">Unofficial monochrome-styled 2FA icons for open source Android authenticator Aegis</div>
-      
-      <a id="download-link" href="https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip">
-        Download icon pack<br>
-        <b>(updated monthly)</b><br>
-      </a>
-      
-      <div id="release">Latest release: <b id="release-date">...</b></div>
-      
-      <div id="info-links">
-        <p><a class="link-purble" href="#issue-guidelines">Request new icons on Github</a></p>
-        
-        <p>
-          <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/CONTRIBUTING.md">Contributing</a> • 
-          <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/FAQ.md">FAQ</a> • 
-          <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons">Repository</a>
-        </p>
-        
-        <p><a class="link-green" href="https://getaegis.app/">Download Aegis for Android</a></p>
-      </div>
-    </header>
-  </div>
-  
-  <div id="search-bar">
-    <div id="search-functions">
-      <input class="search" placeholder="Search for icon">
-      <button class="reset">Clear</button>
-      <noscript>
-        <style>{% include _noscript-style.css %}</style>
-        <div>Please enable JavaScript to use search function!</div>
-      </noscript>
-    </div>
-  </div>
-
-  <div id="primary">
-    <h2>Apps & Sites</h2>
-    <div class="list">
-      {% assign image_files = site.static_files | where: "is_primary", true %}
-      {% for myimage in image_files %}
-      <a href="{{ myimage.path }}" download>
-        <div class="icon-box">
-          <div class="icon">
-            <img src="{{ myimage.path }}" loading="lazy" decoding="async">
-          </div>
-          <p class="name">{{ myimage.basename }}</p>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-  
-  <div id="variations">
-    <h2>Variations & Alternatives</h2>
-    <div class="list">
-      {% assign image_files = site.static_files | where: "is_variation", true %}
-      {% for myimage in image_files %}
-      <a href="{{ myimage.path }}" download>
-        <div class="icon-box">
-          <div class="icon">
-            <img src="{{ myimage.path }}" loading="lazy" decoding="async">
-          </div>
-          <p class="name">{{ myimage.basename }}</p>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-
-  <div id="generic">
-    <h2>Generic</h2>
-    <div class="list">
-      {% assign image_files = site.static_files | where: "is_generic", true %}
-      {% for myimage in image_files %}
-      <a href="{{ myimage.path }}" download>
-        <div class="icon-box">
-          <div class="icon">
-            <img src="{{ myimage.path }}" loading="lazy" decoding="async">
-          </div>
-          <p class="name">{{ myimage.basename }}</p>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-  
-  <div id="outdated">
-    <h2>Outdated</h2>
-    <div class="list">
-      {% assign image_files = site.static_files | where: "is_outdated", true %}
-      {% for myimage in image_files %}
-      <a href="{{ myimage.path }}" download>
-        <div class="icon-box">
-          <div class="icon">
-            <img src="{{ myimage.path }}" loading="lazy" decoding="async">
-          </div>
-          <p class="name">{{ myimage.basename }}</p>
-        </div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-  
-  <footer>{% include _footer.txt %}</footer>
-  
-  <div class="lightbox" id="issue-guidelines">
-    <figure>
-      <a href="#" class="close"></a>
-      <figcaption>
-        <a href="#" class="close-mobile">Close this modal</a>
-      
-        <p id="please-read">Before making any requests, please read our <b>issue guidelines!</b></p>
-        
-        {% capture md-include1 %}
-        {% include _issue-guidelines.md %}
-        {% endcapture %}
-        
-        {{ md-include1 | markdownify }}
-        
-        <p class="accept">
-          <a href="https://github.com/aegis-icons/aegis-icons/issues/">Accept the guidelines</a>
-        </p>
-        
-        <p class="note">For making issues, you need <a href="https://github.com/join">Github account</a>.</p>
-      </figcaption>
-    </figure>
-  </div>
-  
-  <button id="scroll-to-top">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-      <path fill="none" d="M0 0h256v256H0z"/>
-      <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 224V72m-72 72 72-72 72 72M40 40h176"/>
-    </svg>
-  </button>
+<div id="gradient-bg">
+  <header>
+    <div id="logo"></div>
     
-  <script>{% include _bottom-scripts.js %}</script>
-  
-  <script data-goatcounter="https://aegis-icons.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  
-</body>
-</html>
+    <div id="desc">Unofficial monochrome-styled 2FA icons for open source Android authenticator Aegis</div>
+    
+    <a id="download-link" href="https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip">
+      Download icon pack<br>
+      <b>(updated monthly)</b><br>
+    </a>
+    
+    <div id="release">Latest release: <b id="release-date">...</b></div>
+    
+    <div id="info-links">
+      <p><a class="link-purble" href="#issue-guidelines">Request new icons on Github</a></p>
+      
+      <p>
+        <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/CONTRIBUTING.md">Contributing</a> • 
+        <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/FAQ.md">FAQ</a> • 
+        <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons">Repository</a>
+      </p>
+      
+      <p><a class="link-green" href="https://getaegis.app/">Download Aegis for Android</a></p>
+    </div>
+  </header>
+</div>
+
+<div id="search-bar">
+  <div id="search-functions">
+    <input class="search" placeholder="Search for icon">
+    <button class="reset">Clear</button>
+    <noscript>
+      <style>{% include _noscript-style.css %}</style>
+      <div>Please enable JavaScript to use search function!</div>
+    </noscript>
+  </div>
+</div>
+
+<div id="primary">
+  <h2>Apps & Sites</h2>
+  <div class="list">
+    {% assign image_files = site.static_files | where: "is_primary", true %}
+    {% for myimage in image_files %}
+    <a href="{{ myimage.path }}" download>
+      <div class="icon-box">
+        <div class="icon">
+          <img src="{{ myimage.path }}" loading="lazy" decoding="async">
+        </div>
+        <p class="name">{{ myimage.basename }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="variations">
+  <h2>Variations & Alternatives</h2>
+  <div class="list">
+    {% assign image_files = site.static_files | where: "is_variation", true %}
+    {% for myimage in image_files %}
+    <a href="{{ myimage.path }}" download>
+      <div class="icon-box">
+        <div class="icon">
+          <img src="{{ myimage.path }}" loading="lazy" decoding="async">
+        </div>
+        <p class="name">{{ myimage.basename }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="generic">
+  <h2>Generic</h2>
+  <div class="list">
+    {% assign image_files = site.static_files | where: "is_generic", true %}
+    {% for myimage in image_files %}
+    <a href="{{ myimage.path }}" download>
+      <div class="icon-box">
+        <div class="icon">
+          <img src="{{ myimage.path }}" loading="lazy" decoding="async">
+        </div>
+        <p class="name">{{ myimage.basename }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="outdated">
+  <h2>Outdated</h2>
+  <div class="list">
+    {% assign image_files = site.static_files | where: "is_outdated", true %}
+    {% for myimage in image_files %}
+    <a href="{{ myimage.path }}" download>
+      <div class="icon-box">
+        <div class="icon">
+          <img src="{{ myimage.path }}" loading="lazy" decoding="async">
+        </div>
+        <p class="name">{{ myimage.basename }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<footer>{% include _footer.txt %}</footer>
+
+<div class="lightbox" id="issue-guidelines">
+  <figure>
+    <a href="#" class="close"></a>
+    <figcaption>
+      <a href="#" class="close-mobile">Close this modal</a>
+    
+      <p id="please-read">Before making any requests, please read our <b>issue guidelines!</b></p>
+      
+      {% capture md-include1 %}
+      {% include _issue-guidelines.md %}
+      {% endcapture %}
+      
+      {{ md-include1 | markdownify }}
+      
+      <p class="accept">
+        <a href="https://github.com/aegis-icons/aegis-icons/issues/">Accept the guidelines</a>
+      </p>
+      
+      <p class="note">For making issues, you need <a href="https://github.com/join">Github account</a>.</p>
+    </figcaption>
+  </figure>
+</div>
+
+<button id="scroll-to-top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+    <path fill="none" d="M0 0h256v256H0z"/>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 224V72m-72 72 72-72 72 72M40 40h176"/>
+  </svg>
+</button>
+
+<script>{% include _bottom-scripts.js %}</script>
+
+<script data-goatcounter="https://aegis-icons.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
