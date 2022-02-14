@@ -2,15 +2,13 @@
 # SASS file
 ---
 
-// /*
 // - `Clamp` values generated with: https://codesandbox.io/embed/clamp-linear-intepolation-based-on-viewport-width-builder-xgkft?view=preview
 //   (from: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#aa-for-those-who-dont-mind-that-edge-case)
 //   - Alternatives:
 //     - https://modern-fluid-typography.vercel.app/
 //     - https://royalfig.github.io/fluid-typography-calculator/
 // - Good font stripper tool: https://transfonter.org/
-// - unquote("code") is for SASS ignoring things that it doesn't understand and errors.
-// */
+// - `unquote("code")` is for SASS ignoring things that it doesn't understand and errors.
 
 :root {
   --blur: blur(10px);
@@ -123,6 +121,7 @@ header {
 #release {
   border: 1px solid rgba(0, 0, 0, 0.15);
   background: #fff;
+  display: block;
   width: fit-content;
   margin: 0 auto;
   text-align: center;
@@ -241,11 +240,9 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   transition: box-shadow 0.125s ease;
 }
 
-// /*
 // https://css-irl.info/detecting-hover-capable-devices/ 
 // https://web.dev/content-visibility/
 // Average of a[href^="/icons/"] height with 1 to 5 lines of text. Calc doesn't work well for `contain-intrinsic-size`.
-// */
 
 @media (hover: none) and (pointer: coarse) {
   .icon-box {
@@ -299,7 +296,7 @@ a + .disclaimer { margin-top: 25px; }
   color: rgba(0,0,0,0.7);
 }
 
-// /* --- Lightbox CSS --- */
+// --- Lightbox CSS ---
 
 .lightbox { display: none; }
 
@@ -368,7 +365,7 @@ a + .disclaimer { margin-top: 25px; }
 
 .lightbox .close-mobile { display: none; }
 
-// /* --- Issue guidelines related (for lightbox) --- */
+// --- Issue guidelines related (for lightbox) ---
 
 #please-read {
   font-size: 1.4rem;
@@ -408,7 +405,7 @@ figcaption li ul { margin-top:    4px; }
   figcaption li ul { margin-top: 8px; }
 }
 
-// /* --- "Scroll to the top" button --- */
+// --- "Scroll to the top" button ---
 
 #scroll-to-top {
   visibility: hidden;
@@ -437,7 +434,7 @@ figcaption li ul { margin-top:    4px; }
   opacity: 1 !important;
 }
 
-// /* --- Mobile tweaks --- */
+// --- Mobile tweaks ---
 
 @media (max-width: 845px) and (hover: none) and (pointer: coarse) {
   .lightbox:target { align-items: start; }
@@ -483,7 +480,7 @@ figcaption li ul { margin-top:    4px; }
   }
 }
 
-// /* --- If browser supports feature --- */
+// --- If browser supports feature ---
 
 @supports (backdrop-filter: blur(0)) {
   #search-bar {
