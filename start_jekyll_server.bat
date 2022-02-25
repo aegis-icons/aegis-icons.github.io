@@ -5,4 +5,4 @@ echo http://localhost:4000/
 echo.
 echo ----
 echo.
-jekyll serve --host=0.0.0.0
+jekyll serve --host=0.0.0.0 --incremental
