@@ -43,7 +43,7 @@
   };
   
   // ▼ Scroll to the top function
-  function scrollToTop() { rootElement.scrollTo( { top: 0 } ); }
+  function scrollToTop() { rootElement.scrollTo({ top: 0 }); }
   window.addEventListener("scroll", myScrollFunc);
   scrollToTopBtn.addEventListener("click", scrollToTop);
   
