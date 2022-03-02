@@ -1,7 +1,7 @@
-#release, #search-functions input, #search-functions button, #icon-total, #scroll-to-top
+#release, #search-functions input, #search-functions button, #icon-total, #icon-total + .small, #scroll-to-top
 { display: none !important; }
 
-#download-link { margin-bottom: 20px; }
+#download-link { margin-bottom: 4px; }
 
 #search-bar { position: inherit; }
 
