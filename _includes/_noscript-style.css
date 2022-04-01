@@ -1,4 +1,4 @@
-#release, #search-functions input, #search-functions button, #icon-total, #icon-total + .small, #scroll-to-top
+#release, #search-functions input, #search-functions button, #icon-total, .label, #scroll-to-top
 { display: none !important; }
 
 #download-link { margin-bottom: 4px; }

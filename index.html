@@ -50,7 +50,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
 </div>
 
 <div id="primary">
-  <h2>Apps & Sites</h2>
+  <h2>Apps & Sites <span class="label" id="icon-amount-pri">...</span></h2>
   <div class="list">
     {% assign image_files = site.static_files | where: "is_primary", true %}
     {% for myimage in image_files %}
@@ -60,7 +60,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
 </div>
 
 <div id="variations">
-  <h2>Variations & Alternatives</h2>
+  <h2>Variations & Alternatives <span class="label" id="icon-amount-var">...</span></h2> 
   <div class="list">
     {% assign image_files = site.static_files | where: "is_variation", true %}
     {% for myimage in image_files %}
@@ -70,7 +70,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
 </div>
 
 <div id="generic">
-  <h2>Generic</h2>
+  <h2>Generic <span class="label" id="icon-amount-gen">...</span></h2>
   <div class="list">
     {% assign image_files = site.static_files | where: "is_generic", true %}
     {% for myimage in image_files %}
@@ -80,7 +80,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
 </div>
 
 <div id="outdated">
-  <h2>Outdated</h2>
+  <h2>Outdated <span class="label" id="icon-amount-out">...</span></h2>
   <div class="list">
     {% assign image_files = site.static_files | where: "is_outdated", true %}
     {% for myimage in image_files %}
@@ -116,7 +116,6 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
 
 <button id="scroll-to-top">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-    <path fill="none" d="M0 0h256v256H0z"/>
     <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 224V72m-72 72 72-72 72 72M40 40h176"/>
   </svg>
 </button>

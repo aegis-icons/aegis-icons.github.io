@@ -10,9 +10,7 @@
 // - Good font stripper tool: https://transfonter.org/
 // - `unquote("code")` is for SASS ignoring things that it doesn't understand and errors.
 
-:root {
-  --blur: blur(10px);
-}
+:root { --blur: blur(10px); }
 
 @font-face {
   font-display: swap;
@@ -57,7 +55,7 @@
 
 body, input, button { font-family: "Inter", "Roboto", "Segoe UI", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif; }
 
-button, .icon img { user-select: none; -webkit-user-select: none; } 
+button, .icon img { user-select: none; -webkit-user-select: none; }
 
 ol { margin-left: -5px; }
 
@@ -75,6 +73,13 @@ a {
   color: #000;
   text-decoration: none;
 }
+
+.show {
+  visibility: unset !important;
+  opacity: 1 !important;
+}
+
+.hide { visibility: hidden; }
 
 #gradient-bg {
   background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 50%, #EAEAEA 100%);
@@ -234,6 +239,17 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   white-space: nowrap;
 }
 
+.label {
+  font-size: 0.7rem;
+  font-weight: normal;
+  background: #fff;
+  padding: 3px 7px;
+  border-radius: 50px;
+  border: 1px solid rgba(0,0,0,0.35);
+  vertical-align: 4px;
+  margin-left: 4px;
+}
+
 .icon {
   background: #fff;
   height: 100%;
@@ -280,12 +296,8 @@ footer {
 
 #icon-total {
   font-size: 0.925rem;
-  margin: 12px 0 0 0;
+  margin: 12px 0;
 }
-
-.small { font-size: 0.775rem; }
-
-#icon-total + .small { margin-top: 0; }
 
 img[src="/assets/github.svg"] {
   margin: 0 3px 4px 0;
@@ -346,7 +358,7 @@ a + .disclaimer { margin-top: 25px; }
   z-index: 1;
   align-items: center;
   justify-content: center;
-  background-color: #c13838;
+  background: #c13838;
   border-radius: 50%;
   color: white;
   content: "×";
@@ -361,7 +373,7 @@ a + .disclaimer { margin-top: 25px; }
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.8);
   content: "";
   cursor: default;
   backdrop-filter: blur(10px);
@@ -431,11 +443,6 @@ figcaption li ul { margin-top:    4px; }
 #scroll-to-top svg {
   opacity: 0.75;
   margin-top: 2px;
-}
-
-.show {
-  visibility: unset !important;
-  opacity: 1 !important;
 }
 
 // --- Mobile tweaks ---

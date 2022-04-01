@@ -1,40 +1,50 @@
-// ==== VARs used more then once ====
+// ==== Used more then once ====
+  var search = document.querySelector('.search');
   var rootElement = document.documentElement;
+  var headerHeight = document.querySelector("#gradient-bg").offsetHeight;
+  const isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/));
+  var scrollToTopBtn = document.getElementById("scroll-to-top");
+  const labelAll = document.querySelectorAll('.label');
 
 // ==== List.js search function ====
   var listNames = ['primary', 'variations', 'generic', 'outdated'];
-
   var lists = listNames.map(function (name) { return new List(name, { valueNames: ['name'] }); });
-
-  var search = document.querySelector('.search');
+  
   search.addEventListener('keyup', function () {
     var searchValue = this.value;
-    lists.forEach(function (list) { list.search(searchValue); });
-    
-    // ▼ Scroll up (but stop before of #gradient-bg element)
-    headerElem = document.querySelector("#gradient-bg");
-    headerHeight = headerElem.offsetHeight;
-    rootElement.scrollTo({ top: headerHeight });
+    lists.forEach(function (list) { list.search(searchValue); }); 
+    // ▼ Scroll up, but stop before of #gradient-bg
+    // ▼▼ If mobile device
+    if (isMobile) { rootElement.scrollTo({ top: headerHeight }); }
+    // ▼▼ If PC device (and only if scrolled over #gradient-bg)
+    if (!isMobile && (headerHeight <= Math.ceil(window.pageYOffset)) == true) { rootElement.scrollTo({ top: headerHeight }); };
+    // ▼ Hide icon count labels when searching
+    for (const label of labelAll) {
+      label.classList.add('hide');
+    // ▼▼ Remove class if search input is empty
+      if (search.value.length == 0) { label.classList.remove('hide'); }
+    }
   });
 
 // ==== Reset button function and List.js search clearing ====
   var resetButton = document.querySelector('button.reset');
+  
   resetButton.addEventListener('click', function () {
     search.value = '';
     lists.forEach(function (list) { list.search(); });
-    
-    headerElem = document.querySelector("#gradient-bg");
-    headerHeight = headerElem.offsetHeight;
-    rootElement.scrollTo({ top: headerHeight });
+    // ▼ Scroll up (only if scrolled over #gradient-bg), but stop before of #gradient-bg
+    if (headerHeight <= Math.ceil(window.pageYOffset) == true) { rootElement.scrollTo({ top: headerHeight }); }
+    for (const label of labelAll) { label.classList.remove('hide'); }
   });
 
 // ==== Count the icons and print the results ====
-  document.getElementById("icon-amount-all").innerHTML = document.querySelectorAll('.icon').length;
-  document.getElementById("icon-amount-primary").innerHTML = document.querySelectorAll('#primary .icon').length;
+  document.getElementById("total-icon-count").innerHTML = document.querySelectorAll('.icon').length;
+  document.getElementById("icon-amount-pri").innerHTML  = document.querySelectorAll('#primary .icon').length;
+  document.getElementById("icon-amount-var").innerHTML  = document.querySelectorAll('#variations .icon').length;
+  document.getElementById("icon-amount-gen").innerHTML  = document.querySelectorAll('#generic .icon').length;
+  document.getElementById("icon-amount-out").innerHTML  = document.querySelectorAll('#outdated .icon').length;
 
-// ==== "Scroll to the top" button ====
-  scrollToTopBtn = document.getElementById("scroll-to-top");
-  
+// ==== "Scroll to the top" button ===
   // ▼ At 1200px Y axis mark, add class for button (else, remove / do nothing)
   var myScrollFunc = function () {
     var y = window.scrollY;
@@ -49,7 +59,7 @@
   
   // ▼ If at the bottom of page, add class (so it's possible to hide it for mobile with CSS)
   window.onscroll = function(event) {
-    // The "+ 100" makes so that this triggers *slightly* earlier, fixes problem with Firefox Android
+    // ▼▼ The "+ 100" triggers it 100px earlier, fixes problem with Firefox Android
     if ((window.innerHeight + Math.ceil(window.pageYOffset) + 100) >= document.body.offsetHeight) { scrollToTopBtn.classList.add("hide-mobile"); }
     else { scrollToTopBtn.classList.remove("hide-mobile"); }
   };
