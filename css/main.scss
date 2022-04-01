@@ -57,7 +57,7 @@
 
 body, input, button { font-family: "Inter", "Roboto", "Segoe UI", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif; }
 
-button, .icon { user-select: none; -webkit-user-select: none; } 
+button, .icon img { user-select: none; -webkit-user-select: none; } 
 
 ol { margin-left: -5px; }
 
@@ -217,9 +217,9 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  column-gap: 13.85px;
-  row-gap: 13.85px;
+  grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
+  column-gap: 13px;
+  row-gap: 13px;
 }
 
 .list:empty {
@@ -234,7 +234,7 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   white-space: nowrap;
 }
 
-.icon-box {
+.icon {
   background: #fff;
   height: 100%;
   box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
@@ -245,20 +245,20 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 
 // https://css-irl.info/detecting-hover-capable-devices/ 
 // https://web.dev/content-visibility/
-// Average of a[href^="/icons/"] height with 1 to 5 lines of text. Calc doesn't work well for `contain-intrinsic-size`.
+// Average of .icon height (+ padding-bottom) with 1 to 4 lines of text. CSS Calc doesn't work well for `contain-intrinsic-size`.
 
 @media (hover: none) and (pointer: coarse) {
-  .icon-box {
+  .icon {
     content-visibility: auto;
-    contain-intrinsic-size: 243.533px; 
+    contain-intrinsic-size: 233.531px; 
   }
 }
 
-.icon-box:active, .icon-box:focus { box-shadow: 0px 4px 4px rgba(0,0,0,0.25), inset 0px 0px 0px 6px rgba(38,60,217,0.85); }
+.icon:active, .icon:focus { box-shadow: 0px 4px 4px rgba(0,0,0,0.25), inset 0px 0px 0px 6px rgba(38,60,217,0.85); }
 
-.icon-box img {
+.icon img {
   margin: 0 auto;
-  padding: 20px 10px 0 10px;
+  padding: 20px 11.5px 0 11.5px;
   width: 150px;
   height: 150px;
   display: block;

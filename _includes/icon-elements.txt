@@ -1,6 +1,4 @@
-<a href="{{ myimage.path }}" download>
-  <div class="icon-box">
-    <img src="{{ myimage.path }}" loading="lazy" decoding="async">
-    <p class="name">{{ myimage.basename }}</p>
-  </div>
+<a class="icon" href="{{ myimage.path }}" download>
+  <img src="{{ myimage.path }}" loading="lazy" decoding="async">
+  <p class="name">{{ myimage.basename }}</p>
 </a>

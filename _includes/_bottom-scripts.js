@@ -29,8 +29,8 @@
   });
 
 // ==== Count the icons and print the results ====
-  document.getElementById("icon-amount-all").innerHTML = document.querySelectorAll('.icon-box').length;
-  document.getElementById("icon-amount-primary").innerHTML = document.querySelectorAll('#primary .icon-box').length;
+  document.getElementById("icon-amount-all").innerHTML = document.querySelectorAll('.icon').length;
+  document.getElementById("icon-amount-primary").innerHTML = document.querySelectorAll('#primary .icon').length;
 
 // ==== "Scroll to the top" button ====
   scrollToTopBtn = document.getElementById("scroll-to-top");
