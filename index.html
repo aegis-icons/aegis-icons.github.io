@@ -54,14 +54,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   <div class="list">
     {% assign image_files = site.static_files | where: "is_primary", true %}
     {% for myimage in image_files %}
-    <a href="{{ myimage.path }}" download>
-      <div class="icon-box">
-        <div class="icon">
-          <img src="{{ myimage.path }}" loading="lazy" decoding="async">
-        </div>
-        <p class="name">{{ myimage.basename }}</p>
-      </div>
-    </a>
+      {% include icon-elements.txt %}
     {% endfor %}
   </div>
 </div>
@@ -71,14 +64,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   <div class="list">
     {% assign image_files = site.static_files | where: "is_variation", true %}
     {% for myimage in image_files %}
-    <a href="{{ myimage.path }}" download>
-      <div class="icon-box">
-        <div class="icon">
-          <img src="{{ myimage.path }}" loading="lazy" decoding="async">
-        </div>
-        <p class="name">{{ myimage.basename }}</p>
-      </div>
-    </a>
+      {% include icon-elements.txt %}
     {% endfor %}
   </div>
 </div>
@@ -88,14 +74,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   <div class="list">
     {% assign image_files = site.static_files | where: "is_generic", true %}
     {% for myimage in image_files %}
-    <a href="{{ myimage.path }}" download>
-      <div class="icon-box">
-        <div class="icon">
-          <img src="{{ myimage.path }}" loading="lazy" decoding="async">
-        </div>
-        <p class="name">{{ myimage.basename }}</p>
-      </div>
-    </a>
+      {% include icon-elements.txt %}
     {% endfor %}
   </div>
 </div>
@@ -105,14 +84,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   <div class="list">
     {% assign image_files = site.static_files | where: "is_outdated", true %}
     {% for myimage in image_files %}
-    <a href="{{ myimage.path }}" download>
-      <div class="icon-box">
-        <div class="icon">
-          <img src="{{ myimage.path }}" loading="lazy" decoding="async">
-        </div>
-        <p class="name">{{ myimage.basename }}</p>
-      </div>
-    </a>
+      {% include icon-elements.txt %}
     {% endfor %}
   </div>
 </div>
@@ -128,7 +100,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       <p id="please-read">Before making any requests, please read our <b>issue guidelines!</b></p>
       
       {% capture md-include1 %}
-      {% include _issue-guidelines.md %}
+      {% include ._issue-guidelines.md %}
       {% endcapture %}
       
       {{ md-include1 | markdownify }}

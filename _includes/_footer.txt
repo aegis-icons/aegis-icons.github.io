@@ -7,7 +7,7 @@
 </p>
 
 <a href="https://github.com/aegis-icons/aegis-icons">
-  <img src="/assets/github.svg"> Github
+  <img src="/assets/github.svg" loading="lazy" decoding="async"> Github
 </a>
 
 <p class="disclaimer">
