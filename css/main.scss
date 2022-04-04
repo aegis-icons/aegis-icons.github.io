@@ -220,6 +220,17 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 #variations, #generic, #outdated
 { margin: unquote("min(1000px, 7%, 42px) auto 0"); }
 
+.label {
+  font-size: 0.7rem;
+  font-weight: normal;
+  background: #fff;
+  padding: 3px 7px;
+  border-radius: 50px;
+  border: 1px solid rgba(0,0,0,0.35);
+  vertical-align: 4px;
+  margin-left: 4px;
+}
+
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
@@ -239,18 +250,7 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   white-space: nowrap;
 }
 
-.label {
-  font-size: 0.7rem;
-  font-weight: normal;
-  background: #fff;
-  padding: 3px 7px;
-  border-radius: 50px;
-  border: 1px solid rgba(0,0,0,0.35);
-  vertical-align: 4px;
-  margin-left: 4px;
-}
-
-.icon {
+.list a {
   background: #fff;
   height: 100%;
   box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
@@ -259,20 +259,9 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   transition: box-shadow 0.125s ease;
 }
 
-// https://css-irl.info/detecting-hover-capable-devices/ 
-// https://web.dev/content-visibility/
-// Average of .icon height (+ padding-bottom) with 1 to 4 lines of text. CSS Calc doesn't work well for `contain-intrinsic-size`.
+.list a:active, .list a:focus { box-shadow: 0px 4px 4px rgba(0,0,0,0.25), inset 0px 0px 0px 6px rgba(38,60,217,0.85); }
 
-@media (hover: none) and (pointer: coarse) {
-  .icon {
-    content-visibility: auto;
-    contain-intrinsic-size: 233.531px; 
-  }
-}
-
-.icon:active, .icon:focus { box-shadow: 0px 4px 4px rgba(0,0,0,0.25), inset 0px 0px 0px 6px rgba(38,60,217,0.85); }
-
-.icon img {
+.list a img {
   margin: 0 auto;
   padding: 20px 11.5px 0 11.5px;
   width: 150px;

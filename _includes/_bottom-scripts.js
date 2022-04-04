@@ -13,7 +13,7 @@
   search.addEventListener('keyup', function () {
     var searchValue = this.value;
     lists.forEach(function (list) { list.search(searchValue); }); 
-    // ▼ Scroll up, but stop before of #gradient-bg
+    // ▼ Scroll and stop before of #gradient-bg
     // ▼▼ If mobile device
     if (isMobile) { rootElement.scrollTo({ top: headerHeight }); }
     // ▼▼ If PC device (and only if scrolled over #gradient-bg)
@@ -32,17 +32,17 @@
   resetButton.addEventListener('click', function () {
     search.value = '';
     lists.forEach(function (list) { list.search(); });
-    // ▼ Scroll up (only if scrolled over #gradient-bg), but stop before of #gradient-bg
+    // ▼ Scroll (only if scrolled over #gradient-bg) and stop before of #gradient-bg
     if (headerHeight <= Math.ceil(window.pageYOffset) == true) { rootElement.scrollTo({ top: headerHeight }); }
     for (const label of labelAll) { label.classList.remove('hide'); }
   });
 
 // ==== Count the icons and print the results ====
-  document.getElementById("total-icon-count").innerHTML = document.querySelectorAll('.icon').length;
-  document.getElementById("icon-amount-pri").innerHTML  = document.querySelectorAll('#primary .icon').length;
-  document.getElementById("icon-amount-var").innerHTML  = document.querySelectorAll('#variations .icon').length;
-  document.getElementById("icon-amount-gen").innerHTML  = document.querySelectorAll('#generic .icon').length;
-  document.getElementById("icon-amount-out").innerHTML  = document.querySelectorAll('#outdated .icon').length;
+  document.getElementById("total-icon-count").innerHTML = document.querySelectorAll('.list a').length;
+  document.getElementById("icon-amount-pri").innerHTML  = document.querySelectorAll('#primary .list a').length;
+  document.getElementById("icon-amount-var").innerHTML  = document.querySelectorAll('#variations .list a').length;
+  document.getElementById("icon-amount-gen").innerHTML  = document.querySelectorAll('#generic .list a').length;
+  document.getElementById("icon-amount-out").innerHTML  = document.querySelectorAll('#outdated .list a').length;
 
 // ==== "Scroll to the top" button ===
   // ▼ At 1200px Y axis mark, add class for button (else, remove / do nothing)
