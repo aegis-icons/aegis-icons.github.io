@@ -142,6 +142,7 @@ header {
 }
 
 #info-links a, footer a, .lightbox a {
+  padding-bottom: 1px;
   border-bottom: 4px solid;
   color: #191919;
   font-weight: bold;
@@ -400,16 +401,17 @@ a + .disclaimer { margin-top: 25px; }
   font-size: 0.85rem;
 }
 
-figcaption li    { margin-bottom: 4px; }
-figcaption li ul { margin-top:    4px; }
+figcaption li           { margin-bottom: 6px; }
+figcaption li ul        { margin-top:    4px; }
+figcaption ol > li + li { margin-top:    8px; }
 
 @media (max-width: 1000px) {
   figcaption li {
-    margin-bottom: 8px;
-    line-height: 25.5px;
+    margin-bottom: 4px;
+    line-height: 26px;
   }
   
-  figcaption li ul { margin-top: 8px; }
+  figcaption ol > li + li { margin-top: 10px; }
 }
 
 // --- "Scroll to the top" button ---
