@@ -10,7 +10,10 @@
 // - Good font stripper tool: https://transfonter.org/
 // - `unquote("code")` is for SASS ignoring things that it doesn't understand and errors.
 
-:root { --blur: blur(10px); }
+:root {
+  --blur: blur(10px);
+  --reset-bg: linear-gradient(180deg, rgba(255,82,82,0.8) 0%, rgba(156,36,36,0.8) 100%);
+}
 
 @font-face {
   font-display: swap;
@@ -198,7 +201,7 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 }
 
 .reset {
-  background: linear-gradient(180deg, rgba(255,82,82,0.8) 0%, rgba(156,36,36,0.8) 100%);
+  background: var(--reset-bg);
   color: #fff;
   border: 1px solid #3c3c3c;
   border-radius: 10px;
@@ -216,10 +219,10 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 }
 
 #primary
-{ margin: unquote("min(1500px, 5%, 42px) auto 0"); }
+{ margin: unquote("min(1500px, 5%, 35px) auto 0"); }
 
 #variations, #generic, #outdated
-{ margin: unquote("min(1000px, 7%, 42px) auto 0"); }
+{ margin: unquote("min(1000px, 7%, 35px) auto 0"); }
 
 .label {
   font-size: 0.7rem;

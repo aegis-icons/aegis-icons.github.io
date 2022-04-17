@@ -3,19 +3,25 @@
 
 #download-link { margin-bottom: 4px; }
 
-#search-bar { position: inherit; }
+#search-bar {
+  position: inherit;
+  background: var(--reset-bg);
+}
 
 #search-functions {
-  display: inherit; 
+  display: inherit;
   padding: 0 5px;
+  white-space: unset;
 }
 
 noscript div {
-  font-size: clamp(0.78rem, 0.2826rem + 2.5507vw, 1rem);
+  font-size: clamp(0.87rem, 0.7725rem + 0.4333vw, 1rem);
   color: #fff;
   text-align: center;
   font-weight: 600;
-  background: rgb(255, 82, 82);
-  padding: 6px 0;
-  border-radius: 10px;
+}
+
+noscript a {
+  color: #fff;
+  text-decoration: underline;
 }
