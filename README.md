@@ -18,4 +18,4 @@ Website for our icon set that has very basic Jekyll setup.
 
 ## License
 
-[Custom license](LICENSE.md), all rights reserved with exceptions mentioned in LICENSE doc. Icons in the "icons" directory are provided by **aegis-icons** and CC0 licensed ([license for icons](https://github.com/aegis-icons/aegis-icons/blob/master/LICENSE.md), [disclaimer](https://github.com/aegis-icons/aegis-icons#disclaimer)).
+[Custom license](LICENSE.md), all rights reserved with exceptions mentioned in LICENSE doc.
