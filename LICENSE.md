@@ -3,7 +3,7 @@
 All rights reserved, except:
 - For copying small parts of the website code.
   - Copying full source code and making slight edits **is not allowed**, this is not a freely usable template for your websites.
-- For personal learning purposes.
+- For private learning purposes.
 - For forking to improve the code and sending that as pull request here in [aegis-icons.github.io repo](https://github.com/aegis-icons/aegis-icons.github.io).
 
 _These assets aren't part of this licensing:_
