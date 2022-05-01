@@ -6,3 +6,4 @@ echo.
 echo ----
 echo.
 jekyll serve --host=0.0.0.0 --incremental
+pause

@@ -1,6 +1,7 @@
 exclude:
  - get_icons.bat
- - start_jekyll_server.bat
+ - .1_start_jekyll_server.bat
+ - .2_compress_bottom-scripts.bat
  - LICENSE.md
  - README.md
  
