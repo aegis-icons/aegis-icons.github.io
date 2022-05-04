@@ -1,5 +1,4 @@
 ---
-# SASS file
 ---
 
 // - `Clamp` values generated with: https://codesandbox.io/embed/clamp-linear-intepolation-based-on-viewport-width-builder-xgkft?view=preview
@@ -177,16 +176,16 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 
 #search-functions {
   display: grid;
-  max-width: 650px;
+  max-width: 642px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
   grid-template-columns: 1fr auto;
   column-gap: 10px;
   white-space: nowrap;
 }
 
 .search {
-  padding: 8px 0;
+  padding: 8px 3px;
   text-align: center;
   border-radius: 10px;
   border: 2px solid #606060;

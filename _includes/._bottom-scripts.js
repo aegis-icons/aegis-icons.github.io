@@ -9,8 +9,8 @@
 // ==== List.js search function ====
   var listNames = ['primary', 'variations', 'generic', 'outdated'];
   var lists = listNames.map(function (name) { return new List(name, { valueNames: ['name'] }); });
-  
-  search.addEventListener('keyup', function () {
+
+  var searchTrigger = function (event) {
     var searchValue = this.value;
     lists.forEach(function (list) { list.search(searchValue); }); 
     // ▼ Scroll and stop before of #gradient-bg
@@ -24,7 +24,11 @@
     // ▼▼ Remove class if search input is empty
       if (search.value.length == 0) { label.classList.remove('hide'); }
     }
-  });
+  };
+
+  // ▼▼ Trigger search by either typing or pasting
+  search.addEventListener('keyup', searchTrigger, false);
+  search.addEventListener('paste', searchTrigger, false);
 
 // ==== Reset button function and List.js search clearing ====
   var resetButton = document.querySelector('button.reset');
