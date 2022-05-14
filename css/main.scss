@@ -59,10 +59,6 @@ body, input, button { font-family: "Inter", "Roboto", "Segoe UI", system, -apple
 
 button, .list a img { user-select: none; -webkit-user-select: none; }
 
-ol { margin-left: -5px; }
-
-ol ul li { margin-left: -7.5px; }
-
 h2 { font-size: unquote("clamp(1.3rem, 0.6905rem + 3.0476vw, 1.5rem)"); }
 
 body {
@@ -375,7 +371,7 @@ a + .disclaimer { margin-top: 25px; }
 
 .lightbox .close-mobile { display: none; }
 
-// --- Issue guidelines related (for lightbox) ---
+// --- Lightbox content tweaks ---
 
 #please-read {
   font-size: 1.4rem;
@@ -383,12 +379,32 @@ a + .disclaimer { margin-top: 25px; }
   margin: .67em 0;
 }
 
-.accept {
+::marker {
+  color: #263CD9;
+  font-size: 1.065rem;
+  font-weight: bold;
+}
+
+li           { margin-bottom: 4px; }
+ol > li      { padding-left:  4px; }
+li ul,
+ol > li + li { margin-top:    4px; }
+ol,
+ol ul li     { margin-left:  -8px; }
+
+ol > li ul > li { list-style-type: disc; }
+
+ol > li ul > li li {
+  list-style-type: "–";
+  padding-left: 10px;
+}
+
+#accept {
   text-align: center;
   margin: 30px 0 25px 0;
 }
 
-.accept a {
+#accept a {
   border: 0 !important;
   background: #388E3C;
   padding: 12px 30px;
@@ -396,24 +412,11 @@ a + .disclaimer { margin-top: 25px; }
   border-radius: 10px;
 }
 
-.accept a:hover, .accept a:active { background: #1B5E20; }
+#accept a:hover, #accept a:active { background: #1B5E20; }
 
-.note {
+#note {
   text-align: center;
   font-size: 0.85rem;
-}
-
-figcaption li           { margin-bottom: 6px; }
-figcaption li ul        { margin-top:    4px; }
-figcaption ol > li + li { margin-top:    8px; }
-
-@media (max-width: 1000px) {
-  figcaption li {
-    margin-bottom: 4px;
-    line-height: 26px;
-  }
-  
-  figcaption ol > li + li { margin-top: 10px; }
 }
 
 // --- "Scroll to the top" button ---
@@ -474,6 +477,14 @@ figcaption ol > li + li { margin-top:    8px; }
     font-size: 20px;
     line-height: 0;
   }
+  
+  li {
+    margin-bottom: 5px;
+    line-height: 26px;
+  }
+  
+  ol > li + li { margin-top:   10px; }
+  ol ul li     { margin-left: -24px; }
   
   p.note {
     margin-bottom: 125px;
