@@ -486,7 +486,7 @@ ol > li ul > li li {
   ol > li + li { margin-top:   10px; }
   ol ul li     { margin-left: -24px; }
   
-  p.note {
+  #note {
     margin-bottom: 125px;
     font-size: unquote("clamp(0.8rem, -0.5333rem + 6.6667vw, 0.85rem)");
   }
