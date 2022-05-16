@@ -176,12 +176,12 @@ ol > li ul > li li {
     line-height: 26px;
   }
   
-  ol > li + li { margin-top:   10px; }
-  ol ul li     { margin-left: -24px; }
+  ol > li + li { margin-top: 10px; }
+  ol ul li { margin-left: -24px; }
   
   #note {
     margin-bottom: 125px;
-    font-size: unquote("clamp(0.8rem, -0.5333rem + 6.6667vw, 0.85rem)");
+    font-size: clamp(0.8rem, -0.5333rem + 6.6667vw, 0.85rem);
   }
     
   .hide-mobile {
