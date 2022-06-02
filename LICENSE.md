@@ -8,7 +8,7 @@ All rights reserved, except:
 
 _These assets aren't part of this licensing:_
 - [aegis-icons](https://github.com/aegis-icons/aegis-icons) SVGs (everything in the `icons` directory).
-  - **Copyright:** [licensed trademarks](https://github.com/aegis-icons/aegis-icons#disclaimer).
+  - **Copyright:** [licensed trademarks and miscellaneous licenses](https://github.com/aegis-icons/aegis-icons#disclaimer).
 - [iA Writer Duo](https://github.com/iaolo/iA-Fonts/tree/master/iA%20Writer%20Duo) font.
   - **Copyright:** [SIL OFL 1.1](https://github.com/iaolo/iA-Fonts/blob/master/iA%20Writer%20Duo/LICENSE.md).
 - [Inter](https://rsms.me/inter/) font.
