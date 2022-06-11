@@ -1,9 +1,10 @@
 exclude:
+ - .1___start_jekyll_server.bat
+ - .2___compress_bottom-scripts.bat
  - get_icons.bat
- - .1_start_jekyll_server.bat
- - .2_compress_bottom-scripts.bat
  - LICENSE.md
  - README.md
+ - x__excluded/
  
 defaults:
   - scope:

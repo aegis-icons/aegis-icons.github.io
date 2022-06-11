@@ -5,11 +5,14 @@
  
   aegis-icons.github.io config, disabled stuff that will never been needed.
 
-  Github: <https://github.com/csstools/sanitize.css>
-
-  ADDED AS INLINE TO HEAD, MINIMIZED
+  MINIFIED WITH .2_compress_includes_css_js BATCH FILE
   
-  Check: _includes/sanitize.css
+  CHECK FILE:  sanitize.min.css
+  
+  ---------------------
+  
+  sanitize.css GitHub: <https://github.com/csstools/sanitize.css>
+  
 */
 
 /* Document
