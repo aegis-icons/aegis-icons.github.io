@@ -8,7 +8,7 @@
 
 // ==== List.js search function ====
   var listNames = ['primary', 'variations', 'generic', 'outdated'];
-  var lists = listNames.map(function (name) { return new List(name, { valueNames: ['name'] }); });
+  var lists = listNames.map(function (name) { return new List(name, { valueNames: ['n'] }); });
 
   var searchTrigger = function (event) {
     var searchValue = this.value;
@@ -42,11 +42,11 @@
   });
 
 // ==== Count the icons and print the results ====
-  document.getElementById("total-icon-count").innerHTML = document.querySelectorAll('.list a').length;
-  document.getElementById("icon-amount-pri").innerHTML  = document.querySelectorAll('#primary .list a').length;
-  document.getElementById("icon-amount-var").innerHTML  = document.querySelectorAll('#variations .list a').length;
-  document.getElementById("icon-amount-gen").innerHTML  = document.querySelectorAll('#generic .list a').length;
-  document.getElementById("icon-amount-out").innerHTML  = document.querySelectorAll('#outdated .list a').length;
+  document.getElementById("total-icon-count").innerHTML = document.querySelectorAll('.n').length;
+  document.getElementById("icon-amount-pri").innerHTML  = document.querySelectorAll('#primary .n').length;
+  document.getElementById("icon-amount-var").innerHTML  = document.querySelectorAll('#variations .n').length;
+  document.getElementById("icon-amount-gen").innerHTML  = document.querySelectorAll('#generic .n').length;
+  document.getElementById("icon-amount-out").innerHTML  = document.querySelectorAll('#outdated .n').length;
 
 // ==== "Scroll to the top" button ===
   // ▼ At 1200px Y axis mark, add class for button (else, remove / do nothing)
