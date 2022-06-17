@@ -23,159 +23,159 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
 </head>
 
 <body>
-<div id="gradient-bg">
-  <header>
-    <div id="logo"></div>
-    
-    <div id="desc">
-      Unofficial monochrome-styled 2FA icons for open source Android authenticator Aegis
-    </div>
-    
-    <a id="download-link" href="https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip">
-      Download icon pack<br>
-      <b>(updated monthly)</b>
-    </a>
-    
-    <a id="release" href="https://github.com/aegis-icons/aegis-icons/releases/latest">
-      Latest release: <b id="release-date">...</b>
-    </a>
-    
-    <div id="info-links">
-      <p>
-        <a class="link-purble" href="#issue-guidelines">Request new icons on GitHub</a>
-      </p>
+  <div id="gradient-bg">
+    <header>
+      <div id="logo"></div>
       
-      <p>
-        <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/CONTRIBUTING.md">Contributing</a> • 
-        <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/FAQ.md">FAQ</a> • 
-        <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons">Repository</a>
-      </p>
-      
-      <p>
-        <a class="link-green" href="https://getaegis.app/">Download Aegis for Android</a>
-      </p>
-    </div>
-  </header>
-</div>
-
-<div id="search-bar">
-  <div id="search-functions">
-    <input class="search" placeholder="Search the icons">
-    <button class="reset">Clear</button>
-    <noscript>
-      <style>{% include noscript-style.min.css %}</style>
-      <div>
-        Enable JavaScript for search & other functions<br>
-        <small>
-          3rd party connections: <a href="https://www.goatcounter.com/">GoatCounter</a>, <a href="https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest">GitHub JSON</a>
-        </small>
+      <div id="desc">
+        Unofficial monochrome-styled 2FA icons for open source Android authenticator Aegis
       </div>
-    </noscript>
-  </div>
-</div>
-
-<div id="primary">
-  <h2>
-    Apps & Sites
-    <span class="label" id="icon-amount-pri">...</span>
-  </h2>
-  <div class="list">
-    {% assign image_files = site.static_files | where: "is_primary", true %}
-    {% for myimage in image_files %}
-      {% include 3a____icon-elements.txt %}
-    {% endfor %}
-  </div>
-</div>
-
-<div id="variations">
-  <h2>
-    Variations & Alternatives
-    <span class="label" id="icon-amount-var">...</span>
-  </h2> 
-  <div class="list">
-    {% assign image_files = site.static_files | where: "is_variation", true %}
-    {% for myimage in image_files %}
-      {% include 3a____icon-elements.txt %}
-    {% endfor %}
-  </div>
-</div>
-
-<div id="generic">
-  <h2>
-    Generic
-    <span class="label" id="icon-amount-gen">...</span>
-  </h2>
-  <div class="list">
-    {% assign image_files = site.static_files | where: "is_generic", true %}
-    {% for myimage in image_files %}
-      {% include 3a____icon-elements.txt %}
-    {% endfor %}
-  </div>
-</div>
-
-<div id="outdated">
-  <h2>
-    Outdated
-    <span class="label" id="icon-amount-out">...</span>
-  </h2>
-  <div class="list">
-    {% assign image_files = site.static_files | where: "is_outdated", true %}
-    {% for myimage in image_files %}
-      {% include 3a____icon-elements.txt %}
-    {% endfor %}
-  </div>
-</div>
-
-<footer>
-  <p id="icon-total">
-    Currently, we have total of <b id="total-icon-count">...</b> icons!
-  </p>
-
-  <a href="https://github.com/aegis-icons/aegis-icons">
-    <img src="/assets/github.svg" loading="lazy" decoding="async"> Github
-  </a>
-
-  <p class="disclaimer">
-    Aegis-icons includes material that may be protected as a trademark in some jurisdictions. Trademarks seen in here does not indicate endorsement to the brands. If you want to use icon(s) publicly, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights. Please do not use brand based icons for any purpose except to represent the company, product, or service to which they refer.
-  </p>
-
-  <p class="disclaimer">
-    We don't make icons for general purpose, we only focus on userbase of Aegis, the Android app. Check out <a href="https://simpleicons.org/">Simple Icons</a> instead!
-  </p>
-
-  <p class="small">
-    <a href="https://github.com/aegis-icons/aegis-icons/blob/master/messageme.md">Takedown info</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/LICENSE.md">License</a> • <a href="https://github.com/aegis-icons/aegis-icons/#credits">Credits</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/CREDITS-TO-CONTRIBUTORS.md">Contributors</a>
-  </p>
-</footer>
-
-<div class="lightbox" id="issue-guidelines">
-  <figure>
-    <a href="#" class="close"></a>
-    <figcaption>
-      <a href="#" class="close-mobile">Close this modal</a>
-    
-      <p id="please-read">Before making any requests, please read our <b>issue guidelines!</b></p>
       
-      {% capture md-include1 %}
-        {% include 1b____issue-guidelines.md %}
-      {% endcapture %}
+      <a id="download-link" href="https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip">
+        Download icon pack<br>
+        <b>(updated monthly)</b>
+      </a>
       
-      {{ md-include1 | markdownify }}
+      <a id="release" href="https://github.com/aegis-icons/aegis-icons/releases/latest">
+        Latest release: <b id="release-date">...</b>
+      </a>
       
-      <p id="accept">
-        <a href="https://github.com/aegis-icons/aegis-icons/issues/">Accept the guidelines</a>
-      </p>
+      <div id="info-links">
+        <p>
+          <a class="link-purble" href="#issue-guidelines">Request new icons on GitHub</a>
+        </p>
+        
+        <p>
+          <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/CONTRIBUTING.md">Contributing</a> • 
+          <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons/blob/master/FAQ.md">FAQ</a> • 
+          <a class="link-blue" href="https://github.com/aegis-icons/aegis-icons">Repository</a>
+        </p>
+        
+        <p>
+          <a class="link-green" href="https://getaegis.app/">Download Aegis for Android</a>
+        </p>
+      </div>
+    </header>
+  </div>
+
+  <div id="search-bar">
+    <div id="search-functions">
+      <input class="search" placeholder="Search the icons">
+      <button class="reset">Clear</button>
+      <noscript>
+        <style>{% include noscript-style.min.css %}</style>
+        <div>
+          Enable JavaScript for search & other functions<br>
+          <small>
+            3rd party connections: <a href="https://www.goatcounter.com/">GoatCounter</a>, <a href="https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest">GitHub JSON</a>
+          </small>
+        </div>
+      </noscript>
+    </div>
+  </div>
+
+  <div id="primary">
+    <h2>
+      Apps & Sites
+      <span class="label" id="icon-amount-pri">...</span>
+    </h2>
+    <div class="list">
+      {% assign image_files = site.static_files | where: "is_primary", true %}
+      {% for myimage in image_files %}
+        {% include 3a____icon-elements.txt %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div id="variations">
+    <h2>
+      Variations & Alternatives
+      <span class="label" id="icon-amount-var">...</span>
+    </h2> 
+    <div class="list">
+      {% assign image_files = site.static_files | where: "is_variation", true %}
+      {% for myimage in image_files %}
+        {% include 3a____icon-elements.txt %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div id="generic">
+    <h2>
+      Generic
+      <span class="label" id="icon-amount-gen">...</span>
+    </h2>
+    <div class="list">
+      {% assign image_files = site.static_files | where: "is_generic", true %}
+      {% for myimage in image_files %}
+        {% include 3a____icon-elements.txt %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div id="outdated">
+    <h2>
+      Outdated
+      <span class="label" id="icon-amount-out">...</span>
+    </h2>
+    <div class="list">
+      {% assign image_files = site.static_files | where: "is_outdated", true %}
+      {% for myimage in image_files %}
+        {% include 3a____icon-elements.txt %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <footer>
+    <p id="icon-total">
+      Currently, we have total of <b id="total-icon-count">...</b> icons!
+    </p>
+
+    <a href="https://github.com/aegis-icons/aegis-icons">
+      <img src="/assets/github.svg" loading="lazy" decoding="async"> Github
+    </a>
+
+    <p class="disclaimer">
+      Aegis-icons includes material that may be protected as a trademark in some jurisdictions. Trademarks seen in here does not indicate endorsement to the brands. If you want to use icon(s) publicly, you have to ensure that you have the legal right to do so and that you do not infringe any trademark rights. Please do not use brand based icons for any purpose except to represent the company, product, or service to which they refer.
+    </p>
+
+    <p class="disclaimer">
+      We don't make icons for general purpose, we only focus on userbase of Aegis, the Android app. Check out <a href="https://simpleicons.org/">Simple Icons</a> instead!
+    </p>
+
+    <p class="small">
+      <a href="https://github.com/aegis-icons/aegis-icons/blob/master/messageme.md">Takedown info</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/LICENSE.md">License</a> • <a href="https://github.com/aegis-icons/aegis-icons/#credits">Credits</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/CREDITS-TO-CONTRIBUTORS.md">Contributors</a>
+    </p>
+  </footer>
+
+  <div class="lightbox" id="issue-guidelines">
+    <figure>
+      <a href="#" class="close"></a>
+      <figcaption>
+        <a href="#" class="close-mobile">Close this modal</a>
       
-      <p id="note">For making issues, you'll need <a href="https://github.com/join">GitHub account</a>.</p>
-    </figcaption>
-  </figure>
-</div>
+        <p id="please-read">Before making any requests, please read our <b>issue guidelines!</b></p>
+        
+        {% capture md-include1 %}
+          {% include 1b____issue-guidelines.md %}
+        {% endcapture %}
+        
+        {{ md-include1 | markdownify }}
+        
+        <p id="accept">
+          <a href="https://github.com/aegis-icons/aegis-icons/issues/">Accept the guidelines</a>
+        </p>
+        
+        <p id="note">For making issues, you'll need <a href="https://github.com/join">GitHub account</a>.</p>
+      </figcaption>
+    </figure>
+  </div>
 
-<button id="scroll-to-top">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 224V72m-72 72 72-72 72 72M40 40h176"/></svg>
-</button>
+  <button id="scroll-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 224V72m-72 72 72-72 72 72M40 40h176"/></svg>
+  </button>
 
-<script>{% include bottom-scripts.min.js %}</script>
+  <script>{% include bottom-scripts.min.js %}</script>
 
-<script data-goatcounter="https://aegis-icons.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://aegis-icons.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
