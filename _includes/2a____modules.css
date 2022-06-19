@@ -194,4 +194,6 @@ ol > li ul > li li {
     visibility: hidden !important;
     opacity: 0 !important;
   }
+  
+  a:not(#release):hover { outline-color: transparent !important; }
 }
