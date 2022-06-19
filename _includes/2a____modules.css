@@ -44,7 +44,7 @@
   z-index: 1;
   align-items: center;
   justify-content: center;
-  background: #c13838;
+  background: var(--reset-bg);
   border-radius: 50%;
   color: white;
   content: "×";
@@ -98,14 +98,14 @@ ol > li ul > li li {
 }
 
 #accept a {
-  border: 0 !important;
-  background: #388E3C;
+  border: 0;
+  background: linear-gradient(180deg, #388e3c 20%, #2a6b2d 100%);
   padding: 12px 30px;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
-#accept a:hover, #accept a:active { background: #1B5E20; }
+#accept a:hover, #accept a:active { background: linear-gradient(0deg, #388e3c 20%, #2a6b2d 100%); }
 
 #note {
   text-align: center;
@@ -157,12 +157,14 @@ ol > li ul > li li {
     margin: 0 auto 25px;
     display: block;
     color: #fff;
-    background-color: #c13838;
+    background: var(--reset-bg);
     border-radius: 50px;
     width: 80vw;
     text-align: center;
     padding: 10px 0;
   }
+  
+  .lightbox .close-mobile:active { background: var(--reset-bg-act); }
   
   .lightbox .close-mobile::before {
     content: "×";

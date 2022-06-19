@@ -16,6 +16,7 @@
 
 noscript div {
   font-size: clamp(0.87rem, 0.7725rem + 0.4333vw, 1rem);
+  text-shadow: 0 0 2px rgba(0,0,0,0.5);
   color: #fff;
   text-align: center;
   font-weight: 600;
