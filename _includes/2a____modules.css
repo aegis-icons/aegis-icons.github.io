@@ -81,11 +81,11 @@
   font-weight: bold;
 }
 
-li { margin-bottom: 4px; }
-ol > li { padding-left: 4px; }
+li                  { margin-bottom: 4px; }
+ol > li             { padding-left: 4px; }
 li ul, ol > li + li { margin-top: 4px; }
-ol, ol ul li { margin-left: -8px; }
-ol > li ul > li { list-style-type: disc; }
+ol, ol ul li        { margin-left: -8px; }
+ol > li ul > li     { list-style-type: disc; }
 
 ol > li ul > li li {
   list-style-type: "–";
@@ -103,9 +103,13 @@ ol > li ul > li li {
   padding: 12px 30px;
   color: #fff;
   border-radius: 20px;
+  outline: 6px solid transparent;
+  transition: outline-color 0.25s;
 }
 
-#accept a:hover, #accept a:active { background: linear-gradient(0deg, #388e3c 20%, #2a6b2d 100%); }
+#accept a:hover { outline-color: rgba(0,0,0,0.125); }
+
+#accept a:active { background: linear-gradient(0deg, #388e3c 20%, #2a6b2d 100%); }
 
 #note {
   text-align: center;
