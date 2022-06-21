@@ -3,18 +3,18 @@
 Website for our icon set that has very basic Jekyll setup.
 
 1. [Install Ruby and Jekyll with guides here](https://jekyllrb.com/docs/installation/#guides).
-2. Run `bundle` in terminal at site's directory.
+2. Run `bundle` in terminal at site's root directory.
 3. To start the server, use [`.1___start_jekyll_server` Windows BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.1___start_jekyll_server.bat).
-   - Alternatively, run `jekyll serve` in terminal at site's root directory.
+   - Alternatively, run `jekyll serve` in the terminal at site's root directory.
 
-**For compressing** CSS and JS files in the `_includes` folder:
+**Compressing** CSS and JS files for GitHub Pages:
 1. Install [Node.js](https://nodejs.org/en/download/) first.
-   - Then install [Minify](https://github.com/coderaiser/minify) with CMD command:
+   - Then install [Minify](https://github.com/coderaiser/minify) with this command in the terminal:
    ```
    npm i minify -g
    ```
 2. Use [`.2___compress_includes-dir_css_js` Windows BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.2___compress_includes-dir_css_js.bat) **(recommended)**.
-   - If that's not possible, then go to `_includes` directory and paste these CMD commands:
+   - If that's not possible, then go to `_includes` directory and paste these commands to the terminal:
    ```
    minify 1a____bottom-scripts.js > bottom-scripts.min.js
    minify 2a____modules.css > modules.min.css
@@ -22,6 +22,10 @@ Website for our icon set that has very basic Jekyll setup.
    minify 2c____fonts.css > fonts.min.css
    minify 4a____sanitize.css > sanitize.min.css
    ```
+   
+While using Jekyll production server, site uses uncompressed CSS & JS files.
+
+**Remember to compress the files before committing!**
 
 ## Credits
 

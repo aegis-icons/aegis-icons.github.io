@@ -15,9 +15,16 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   {% include 3b____metadata-stuff.txt %}
   {% include 3c____favicon-stuff.txt %}
   <style>
-    {% include sanitize.min.css %}
-    {% include fonts.min.css %}
-    {% include modules.min.css %}
+    {% if jekyll.environment == "development" %}
+      {% include 2a____modules.css %}
+      {% include 2c____fonts.css %}
+      {% include 4a____sanitize.css %}
+    {% endif %}
+    {% if jekyll.environment == "production" %}
+      {% include modules.min.css %}
+      {% include fonts.min.css %}
+      {% include sanitize.min.css %}
+    {% endif %}
   </style>
   <script>{% include list.min.js %}</script>
 </head>
@@ -63,7 +70,14 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       <input class="search" placeholder="Search the icons">
       <button class="reset">Clear</button>
       <noscript>
-        <style>{% include noscript-style.min.css %}</style>
+        <style>
+          {% if jekyll.environment == "development" %}
+            {% include 2b____noscript-style.css %}
+          {% endif %}
+          {% if jekyll.environment == "production" %}
+            {% include noscript-style.min.css %}
+          {% endif %}
+        </style>
         <div>
           Enable JavaScript for search & other functions<br>
           <small>
@@ -175,7 +189,14 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 224V72m-72 72 72-72 72 72M40 40h176"/></svg>
   </button>
 
-  <script>{% include bottom-scripts.min.js %}</script>
+  <script>
+    {% if jekyll.environment == "development" %}
+      {% include 1a____bottom-scripts.js %}
+    {% endif %}
+    {% if jekyll.environment == "production" %}
+      {% include bottom-scripts.min.js %}
+    {% endif %}
+  </script>
 
   <script data-goatcounter="https://aegis-icons.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
