@@ -93,23 +93,21 @@ ol > li ul > li li {
 }
 
 #accept {
-  text-align: center;
-  margin: 30px 0 25px 0;
-}
-
-#accept a {
-  border: 0;
-  background: linear-gradient(180deg, #388e3c 20%, #2a6b2d 100%);
-  padding: 12px 30px;
+  background: linear-gradient(180deg, #60a563 0%, #2a6b2d 100%);
   color: #fff;
-  border-radius: 20px;
+  display: block;
+  width: fit-content;
+  margin: 27px auto 0;
+  padding: 12px 45px;
+  border: 0;
+  border-radius: 50px;
   outline: 6px solid transparent;
   transition: outline-color 0.25s;
 }
 
-#accept a:hover { outline-color: rgba(0,0,0,0.125); }
+#accept:hover { outline-color: rgba(0,0,0,0.125); }
 
-#accept a:active { background: linear-gradient(0deg, #388e3c 20%, #2a6b2d 100%); }
+#accept:active { background: linear-gradient(0deg, #60a563 0%, #2a6b2d 100%); }
 
 #note {
   text-align: center;
@@ -195,5 +193,5 @@ ol > li ul > li li {
     opacity: 0 !important;
   }
   
-  a:not(#release):hover { outline-color: transparent !important; }
+  a:not(#release):hover { outline: 0 !important; }
 }
