@@ -15,7 +15,8 @@
   --reset-bg-act: linear-gradient(0deg, #FF5252 0%, #9C2424 100%);
 }
 
-body, input, button { font-family: "Inter", "Roboto", "Segoe UI", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif; }
+body, input, button
+{ font-family: "Inter", "Roboto", "Segoe UI", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif; }
 
 button, .list a img { user-select: none; -webkit-user-select: none; }
 
@@ -228,7 +229,8 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   transition: box-shadow 0.125s ease;
 }
 
-.list a:active, .list a:focus { box-shadow: 0px 4px 4px rgba(0,0,0,0.25), inset 0px 0px 0px 6px rgba(38,60,217,0.85); }
+.list a:active, .list a:focus
+{ box-shadow: 0px 4px 4px rgba(0,0,0,0.25), inset 0px 0px 0px 6px rgba(38,60,217,0.85); }
 
 .list a img {
   margin: 0 auto;
@@ -286,4 +288,12 @@ a + .disclaimer { margin-top: 25px; }
     border: 0;
     border-bottom: 1px solid rgba(0,0,0,0.5);
   }
+}
+
+// --- Tweaks for desktop ---
+
+@media (min-width: 762px) {
+  #download-link { margin: 2% auto 19px; }
+  #info-links    { padding-top: 4.5px; }
+  #gradient-bg   { max-height: 590px; }
 }
