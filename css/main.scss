@@ -293,7 +293,7 @@ a + .disclaimer { margin-top: 25px; }
 // --- Tweaks for desktop ---
 
 @media (min-width: 762px) {
+  #gradient-bg   { max-height: 590px; }
   #download-link { margin: 2% auto 19px; }
   #info-links    { padding-top: 4.5px; }
-  #gradient-bg   { max-height: 590px; }
 }
