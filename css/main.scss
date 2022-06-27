@@ -293,12 +293,13 @@ a + .disclaimer { margin-top: 25px; }
   }
 }
 
-// --- Laggy scrolling fixes for Firefox mobile ---
+// --- Laggy scroll fixes for Firefox mobile ---
 
 @-moz-document url-prefix() { @media (pointer:coarse) {
   *               { backdrop-filter: inherit !important; }
   .list a,
-  .list:empty     { box-shadow: none; }
+  .list:empty,
+  .reset          { box-shadow: none; }
   .list a:active,
   .list a:focus   { box-shadow: var(--inset-sh); }
   #search-bar     { background: var(--search-bg-no-blur) !important; }
