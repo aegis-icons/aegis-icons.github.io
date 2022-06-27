@@ -1,5 +1,9 @@
 {%- comment -%}
 
+Forked from: https://github.com/Mendeo/jekyll-minifier
+
+---
+
 The MIT License (MIT)
 
 Copyright (c) Aleksandr Meniailo (deorathemen@gmail.com), Mendeo 2020
@@ -24,11 +28,11 @@ SOFTWARE.
 
 {%- endcomment -%}
 
-{%- assign intactTags = "script pre textarea" | split: " " -%} {%- comment -%} Теги, которые никак не затрагиваются {%- endcomment -%}
-{%- assign spaceTags = "p" | split: " " -%} {%- comment -%} Теги, внутри которых удаляются отсупы, а переносы строк заменяются пробелами {%- endcomment -%}
+{% if jekyll.environment == "production" %}{%- assign intactTags = "pre textarea" | split: " " -%}{% endif %}{% if jekyll.environment == "development" %}{%- assign intactTags = "script pre textarea" | split: " " -%}{% endif %}
+
+{%- assign spaceTags = "p" | split: " " -%}
 
 {%- assign workTags = intactTags | concat: spaceTags -%}
-{%- comment -%} Удаляем комментарии {%- endcomment -%}
 {%- assign new_comment_tag = "2e57la4G82XMQr9K" -%}
 {%- assign content = content | replace: "<!--", new_comment_tag | replace: "-->", new_comment_tag -%}
 {%- assign contentArray = content | split: new_comment_tag -%}
@@ -40,11 +44,6 @@ SOFTWARE.
 	{%- endif -%}
 {%- endfor -%}
 
-{%- comment -%}
-Ищем строки, в которых есть интактные теги (из массива intactTags) и ничего там не делаем, а делаем в остальных местах
-Также заменяем перенос строк на пробелы в тэгах из массива spaceTags
-Тэги, которые мы ищем должны быть окружены пустыми строками
-{%- endcomment -%}
 {%- for tag in workTags -%}
 	{%- assign what = "<" | append: tag -%}
 	{%- assign how = what | prepend: "
@@ -71,7 +70,6 @@ SOFTWARE.
 			{%- if aux1 != part.size or aux2 != part.size -%}
 				{%- assign currentTag = tag -%}
 				{%- assign currentTagIndex = forloop.index -%}
-				{%- comment -%} Что если закрывающий тег на той же строке? {%- endcomment -%}
 				{%- assign what = "</" | append: currentTag | append: ">" -%}
 				{%- assign aux = part | remove: what | size -%}
 				{%- if aux != part.size -%}
@@ -84,7 +82,7 @@ SOFTWARE.
 		{%- if currentTag == "~" -%}
 			{%- assign aux = part | strip | replace: "/>", ">" -%}
 			{%- assign aux_size = aux.size -%}
-			{%- for i in (1 .. 100) -%} {%- comment -%} Удаляем лишние пробелы перед угловыми скобками {%- endcomment -%}
+			{%- for i in (1 .. 100) -%}
 				{%- assign aux = aux | replace: " >", ">" -%}
 				{%- if aux_size == aux.size -%}
 					{%- break -%}
@@ -92,11 +90,11 @@ SOFTWARE.
 			{%- endfor -%}
 			{%- assign content = content | append: aux -%}
 		{%- else -%}
-			{%- if currentTagIndex < intactTags.size -%} {%- comment -%} Зашли в интактный тэг {%- endcomment -%}
+			{%- if currentTagIndex < intactTags.size -%}
 				{%- assign aux = part | lstrip | append: "
 "-%}
 				{%- assign content = content | append: aux -%}
-			{%- else -%} {%- comment -%} Зашли в тэг, где переносы строк нужно заменить пробелами {%- endcomment -%}
+			{%- else -%}
 				{%- assign aux = part | lstrip | append: " " -%}
 				{%- assign content = content | append: aux -%}
 			{%- endif -%}
@@ -108,19 +106,19 @@ SOFTWARE.
 			{%- assign currentTag = "~" -%}
 		{%- endif -%}
 		{%- if currentTag == "~" -%}
-			{%- if currentTagIndex < intactTags.size -%} {%- comment -%} Конец интактного тэга {%- endcomment -%}
+			{%- if currentTagIndex < intactTags.size -%}
 				{%- assign aux = part | rstrip -%}
 				{%- assign content = content | append: aux -%}
-			{%- else -%} {%- comment -%} Зашли в конец тэга, где переносы строк нужно заменить пробелами {%- endcomment -%}
+			{%- else -%}
 				{%- assign aux = part | strip -%}
 				{%- assign content = content | append: aux -%}
 			{%- endif -%}
 		{%- else -%}
-			{%- if currentTagIndex < intactTags.size -%} {%- comment -%} Зашли в интактный тэг {%- endcomment -%}
+			{%- if currentTagIndex < intactTags.size -%}
 				{%- assign aux = part | append: "
 " -%}
 				{%- assign content = content | append: aux -%}
-			{%- else -%} {%- comment -%} Зашли в тэг, где переносы строк нужно заменить пробелами {%- endcomment -%}
+			{%- else -%}
 				{%- assign aux = part | strip | append: " " -%}
 				{%- assign content = content | append: aux -%}
 			{%- endif -%}
