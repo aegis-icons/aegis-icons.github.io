@@ -23,9 +23,9 @@ Website for our icon set that has very basic Jekyll setup.
    minify 4a____sanitize.css > sanitize.min.css
    ```
    
-While using Jekyll production server, site uses uncompressed CSS & JS files.
+While using Jekyll development server, site uses uncompressed CSS & JS files.
 
-**Remember to compress the files before committing!**
+**Remember to compress CSS & JS files before committing / sending PR!**
 
 ## Credits
 
