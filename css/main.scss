@@ -15,6 +15,7 @@
   --reset-bg-act: linear-gradient(0deg, #FF5252 0%, #9C2424 100%);
   --search-bg-no-blur: linear-gradient(180deg, rgb(183,181,181) 0%, rgba(196,196,196,0.9) 100%);
   --to-top-bg-no-blur: linear-gradient(180deg, rgba(196,196,196,0.6) 0%, rgba(183,181,181,0.9) 100%);
+  --sh: 0px 4px 4px rgba(0,0,0,0.25);
   --inset-sh: inset 0px 0px 0px 6px rgba(38,60,217,0.85);
 }
 
@@ -215,7 +216,7 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   background: #fff;
   padding: 10px 17.5px;
   border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  box-shadow: var(--sh);
 }
 
 .list:empty::after {
@@ -226,14 +227,14 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
 .list a {
   background: #fff;
   height: 100%;
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  box-shadow: var(--sh);
   border-radius: 10px;
   padding-bottom: 2.5px;
   transition: box-shadow 0.125s ease;
 }
 
 .list a:active, .list a:focus
-{ box-shadow: 0px 4px 4px rgba(0,0,0,0.25), var(--inset-sh); }
+{ box-shadow: var(--sh), var(--inset-sh); }
 
 .list a img {
   margin: 0 auto;
@@ -293,18 +294,20 @@ a + .disclaimer { margin-top: 25px; }
   }
 }
 
-// --- Laggy scroll fixes for Firefox mobile ---
+// --- Laggy scroll fixes for Firefox ---
 
-@-moz-document url-prefix() { @media (pointer:coarse) {
-  *               { backdrop-filter: inherit !important; }
-  .list a,
-  .list:empty,
-  .reset          { box-shadow: none; }
-  .list a:active,
-  .list a:focus   { box-shadow: var(--inset-sh); }
-  #search-bar     { background: var(--search-bg-no-blur) !important; }
-  #scroll-to-top  { background: var(--to-top-bg-no-blur) !important; }
-} }
+@-moz-document url-prefix() { 
+  *:not(.lightbox .close) { backdrop-filter: inherit !important; }
+  #search-bar    { background: var(--search-bg-no-blur) !important; }
+  #scroll-to-top { background: var(--to-top-bg-no-blur) !important; }
+  
+  // ▼ Mobile fixes
+  @media (pointer:coarse) {
+    .lightbox .close { backdrop-filter: inherit !important; }
+    .list a, .list:empty, .reset  { box-shadow: none; }
+    .list a:active, .list a:focus { box-shadow: var(--inset-sh); }
+  }
+}
 
 // --- Tweaks for desktop ---
 
