@@ -13,7 +13,7 @@
   --blur: blur(10px);
   --reset-bg: linear-gradient(180deg, #FF5252 0%, #9C2424 100%);
   --reset-bg-act: linear-gradient(0deg, #FF5252 0%, #9C2424 100%);
-  --search-bg-no-blur: linear-gradient(180deg, rgb(183,181,181) 0%, rgba(196,196,196,0.9) 100%);
+  --search-bg-no-blur: linear-gradient(180deg, rgba(183,181,181,0.95) 0%, rgba(215,215,215,0.95) 100%);
   --to-top-bg-no-blur: linear-gradient(180deg, rgba(196,196,196,0.6) 0%, rgba(183,181,181,0.9) 100%);
   --sh: 0px 4px 4px rgba(0,0,0,0.25);
   --inset-sh: inset 0px 0px 0px 6px rgba(38,60,217,0.85);
@@ -282,7 +282,7 @@ a + .disclaimer { margin-top: 25px; }
 
 @supports (backdrop-filter: blur(0)) {
   #search-bar {
-    background: linear-gradient(180deg, rgb(183,181,181) 0%, rgba(196,196,196,0.5) 100%);
+    background: linear-gradient(180deg, #B7B5B5 0%, rgba(196,196,196,0.5) 100%);
     backdrop-filter: var(--blur);
   }
   
