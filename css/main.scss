@@ -22,9 +22,12 @@
 body, input, button
 { font-family: "Inter", "Roboto", "Segoe UI", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif; }
 
-button, .list a img { user-select: none; -webkit-user-select: none; }
-
 h2 { font-size: unquote("clamp(1.3rem, 0.6905rem + 3.0476vw, 1.5rem)"); }
+
+button, .list img {
+  user-select: none;
+  -webkit-user-select: none;
+}
 
 body {
   font-weight: 400;
@@ -70,7 +73,8 @@ header {
   padding: 10px 16px;
 }
 
-#download-link, #release { transition: outline-color 0.25s; }
+#download-link, #release
+{ transition: outline-color 0.25s; }
 
 #download-link {
   background: linear-gradient(180deg, #2236c3 0%, #172482 100%);
@@ -87,9 +91,11 @@ header {
   outline: 6px solid transparent;
 }
 
-#download-link:hover { outline-color: rgba(0,0,0,0.125); }
+#download-link:hover
+{ outline-color: rgba(0,0,0,0.125); }
 
-#download-link:active { background: linear-gradient(0deg, #2236c3 0%, #172482 100%); }
+#download-link:active
+{ background: linear-gradient(0deg, #2236c3 0%, #172482 100%); }
 
 #release {
   border: 1px solid rgba(0,0,0,0.15);
@@ -105,7 +111,8 @@ header {
   outline: 4px solid transparent;
 }
 
-#release:hover { outline-color: rgba(0,0,0,0.1); }
+#release:hover
+{ outline-color: rgba(0,0,0,0.1); }
 
 #info-links {
   padding-top: 2.5px;
@@ -292,6 +299,12 @@ a + .disclaimer { margin-top: 25px; }
     border: 0;
     border-bottom: 1px solid rgba(0,0,0,0.5);
   }
+}
+
+// --- Disable transitions if user has requested that in their system ---
+
+@media (prefers-reduced-motion) {
+  * { transition: none !important; }
 }
 
 // --- Laggy scroll fixes for Firefox ---
