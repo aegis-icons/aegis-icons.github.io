@@ -3,11 +3,12 @@
 Website for our icon set that has very basic Jekyll setup.
 
 1. [Install Ruby and Jekyll with guides here](https://jekyllrb.com/docs/installation/#guides).
-2. Run `bundle` in terminal at site's root directory.
+2. Run `bundle` in the terminal at site's root directory.
 3. To start the server, use [`.1___start_jekyll_server` Windows BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.1___start_jekyll_server.bat).
    - Alternatively, run `jekyll serve` in the terminal at site's root directory.
 
-**Compressing** CSS and JS files for GitHub Pages:
+## *Compressing* CSS and JS files in the `_includes` directory
+
 1. Install [Node.js](https://nodejs.org/en/download/) first.
    - Then install [Minify](https://github.com/coderaiser/minify) with this command in the terminal:
    ```

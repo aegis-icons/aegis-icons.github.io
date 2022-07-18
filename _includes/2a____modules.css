@@ -69,7 +69,7 @@
 
 /* --- Lightbox content tweaks --- */
 
-#please-read {
+h1#please-read {
   font-size: 1.4rem;
   font-weight: 400;
   margin: .67em 0;
