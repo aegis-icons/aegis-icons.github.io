@@ -138,7 +138,7 @@ ol > li ul > li li {
   margin-top: 2px;
 }
 
-/* --- Mobile tweaks --- */
+/* --- Mobile tweaks for smaller devices --- */
 
 @media (max-width: 845px) and (hover: none) and (pointer: coarse) {
   .lightbox:target { align-items: start; }
@@ -192,6 +192,4 @@ ol > li ul > li li {
     visibility: hidden !important;
     opacity: 0 !important;
   }
-  
-  a:not(#release):hover { outline: 0 !important; }
 }

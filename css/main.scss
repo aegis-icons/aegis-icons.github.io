@@ -6,6 +6,7 @@
 //   - Alternatives:
 //     - https://modern-fluid-typography.vercel.app/
 //     - https://royalfig.github.io/fluid-typography-calculator/
+//     - https://min-max-calculator.9elements.com/
 // - Good font stripper tool: https://transfonter.org/
 // - `unquote("code")` is for SASS ignoring things that it doesn't understand and errors.
 
@@ -240,11 +241,13 @@ footer a:hover, footer a:active          { border-bottom-color: #000000 !importa
   box-shadow: var(--sh);
   border-radius: 10px;
   padding-bottom: 2.5px;
-  transition: box-shadow 0.125s ease;
+  transition: box-shadow 1s ease 1s;
 }
 
-.list a:active, .list a:focus
-{ box-shadow: var(--sh), var(--inset-sh); }
+.list a:active {
+  box-shadow: var(--sh), var(--inset-sh);
+  transition: box-shadow 0.05s ease;
+}
 
 .list a img {
   margin: 0 auto;
@@ -288,6 +291,15 @@ a + .disclaimer { margin-top: 25px; }
   color: rgba(0,0,0,0.7);
 }
 
+// --- Mobile tweaks ---
+
+@media (hover: none) and (pointer: coarse) {
+  a:not(#release):hover { outline: 0 !important; }
+
+  .list a { transition: box-shadow 1s ease 1.75s; }
+  .list a:active { transition: box-shadow 0.2s ease; }
+}
+
 // --- If browser supports feature ---
 
 @supports (backdrop-filter: blur(0)) {
@@ -314,14 +326,23 @@ a + .disclaimer { margin-top: 25px; }
 
 @-moz-document url-prefix() { 
   *:not(.lightbox .close) { backdrop-filter: inherit !important; }
+
   #search-bar    { background: var(--search-bg-no-blur) !important; }
   #scroll-to-top { background: var(--to-top-bg-no-blur) !important; }
   
-  // ▼ Mobile fixes
+  // ▼ Mobile Firefox fixes
   @media (pointer:coarse) {
     .lightbox .close { backdrop-filter: inherit !important; }
-    .list a, .list:empty, .reset  { box-shadow: none; }
-    .list a:active, .list a:focus { box-shadow: var(--inset-sh); }
+
+    .list a, .list:empty, .reset {
+      box-shadow: none;
+      transition: box-shadow 1s ease 1s; // Tap focus is different compare to mobile Chromium
+    }
+
+    .list a:active {
+      box-shadow: var(--inset-sh);
+      transition: box-shadow 0s ease; // Tap focus is different compare to mobile Chromium
+    }
   }
 }
 
