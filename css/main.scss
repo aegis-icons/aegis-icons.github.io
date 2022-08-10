@@ -333,8 +333,8 @@ a + .disclaimer { margin-top: 25px; }
 @-moz-document url-prefix() { 
   *:not(.lightbox .close) { backdrop-filter: inherit !important; }
 
-  #search-bar    { background: var(--search-bg-no-blur) !important; }
-  #scroll-to-top { background: var(--to-top-bg-no-blur) !important; }
+  #search-bar    { background: var(--search-bg-no-blur); }
+  #scroll-to-top { background: var(--to-top-bg-no-blur); }
   
   // ▼ Mobile Firefox fixes
   @media (pointer:coarse) {
