@@ -1,14 +1,10 @@
 <meta name="title" content="aegis-icons">
+<meta name="description" content="Unofficial 2FA entry icons for open source Android authenticator Aegis">
 <meta name="application-name" content="aegis-icons">
 <meta name="apple-mobile-web-app-title" content="aegis-icons">
-<meta name="description" content="Unofficial 2FA entry icons for open source Android authenticator Aegis">
 <meta property="og:title" content="aegis-icons">
-<meta property="og:type" content="website">
 <meta property="og:description" content="Unofficial 2FA entry icons for open source Android authenticator Aegis">
 <meta property="og:image" content="https://aegis-icons.github.io/opengraph-image.png">
-<meta property="og:url" content="https://aegis-icons.github.io/">
 <meta property="twitter:title" content="aegis-icons">
 <meta property="twitter:card" content="summary">
-<meta property="twitter:description" content="Unofficial 2FA entry icons for open source Android authenticator Aegis">
 <meta property="twitter:image" content="https://aegis-icons.github.io/twitter-card-image.png">
-<meta property="twitter:url" content="https://aegis-icons.github.io/">
