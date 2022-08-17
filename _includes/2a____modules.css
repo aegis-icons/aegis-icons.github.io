@@ -21,7 +21,7 @@
 
 .lightbox figcaption {
   max-width: 1160px;
-  max-height: 82vh;
+  max-height: 94vh;
   position: relative;
   padding: 1.5em;
   background: #eee;
@@ -72,13 +72,13 @@
 h1#please-read {
   font-size: 1.4rem;
   font-weight: 400;
-  margin: .67em 0;
+  margin: .32em 0 .40em;
 }
 
-::marker {
-  color: #263CD9;
-  font-size: 1.065rem;
-  font-weight: bold;
+p#issue_guideline-update {
+  font-style: italic;
+  margin: 0 0 18px;
+  font-size: 0.85rem;
 }
 
 li                  { margin-bottom: 4px; }
@@ -92,12 +92,18 @@ ol > li ul > li li {
   padding-left: 10px;
 }
 
+::marker {
+  color: #263CD9;
+  font-size: 1.065rem;
+  font-weight: bold;
+}
+
 #accept {
   background: linear-gradient(180deg, #60a563 0%, #2a6b2d 100%);
   color: #fff;
   display: block;
   width: fit-content;
-  margin: 27px auto 0;
+  margin: 22px auto 0;
   padding: 12px 45px;
   border: 0;
   border-radius: 50px;
