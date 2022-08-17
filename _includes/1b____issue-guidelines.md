@@ -21,6 +21,4 @@
 7. If you have question or miscellaneous suggestion, check out [FAQ](FAQ.md) first.
 8. Be respectful to the maintainers and contributers.
 
-*(Issue guidelines was last updated in: 2022-08-17)*
-
 **After reading and accepting guidelines, you can now make a new issue.**
