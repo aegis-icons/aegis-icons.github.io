@@ -1,5 +1,7 @@
 
 <!-- LEAVE LINE 1 AS LINE BREAK! Without it, Jekyll doesn't include this correctly for some reason -->
+*(Issue guidelines was last updated in: 2022-08-17)*
+
 1. App / site related requests has to have Aegis-compatible 2FA support one way or another, this project does not make icons outside of Aegis usage.
    - **Don't lie**, we always double-check if requested service has 2FA support. You can add proof for the existence of Aegis-compatible 2FA to the issue form's "Anything else?" section.
      - For the similar icons for general purpose, check out [Simple Icons](https://simpleicons.org/) instead.
@@ -18,5 +20,7 @@
    - **[More info](#icon-acceptability-criteria)** about **approved & unapproved types of apps / sites.**
 7. If you have question or miscellaneous suggestion, check out [FAQ](FAQ.md) first.
 8. Be respectful to the maintainers and contributers.
+
+*(Issue guidelines was last updated in: 2022-08-17)*
 
 **After reading and accepting guidelines, you can now make a new issue.**
