@@ -69,13 +69,13 @@
 
 /* --- Lightbox content tweaks --- */
 
-h1#please-read {
+#please-read {
   font-size: 1.4rem;
   font-weight: 400;
   margin: .32em 0 .40em;
 }
 
-p#issue_guideline-update {
+#issue_guideline-update {
   font-style: italic;
   margin: 0 0 18px;
   font-size: 0.85rem;
@@ -117,7 +117,8 @@ ol > li ul > li li {
 
 #note {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: clamp(0.785rem, -0.641rem + 6.96vw, 0.85rem);
+  margin-bottom: 0;
 }
 
 /* --- "Scroll to the top" button --- */
@@ -189,10 +190,7 @@ ol > li ul > li li {
   ol > li + li { margin-top: 10px; }
   ol ul li { margin-left: -24px; }
   
-  #note {
-    margin-bottom: 125px;
-    font-size: clamp(0.8rem, -0.5333rem + 6.6667vw, 0.85rem);
-  }
+  #note { margin-bottom: 125px; }
     
   .hide-mobile {
     visibility: hidden !important;
