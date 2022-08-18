@@ -4,7 +4,7 @@
   Last updated on: 2022-08-18
 </p>
 
-1. App / site related requests has to **have Aegis-compatible 2FA support** one way or another, this project does not make icons outside of Aegis usage.
+1. App / site related requests has to **have Aegis-compatible 2FA support** one way or another, this project doesn't make icons outside of Aegis usage.
    - Don't lie, we always double-check if requested service has 2FA support. You can add proof for the existence of Aegis-compatible 2FA to the issue form's "Anything else?" section.
      - For the similar icons for general purpose, check out [Simple Icons](https://simpleicons.org/) instead.
 2. **Check that icon you're about to request doesn't already exist by using search on this site** or opened / closed in the GitHub issues.
