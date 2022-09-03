@@ -1,5 +1,3 @@
-
-<!-- LEAVE LINE 1 AS LINE BREAK! Without it, Jekyll doesn't include this correctly for some reason -->
 <p id="issue_guideline-update">
   Last updated on: 2022-08-18
 </p>
