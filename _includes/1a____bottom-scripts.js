@@ -34,11 +34,14 @@
   var resetButton = document.querySelector('button.reset');
   
   resetButton.addEventListener('click', function () {
-    search.value = '';
-    lists.forEach(function (list) { list.search(); });
-    // ▼ Scroll (only if scrolled over #gradient-bg) and stop before of #gradient-bg
-    if (headerHeight <= Math.ceil(window.pageYOffset) == true) { rootElement.scrollTo({ top: headerHeight }); }
-    for (const label of labelAll) { label.classList.remove('hide'); }
+    // ▼ Only trigger if input has text
+    if (!search.value == '') {
+      search.value = '';
+      lists.forEach(function (list) { list.search(); });
+      // ▼▼ Scroll (only if scrolled over #gradient-bg) and stop before of #gradient-bg
+      if (headerHeight <= Math.ceil(window.pageYOffset) == true) { rootElement.scrollTo({ top: headerHeight }); }
+      for (const label of labelAll) { label.classList.remove('hide'); }
+    }
   });
 
 // ==== Count the icons and print the results ====
