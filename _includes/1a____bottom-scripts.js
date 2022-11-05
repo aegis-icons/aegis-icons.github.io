@@ -10,7 +10,7 @@
   var listNames = ['primary', 'variations', 'generic', 'outdated'];
   var lists = listNames.map(function (name) { return new List(name, { valueNames: ['n'] }); });
 
-  var searchTrigger = function (event) {
+  var searchTrigger = function (e) {
     var searchValue = this.value;
     lists.forEach(function (list) { list.search(searchValue); }); 
     // ▼ Scroll and stop before of #gradient-bg
@@ -26,9 +26,8 @@
     }
   };
 
-  // ▼▼ Trigger search by either typing or pasting
-  search.addEventListener('keyup', searchTrigger, false);
-  search.addEventListener('paste', searchTrigger, false);
+  // ▼▼ Trigger search by either typing, cutting (for resetting the search) or pasting
+  ['keyup', 'paste', 'cut'].forEach(function(e) { search.addEventListener(e, searchTrigger); });
 
 // ==== Reset button function and List.js search clearing ====
   var resetButton = document.querySelector('button.reset');
@@ -37,7 +36,7 @@
     // ▼ Only trigger if input has text
     if (!search.value == '') {
       search.value = '';
-      lists.forEach(function (list) { list.search(); });
+      lists.forEach(function (list) { list.search(); } );
       // ▼▼ Scroll (only if scrolled over #gradient-bg) and stop before of #gradient-bg
       if (headerHeight <= Math.ceil(window.pageYOffset) == true) { rootElement.scrollTo({ top: headerHeight }); }
       for (const label of labelAll) { label.classList.remove('hide'); }
