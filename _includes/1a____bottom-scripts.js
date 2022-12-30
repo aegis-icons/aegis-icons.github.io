@@ -21,12 +21,12 @@
     // ▼ Hide icon count labels when searching
     for (const label of labelAll) {
       label.classList.add('hide');
-    // ▼▼ Remove class if search input is empty
+      // ▼▼ Remove class if search input is empty
       if (search.value.length == 0) { label.classList.remove('hide'); }
     }
   };
 
-  // ▼▼ Trigger search by either typing, cutting (for resetting the search) or pasting
+  // ▼ Trigger search by either typing, cutting (for resetting the search) or pasting
   ['keyup', 'paste', 'cut'].forEach(function(e) { search.addEventListener(e, searchTrigger); });
 
 // ==== Reset button function and List.js search clearing ====
