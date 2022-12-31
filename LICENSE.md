@@ -1,4 +1,4 @@
-**Copyright © 2022 Kristian Salonen** (as part of "aegis-icons" project).
+**Copyright © 2023 Kristian Salonen** (as part of "aegis-icons" project).
 
 All rights reserved, except:
 - For copying small parts of the website code.
@@ -15,7 +15,7 @@ _These assets aren't part of this licensing:_
   - **Copyright:** [SIL OFL 1.1](https://github.com/rsms/inter/blob/master/LICENSE.txt).
 - [Jekyll Minifier](https://github.com/Mendeo/jekyll-minifier) Liquid template.
   - **Copyright:** [MIT](https://github.com/Mendeo/jekyll-minifier/blob/main/LICENSE).
-- [Phosphor Icons](https://phosphoricons.com/) SVGs.
+- [Phosphor Icons](https://phosphoricons.com/)'s `arrow-line-up` icon SVG.
   - **Copyright:** [MIT](https://github.com/phosphor-icons/phosphor-icons/blob/master/LICENSE).
 - [List.js](https://listjs.com/) JS script.
   - **Copyright:** [MIT](https://github.com/javve/list.js/blob/master/LICENSE).
