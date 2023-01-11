@@ -4,8 +4,13 @@ Website for our icon set that has very basic Jekyll setup.
 
 1. [Install Ruby and Jekyll with guides here](https://jekyllrb.com/docs/installation/#guides).
 2. Run `bundle` in the terminal at site's root directory.
-3. To start the server, use [`.1___start_jekyll_server` Windows BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.1___start_jekyll_server.bat).
-   - Alternatively, run `jekyll serve` in the terminal at site's root directory.
+3. Start the server.
+   1. **In Windows**, run [`.1___start_jekyll_server` Windows BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.1___start_jekyll_server.bat).
+   2.  **For other OSes / alternative way**, run this in the terminal at site's root directory:
+   ```cmd
+   jekyll serve --incremental --host=0.0.0.0 --port 4000 --open_url
+   ```
+If you can't connect to `0.0.0.0:4000`, try `localhost:4000` in browser instead **or** changing `--host=0.0.0.0` to `--host=localhost`.
 
 ## *Compressing* CSS and JS files in the `_includes` directory
 
