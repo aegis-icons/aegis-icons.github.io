@@ -22,6 +22,9 @@ If you can't connect to `0.0.0.0:4000`, try `localhost:4000` in browser instead 
 2. Find your **local** IPv4 address of the server PC.
 3. Go to `http://[SERVER'S-LOCAL-IPv4-ADDRESS]:4000` on your other device.
 
+> **Note** \
+> Server's local network sharing won't work if `--host 0.0.0.0` is changed to `--host localhost`.
+
 ## Compressing CSS and JS files in the `_includes` directory
 
 1. Install [Node.js](https://nodejs.org/en/download/) first.
