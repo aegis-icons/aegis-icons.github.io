@@ -26,8 +26,8 @@
     }
   };
 
-  // ▼ Trigger search by either typing, cutting (for resetting the search) or pasting
-  ['keyup', 'paste', 'cut'].forEach(function(e) { search.addEventListener(e, searchTrigger); });
+  // ▼ Trigger search
+  ['input'].forEach(function(e) { search.addEventListener(e, searchTrigger); });
 
 // ==== Reset button function and List.js search clearing ====
   var resetButton = document.querySelector('button.reset');
