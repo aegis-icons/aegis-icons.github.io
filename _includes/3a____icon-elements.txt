@@ -1,5 +1,5 @@
 <a href="{{ myimage.path }}" download>
-  <img src="{{ myimage.path }}" loading="lazy" decoding="async">
-  <!-- DO NOT REMOVE class="n" !!! It's for List.js -->
+  <img src="{{ myimage.path }}" width="150" height="150" loading="lazy" decoding="async">
+  <!-- ▼▼▼ DO NOT REMOVE `class="n"`. It's for List.js ▼▼▼ -->
   <p class="n">{{ myimage.basename }}</p>
 </a>
