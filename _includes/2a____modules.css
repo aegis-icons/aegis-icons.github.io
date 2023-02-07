@@ -3,66 +3,66 @@
 .lightbox { display: none; }
 
 .lightbox:target {
-  position: absolute;
-  z-index: 3;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
   left: 0;
+  position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 3;
 }
 
 .lightbox figure {
-  position: fixed;
   margin: 20px;
+  position: fixed;
 }
 
 .lightbox figcaption {
-  max-width: 1200px;
-  max-height: 94vh;
-  position: relative;
-  padding: 1.5em;
   background: #eee;
-  overflow-y: auto;
   border-radius: 20px;
+  max-height: 94vh;
+  max-width: 1200px;
+  overflow-y: auto;
+  padding: 1.5em;
+  position: relative;
 }
 
 .lightbox .close {
-  position: relative;
   display: block;
+  position: relative;
 }
 
 .lightbox .close::after {
-  left: -1rem;
-  top: -0.75rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  position: absolute;
-  display: flex;
-  z-index: 1;
   align-items: center;
-  justify-content: center;
   background: var(--reset-bg);
   border-radius: 50%;
   color: white;
   content: "×";
   cursor: pointer;
+  display: flex;
   font-size: 1.7rem;
+  height: 2.5rem;
+  justify-content: center;
+  left: -1rem;
   padding-bottom: 3px;
+  position: absolute;
+  top: -.75rem;
+  width: 2.5rem;
+  z-index: 1;
 }
 
 .lightbox .close::before {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,.8);
   content: "";
   cursor: default;
-  backdrop-filter: blur(10px);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .lightbox .close-mobile { display: none; }
@@ -76,9 +76,9 @@
 }
 
 #issue_guideline-update {
+  font-size: .85rem;
   font-style: italic;
   margin: 0 0 18px;
-  font-size: 0.85rem;
 }
 
 li                  { margin-bottom: 4px; }
@@ -100,49 +100,49 @@ ol > li ul > li li {
 
 #accept {
   background: linear-gradient(180deg, #60a563 0%, #2a6b2d 100%);
-  color: #fff;
-  display: block;
-  width: fit-content;
-  margin: 22px auto 0;
-  padding: 12px 45px;
   border: 0;
   border-radius: 50px;
+  color: #fff;
+  display: block;
+  margin: 22px auto 0;
   outline: 6px solid transparent;
-  transition: outline-color 0.25s;
+  padding: 12px 45px;
+  transition: outline-color .25s;
+  width: fit-content;
 }
 
-#accept:hover { outline-color: rgba(0,0,0,0.125); }
+#accept:hover { outline-color: rgba(0,0,0,.125); }
 
 #accept:active { background: linear-gradient(0deg, #60a563 0%, #2a6b2d 100%); }
 
 #note {
-  text-align: center;
-  font-size: clamp(0.785rem, -0.641rem + 6.96vw, 0.85rem);
+  font-size: clamp(.785rem, -.641rem + 6.96vw, .85rem);
   margin-bottom: 0;
+  text-align: center;
 }
 
 /* --- "Scroll to the top" button --- */
 
 #scroll-to-top {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.4s ease;
-  cursor: pointer;
   background: var(--to-top-bg-no-blur);
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,0,0,.2);
   border-radius: 50%;
-  position: fixed;
-  padding: 12px;
-  right: 15px;
   bottom: 15px;
-  width: 54px;
+  cursor: pointer;
   height: 54px;
+  opacity: 0;
+  padding: 12px;
+  position: fixed;
+  right: 15px;
+  transition: all .4s ease;
+  visibility: hidden;
+  width: 54px;
   z-index: 2;
 }
 
 #scroll-to-top svg {
-  opacity: 0.75;
   margin-top: 2px;
+  opacity: .75;
 }
 
 /* --- Mobile tweaks for smaller devices --- */
@@ -153,38 +153,38 @@ ol > li ul > li li {
   .lightbox figure { margin: 0; }
   
   .lightbox figcaption {
-    max-height: 100vh;
     border-radius: 0;
+    max-height: 100vh;
     padding: 1.25em;
   }
 
   .lightbox .close { display: none; }
 
   .lightbox .close-mobile {
-    display: unset;
-    border: 0;
-    margin: 0 auto 25px;
-    display: block;
-    color: #fff;
     background: var(--reset-bg);
+    border: 0;
     border-radius: 50px;
-    width: 80vw;
-    text-align: center;
+    color: #fff;
+    display: unset;
+    display: block;
+    margin: 0 auto 25px;
     padding: 10px 0;
+    text-align: center;
+    width: 80vw;
   }
   
   .lightbox .close-mobile:active { background: var(--reset-bg-act); }
   
   .lightbox .close-mobile::before {
     content: "×";
-    padding-right: 12px;
     font-size: 20px;
     line-height: 0;
+    padding-right: 12px;
   }
   
   li {
-    margin-bottom: 5px;
     line-height: 26px;
+    margin-bottom: 5px;
   }
   
   ol > li + li { margin-top: 10px; }
@@ -193,7 +193,7 @@ ol > li ul > li li {
   #note { margin-bottom: 125px; }
     
   .hide-mobile {
-    visibility: hidden !important;
     opacity: 0 !important;
+    visibility: hidden !important;
   }
 }
