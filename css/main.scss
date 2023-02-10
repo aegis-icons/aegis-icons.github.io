@@ -24,7 +24,7 @@ body, input, button
 { font-family: "Inter", "Roboto", "Segoe UI", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif; }
 
 h1 {
-  font-size: unquote("clamp(1.3rem, 0.6905rem + 3.0476vw, 1.5rem)");
+  font-size: unquote("clamp(1.3rem, .6905rem + 3.0476vw, 1.5rem)");
   margin: 20px 0;
 }
 
