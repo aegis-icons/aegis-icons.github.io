@@ -21,7 +21,7 @@
 }
 
 body, input, button
-{ font-family: "Inter", "Roboto", "Segoe UI", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Helvetica Neue", "Lucida Grande", sans-serif; }
+{ font-family: "Inter","Roboto","Segoe UI",system,-apple-system,".SFNSText-Regular","San Francisco","Helvetica Neue","Lucida Grande",sans-serif; }
 
 h1 {
   font-size: unquote("clamp(1.3rem, .6905rem + 3.0476vw, 1.5rem)");
@@ -70,7 +70,7 @@ header {
 }
 
 #desc {
-  font-family: "iA Writer Duo", "Roboto Mono", "SF Mono", Consolas, "Lucida Console", "DejaVu Sans Mono", "Liberation Mono", monospace;
+  font-family: "iA Writer Duo","Roboto Mono","SF Mono",Consolas,"Lucida Console","DejaVu Sans Mono","Liberation Mono",monospace;
   font-size: unquote("clamp(1.025rem, .8rem + 1.1429vw, 1.4rem)");
   font-style: italic;
   padding: 10px 16px;
@@ -78,14 +78,14 @@ header {
 }
 
 #download-link, #release
-{ transition: outline-color 0.25s; }
+{ transition: outline-color .25s; }
 
 #download-link {
   background: linear-gradient(180deg, #2236c3 0%, #172482 100%);
   border-radius: 20px;
   color: #fff;
   display: block;
-  font-size: unquote("clamp(1.05rem, 0.8064rem + 1.1636vw, 1.25rem)");
+  font-size: unquote("clamp(1.05rem, .8064rem + 1.1636vw, 1.25rem)");
   margin: 2.5% auto 15px;
   max-width: 60%;
   min-width: 235px;
@@ -136,16 +136,16 @@ header {
 #info-links p { line-height: 1; }
 
 .link-blue,
-figcaption a  { border-bottom-color: #5768e2 !important; }
-.link-purble  { border-bottom-color: #775bbb !important; }
-.link-green   { border-bottom-color: #95c336 !important; }
-footer a      { border-bottom-color: rgba(0,0,0,.65) !important; font-style: normal !important; }
+figcaption a  { border-bottom-color: #5768e2; }
+.link-purble  { border-bottom-color: #775bbb; }
+.link-green   { border-bottom-color: #95c336; }
+footer a      { border-bottom-color: rgba(0,0,0,.65); font-style: normal; }
 
-.link-blue:hover, .link-blue:active,
-figcaption a:hover, figcaption a:active { border-bottom-color: #263cd9 !important; }
-.link-purble:hover, .link-purble:active { border-bottom-color: #512da8 !important; }
-.link-green:hover, .link-green:active   { border-bottom-color: #7aa325 !important; }
-footer a:hover, footer a:active         { border-bottom-color: #000    !important; }
+
+:is(.link-blue, figcaption a):is(:hover, :active) { border-bottom-color: #263cd9; }
+.link-purble:is(:hover, :active)                  { border-bottom-color: #512da8; }
+.link-green:is(:hover, :active)                   { border-bottom-color: #7aa325; }
+footer a:is(:hover, :active)                      { border-bottom-color: #000; }
 
 #search-bar {
   background: var(--search-bg-no-blur);
@@ -334,9 +334,10 @@ a + .disclaimer { margin-top: 25px; }
   * { transition: none !important; }
 }
 
-// --- Laggy scroll fixes for Firefox ---
+// --- Firefox only tweaks ---
 
 @-moz-document url-prefix() { 
+  // ▼ Lag fixes
   *:not(.lightbox .close) { backdrop-filter: inherit !important; }
 
   #search-bar    { background: var(--search-bg-no-blur); }

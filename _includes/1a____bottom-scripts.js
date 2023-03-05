@@ -16,7 +16,7 @@
     // ▼ Scroll and stop before of #gradient-bg
     // ▼▼ If mobile device
     if (isMobile) { rootElement.scrollTo({ top: headerHeight }); }
-    // ▼▼ If PC device (and only if scrolled over #gradient-bg)
+    // ▼▼ If PC (and only if scrolled over #gradient-bg)
     if (!isMobile && (headerHeight <= Math.ceil(window.pageYOffset)) == true) { rootElement.scrollTo({ top: headerHeight }); };
     // ▼ Hide icon count labels when searching
     for (const label of labelAll) {
