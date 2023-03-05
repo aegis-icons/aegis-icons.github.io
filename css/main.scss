@@ -136,16 +136,15 @@ header {
 
 #info-links p { line-height: 1; }
 
-.link-blue, figcaption a  { border-bottom-color: #5768e2; }
-.link-purble              { border-bottom-color: #775bbb; }
-.link-green               { border-bottom-color: #95c336; }
-footer a                  { border-bottom-color: rgba(0,0,0,.65); font-style: normal; }
+#a-blue a, figcaption a { border-bottom-color: #5768e2; }
+#a-purble a             { border-bottom-color: #775bbb; }
+#a-green a              { border-bottom-color: #95c336; }
+footer a                { border-bottom-color: rgba(0,0,0,.65); font-style: normal; }
 
-
-:is(.link-blue, figcaption a):is(:hover, :active) { border-bottom-color: #263cd9; }
-.link-purble:is(:hover, :active)                  { border-bottom-color: #512da8; }
-.link-green:is(:hover, :active)                   { border-bottom-color: #7aa325; }
-footer a:is(:hover, :active)                      { border-bottom-color: #000; }
+:is(#a-blue a, figcaption a):is(:hover, :active) { border-bottom-color: #263cd9; }
+#a-purble a:is(:hover, :active)                  { border-bottom-color: #512da8; }
+#a-green a:is(:hover, :active)                   { border-bottom-color: #7aa325; }
+footer a:is(:hover, :active)                     { border-bottom-color: #000; }
 
 #search-bar {
   background: var(--search-bg-no-blur);
