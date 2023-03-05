@@ -1,6 +1,7 @@
 cd _includes
-call minify 1a____bottom-scripts.js> bottom-scripts.min.js
-call minify 2a____modules.css> modules.min.css
-call minify 2b____noscript-style.css> noscript-style.min.css
-call minify 2c____fonts.css> fonts.min.css
-call minify 4a____sanitize.css> sanitize.min.css
+minify -o bottom-scripts.min.js         1a____bottom-scripts.js
+minify -o bottom-scripts-module.min.js  1b____bottom-scripts-module.js
+minify -o modules.min.css               2a____modules.css
+minify -o noscript-style.min.css        2b____noscript-style.css
+minify -o fonts.min.css                 2c____fonts.css
+minify -o sanitize.min.css              4a____sanitize.css

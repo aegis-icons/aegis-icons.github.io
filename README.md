@@ -27,19 +27,18 @@ If you can't connect to `0.0.0.0:4000`, try `localhost:4000` in browser instead 
 
 ## Compressing CSS and JS files in the `_includes` directory
 
-1. Install [Node.js](https://nodejs.org/en/download/) first.
-   - Then install [Minify](https://github.com/coderaiser/minify) with this command in the terminal:
-   ```
-   npm i minify -g
-   ```
+1. Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify#readme) with your prefered way.
+   - For Windows, download [binary](https://github.com/tdewolff/minify/releases/latest) (`minify_windows_amd64.zip`) and add that .exe to the folder that's on the PATH (`c:\Windows` for example, highly recommend to create [new PATH variable](https://www.computerhope.com/issues/ch000549.htm))
+
 2. Use [`.2___compress_includes-dir_css_js` Windows BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.2___compress_includes-dir_css_js.bat) **(recommended)**.
-   - If that's not possible, then go to `_includes` directory and paste these commands to the terminal:
+   - If you're not on Windows, then go to `_includes` directory and paste these commands to the terminal:
    ```
-   minify 1a____bottom-scripts.js > bottom-scripts.min.js
-   minify 2a____modules.css > modules.min.css
-   minify 2b____noscript-style.css > noscript-style.min.css
-   minify 2c____fonts.css > fonts.min.css
-   minify 4a____sanitize.css > sanitize.min.css
+   minify -o bottom-scripts.min.js         1a____bottom-scripts.js
+   minify -o bottom-scripts-module.min.js  1b____bottom-scripts-module.js
+   minify -o modules.min.css               2a____modules.css
+   minify -o noscript-style.min.css        2b____noscript-style.css
+   minify -o fonts.min.css                 2c____fonts.css
+   minify -o sanitize.min.css              4a____sanitize.css
    ```
    
 While using Jekyll development server, site uses uncompressed CSS & JS files.

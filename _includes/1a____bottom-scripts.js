@@ -2,7 +2,7 @@
   var search = document.querySelector('.search');
   var rootElement = document.documentElement;
   var headerHeight = document.querySelector("#gradient-bg").offsetHeight;
-  const isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/));
+  const isMobile = ('ontouchstart' in document.documentElement);
   var scrollToTopBtn = document.getElementById("scroll-to-top");
   const labelAll = document.querySelectorAll('.label');
 
@@ -69,14 +69,3 @@
     if ((window.innerHeight + Math.ceil(window.pageYOffset) + 100) >= document.body.offsetHeight) { scrollToTopBtn.classList.add("hide-mobile"); }
     else { scrollToTopBtn.classList.remove("hide-mobile"); }
   };
-  
-// ==== Parse JSON and print latest release version via repo tag ====
-  function successListener() {  
-    var data = JSON.parse(this.responseText);  
-    document.getElementById("release-date").innerHTML = ""+data.tag_name
-  }
-  
-  var request = new XMLHttpRequest();  
-  request.onload = successListener;
-  request.open('get','https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest',true);  
-  request.send();

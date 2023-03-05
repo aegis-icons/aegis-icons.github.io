@@ -10,7 +10,6 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
   <link rel="preload" href="/fonts/inter-v3-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="prefetch" href="/fonts/inter-v3-latin-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="prefetch" href="/fonts/Inter-Italic-win-hint_stripped.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="prefetch" href="https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest" as="fetch" crossorigin>
   <link rel="stylesheet" href="/css/main.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -161,7 +160,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       We don't make icons for general purpose, we only focus on userbase of Aegis, the Android app. Check out <a href="https://simpleicons.org/">Simple Icons</a> instead!
     </p>
 
-    <p class="small">
+    <p id="small-links">
       <a href="https://github.com/aegis-icons/aegis-icons/blob/master/messageme.md">Takedown info</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/LICENSE.md">License</a> • <a href="https://github.com/aegis-icons/aegis-icons/#credits">Credits</a> • <a href="https://github.com/aegis-icons/aegis-icons/blob/master/CREDITS-TO-CONTRIBUTORS.md">Contributors</a>
     </p>
   </footer>
@@ -174,7 +173,7 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
       
         <h1 id="please-read">Before making any requests, please read our <b>issue guidelines!</b></h1>
         
-        {% capture md-include1 %}{% include 1b____issue-guidelines.md %}{% endcapture %}
+        {% capture md-include1 %}{% include 1c____issue-guidelines.md %}{% endcapture %}
         {{ md-include1 | markdownify }}
         
         <a id="accept" href="https://github.com/aegis-icons/aegis-icons/issues/">Accept the guidelines</a>
@@ -194,6 +193,15 @@ title: aegis-icons – Unofficial 2FA entry icons for open source Android authen
     {% endif %}
     {% if jekyll.environment == "production" %}
       {% include bottom-scripts.min.js %}
+    {% endif %}
+  </script>
+
+  <script type="module">
+    {% if jekyll.environment == "development" %}
+      {% include 1b____bottom-scripts-module.js %}
+    {% endif %}
+    {% if jekyll.environment == "production" %}
+      {% include bottom-scripts-module.min.js %}
     {% endif %}
   </script>
 
