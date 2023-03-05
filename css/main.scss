@@ -126,7 +126,8 @@ header {
 }
 
 #info-links a, footer a, .lightbox a {
-  border-bottom: 4px solid;
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
   color: #191919;
   font-weight: bold;
   padding-bottom: 1px;
@@ -135,11 +136,10 @@ header {
 
 #info-links p { line-height: 1; }
 
-.link-blue,
-figcaption a  { border-bottom-color: #5768e2; }
-.link-purble  { border-bottom-color: #775bbb; }
-.link-green   { border-bottom-color: #95c336; }
-footer a      { border-bottom-color: rgba(0,0,0,.65); font-style: normal; }
+.link-blue, figcaption a  { border-bottom-color: #5768e2; }
+.link-purble              { border-bottom-color: #775bbb; }
+.link-green               { border-bottom-color: #95c336; }
+footer a                  { border-bottom-color: rgba(0,0,0,.65); font-style: normal; }
 
 
 :is(.link-blue, figcaption a):is(:hover, :active) { border-bottom-color: #263cd9; }
