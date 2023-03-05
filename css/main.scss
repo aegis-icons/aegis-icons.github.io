@@ -108,9 +108,11 @@ header {
   box-shadow: 0 2px 2px rgba(0,0,0,.25);
   display: block;
   font-size: .79rem;
+  height: 29px;
+  line-height: 28.5px;
   margin: 0 auto;
   outline: 4px solid transparent;
-  padding: 5px 5.5% 3px 5.5%;
+  padding: 0 5.5%;
   text-align: center;
   width: fit-content;
 }
@@ -283,7 +285,10 @@ footer {
   margin: 12px 0;
 }
 
-#small-links { font-size: .725rem; }
+#small-links {
+  font-size: .725rem;
+  margin-top: 20px;
+}
 
 img[src="/assets/github.svg"] {
   height: 17px;

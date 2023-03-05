@@ -43,13 +43,6 @@
     }
   });
 
-// ==== Count the icons and print the results ====
-  document.getElementById("total-icon-count").innerHTML = document.querySelectorAll('.n').length;
-  document.getElementById("icon-amount-pri").innerHTML  = document.querySelectorAll('#primary .n').length;
-  document.getElementById("icon-amount-var").innerHTML  = document.querySelectorAll('#variations .n').length;
-  document.getElementById("icon-amount-gen").innerHTML  = document.querySelectorAll('#generic .n').length;
-  document.getElementById("icon-amount-out").innerHTML  = document.querySelectorAll('#outdated .n').length;
-
 // ==== "Scroll to the top" button ===
   // ▼ At 1200px Y axis mark, add class for button (else, remove / do nothing)
   var myScrollFunc = function () {
@@ -65,7 +58,7 @@
   
   // ▼ If at the bottom of page, add class (so it's possible to hide it for mobile with CSS)
   window.onscroll = function(event) {
-    // ▼▼ The "+ 100" triggers it 100px earlier, fixes problem with Firefox Android
-    if ((window.innerHeight + Math.ceil(window.pageYOffset) + 100) >= document.body.offsetHeight) { scrollToTopBtn.classList.add("hide-mobile"); }
+    // ▼▼ The "+ 150" triggers it 150 px earlier, fixes problem with Firefox Android
+    if ((window.innerHeight + Math.ceil(window.pageYOffset) + 150) >= document.body.offsetHeight) { scrollToTopBtn.classList.add("hide-mobile"); }
     else { scrollToTopBtn.classList.remove("hide-mobile"); }
   };
