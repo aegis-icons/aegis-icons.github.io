@@ -10,6 +10,7 @@ Website for our icon set that has very basic Jekyll setup.
 2. Run `bundle` in the terminal at site's root directory.
 
 ### Start the server
+
 1. **In Windows**, run [`.1___start_jekyll_server` Windows BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.1___start_jekyll_server.bat).
 2.  **For other OSes / alternative way**, run this in the terminal at site's root directory:
 ```cmd
