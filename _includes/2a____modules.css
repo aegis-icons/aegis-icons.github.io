@@ -31,6 +31,7 @@
 
 .lightbox .close {
   display: block;
+  padding-bottom: 7px;
   position: relative;
 }
 
@@ -43,6 +44,7 @@
   cursor: pointer;
   display: flex;
   font-size: 1.7rem;
+  font-weight: bold;
   height: 2.5rem;
   justify-content: center;
   left: -1rem;
@@ -69,7 +71,7 @@
 
 /* --- Lightbox content tweaks --- */
 
-#please-read {
+.lightbox h2 {
   font-size: 1.4rem;
   font-weight: 400;
   margin: .32em 0 .40em;

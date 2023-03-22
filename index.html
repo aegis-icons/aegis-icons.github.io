@@ -36,35 +36,35 @@ title: aegis-icons – 2FA icons for Aegis
     <header>
       <div id="logo"></div>
       
-      <div id="desc">
+      <h1>
         Unofficial monochrome-styled 2FA icons for open source Android authenticator Aegis
-      </div>
+      </h1>
       
-      <span data-nosnippet>
         <a id="download-link" href="https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip">
-          Download icon pack<br>
-          <b>(updated monthly)</b>
+          <span data-nosnippet>
+            Download icon pack<br>
+            <b>(updated monthly)</b>
+          </span>
         </a>
-      </span>
       
-      <span data-nosnippet>
         <a id="release" href="https://github.com/aegis-icons/aegis-icons/releases/latest">
-          Latest release: <b id="release-date">...</b>
+          <span data-nosnippet>
+            Latest release: <b id="release-date">...</b>
+          </span>
         </a>
-      </span>
       
-      <div id="info-links" data-nosnippet>
-        <p id="a-purble">
+      <div id="info-links" class="href-text" data-nosnippet>
+        <p class="href-purble">
           <a href="#issue-guidelines">Request new icons on GitHub</a>
         </p>
         
-        <p id="a-blue">
+        <p class="href-blue">
           <a href="https://github.com/aegis-icons/aegis-icons/blob/master/CONTRIBUTING.md">Contributing</a> • 
           <a href="https://github.com/aegis-icons/aegis-icons/blob/master/FAQ.md">FAQ</a> • 
           <a href="https://github.com/aegis-icons/aegis-icons">Repository</a>
         </p>
         
-        <p id="a-green">
+        <p class="href-green">
           <a href="https://getaegis.app/">Download Aegis for Android</a>
         </p>
       </div>
@@ -74,7 +74,7 @@ title: aegis-icons – 2FA icons for Aegis
   <div id="search-bar">
     <div id="search-functions">
       <input class="search" placeholder="Search the icons" type="search">
-      <button class="reset">Clear</button>
+      <button class="reset"><span data-nosnippet>Clear</span></button>
       <noscript>
         <style>
           {% if jekyll.environment == "development" %}
@@ -95,10 +95,10 @@ title: aegis-icons – 2FA icons for Aegis
   </div>
 
   <div id="primary">
-    <h1>
+    <h2>
       Apps & Sites
       <span class="label" id="icon-amount-pri">...</span>
-    </h1>
+    </h2>
     <div class="list">
       {% assign image_files = site.static_files | where: "is_primary", true %}
       {% for myimage in image_files %}
@@ -108,10 +108,10 @@ title: aegis-icons – 2FA icons for Aegis
   </div>
 
   <div id="variations">
-    <h1>
+    <h2>
       Variations & Alternatives
       <span class="label" id="icon-amount-var">...</span>
-    </h1> 
+    </h2> 
     <div class="list">
       {% assign image_files = site.static_files | where: "is_variation", true %}
       {% for myimage in image_files %}
@@ -121,10 +121,10 @@ title: aegis-icons – 2FA icons for Aegis
   </div>
 
   <div id="generic">
-    <h1>
+    <h2>
       Generic
       <span class="label" id="icon-amount-gen">...</span>
-    </h1>
+    </h2>
     <div class="list">
       {% assign image_files = site.static_files | where: "is_generic", true %}
       {% for myimage in image_files %}
@@ -134,10 +134,10 @@ title: aegis-icons – 2FA icons for Aegis
   </div>
 
   <div id="outdated">
-    <h1>
+    <h2>
       Outdated
       <span class="label" id="icon-amount-out">...</span>
-    </h1>
+    </h2>
     <div class="list">
       {% assign image_files = site.static_files | where: "is_outdated", true %}
       {% for myimage in image_files %}
@@ -146,7 +146,7 @@ title: aegis-icons – 2FA icons for Aegis
     </div>
   </div>
 
-  <footer>
+  <footer class="href-text">
     <p id="icon-total">
       Currently, we have total of <b id="total-icon-count">...</b> icons!
     </p>
@@ -172,10 +172,10 @@ title: aegis-icons – 2FA icons for Aegis
   <div class="lightbox" id="issue-guidelines">
     <figure>
       <a href="#" class="close"></a>
-      <figcaption>
+      <figcaption class="href-text href-blue">
         <a href="#" class="close-mobile">Close this modal</a>
       
-        <h1 id="please-read">Before making any requests, please read our <b>issue guidelines!</b></h1>
+        <h2>Before making any requests, please read our <b>issue guidelines!</b></h2>
         
         {% capture md-include1 %}{% include 1c____issue-guidelines.md %}{% endcapture %}
         {{ md-include1 | markdownify }}

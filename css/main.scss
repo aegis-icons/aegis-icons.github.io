@@ -24,6 +24,16 @@ body, input, button
 { font-family: "Inter","Roboto","Segoe UI",system,-apple-system,".SFNSText-Regular","San Francisco","Helvetica Neue","Lucida Grande",sans-serif; }
 
 h1 {
+  font-family: "iA Writer Duo","Roboto Mono","SF Mono",Consolas,"Lucida Console","DejaVu Sans Mono","Liberation Mono",monospace;
+  font-size: unquote("clamp(1.025rem, .8rem + 1.1429vw, 1.4rem)");
+  font-style: italic;
+  font-weight: unset;
+  line-height: 1.475;
+  padding: 3px 16px 8px;
+  text-align: center;
+}
+
+h2 {
   font-size: unquote("clamp(1.3rem, .6905rem + 3.0476vw, 1.5rem)");
   margin: 20px 0;
 }
@@ -64,17 +74,9 @@ header {
 
 #logo {
   background: url("../assets/logo.svg") no-repeat center;
-  margin: 2.5% 12.5% 1.25%;
+  margin: 2.5% 12.5% 0;
   min-height: 110px;
   padding: 16.2%;
-}
-
-#desc {
-  font-family: "iA Writer Duo","Roboto Mono","SF Mono",Consolas,"Lucida Console","DejaVu Sans Mono","Liberation Mono",monospace;
-  font-size: unquote("clamp(1.025rem, .8rem + 1.1429vw, 1.4rem)");
-  font-style: italic;
-  padding: 10px 16px;
-  text-align: center;
 }
 
 #download-link, #release
@@ -86,7 +88,7 @@ header {
   color: #fff;
   display: block;
   font-size: unquote("clamp(1.05rem, .8064rem + 1.1636vw, 1.25rem)");
-  margin: 2.5% auto 15px;
+  margin: 0 auto 15px;
   max-width: 60%;
   min-width: 235px;
   outline: 6px solid transparent;
@@ -125,26 +127,28 @@ header {
   text-align: center;
 }
 
-#info-links a, footer a, .lightbox a {
+#info-links p { line-height: 1; }
+
+.href-text a {
+  border-bottom-color: rgba(0,0,0,0.65);
   border-bottom-style: solid;
   border-bottom-width: 4px;
   color: #191919;
+  font-style: normal;
   font-weight: bold;
   padding-bottom: 1px;
   transition: border-bottom-color .15s;
 }
 
-#info-links p { line-height: 1; }
+.href-text a:is(:hover, :active) { border-bottom-color: #000000; }
 
-#a-blue a, figcaption a { border-bottom-color: #5768e2; }
-#a-purble a             { border-bottom-color: #775bbb; }
-#a-green a              { border-bottom-color: #95c336; }
-footer a                { border-bottom-color: rgba(0,0,0,.65); font-style: normal; }
+.href-blue a    { border-bottom-color: #5768e2; }
+.href-purble a  { border-bottom-color: #775bbb; }
+.href-green a   { border-bottom-color: #95c336; }
 
-:is(#a-blue a, figcaption a):is(:hover, :active) { border-bottom-color: #263cd9; }
-#a-purble a:is(:hover, :active)                  { border-bottom-color: #512da8; }
-#a-green a:is(:hover, :active)                   { border-bottom-color: #7aa325; }
-footer a:is(:hover, :active)                     { border-bottom-color: #000; }
+.href-blue a:is(:hover, :active)   { border-bottom-color: #263cd9; }
+.href-purble a:is(:hover, :active) { border-bottom-color: #512da8; }
+.href-green a:is(:hover, :active)  { border-bottom-color: #7aa325; }
 
 #search-bar {
   background: var(--search-bg-no-blur);
@@ -182,8 +186,8 @@ footer a:is(:hover, :active)                     { border-bottom-color: #000; }
   outline: transparent;
 }
 
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+.search::-webkit-search-cancel-button,
+.search::-webkit-search-decoration {
   -webkit-appearance: none;
   appearance: none;
 }
@@ -362,6 +366,6 @@ a + .disclaimer { margin-top: 25px; }
 
 @media (min-width: 762px) {
   #gradient-bg   { max-height: 590px; }
-  #download-link { margin: 2% auto 19px; }
+  #download-link { margin: 0 auto 19px; }
   #info-links    { padding-top: 4.5px; }
 }
