@@ -11,11 +11,14 @@ Website for our icon set that has very basic Jekyll setup.
 
 ### Start the server
 
-1. **In Windows**, run [`.1___start_jekyll_server` Windows BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.1___start_jekyll_server.bat).
-2.  **For other OSes / alternative way**, run this in the terminal at site's root directory:
+1. **For Windows**, run [`.1___start_jekyll_server` BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.1___start_jekyll_server.bat).
+2.  **For other OSes / alternative way**, execute this terminal command at site's root directory:
 ```cmd
 jekyll serve --incremental --host 0.0.0.0 --port 4000 --open_url
 ```
+
+*After running the BAT or executing the command, it will automatically open local Jekyll server pages in the default browser.*
+
 If you can't connect to `0.0.0.0:4000`, try `localhost:4000` in browser instead **or** changing `--host 0.0.0.0` to `--host localhost`.
 
 ## Share the server with local network
@@ -33,10 +36,11 @@ If you can't connect to `0.0.0.0:4000`, try `localhost:4000` in browser instead 
 ## Compressing CSS and JS files in the `_includes` directory
 
 1. Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify#readme) with your prefered way.
-   - For Windows, download [binary](https://github.com/tdewolff/minify/releases/latest) (`minify_windows_amd64.zip`) and add that .exe to the folder that's on the PATH (`c:\Windows` for example, highly recommended to create [new PATH variable](https://www.computerhope.com/issues/ch000549.htm)).
+   - **On Windows**, download [binary](https://github.com/tdewolff/minify/releases/latest) (`minify_windows_amd64.zip`) and add that .exe to the folder that's on the PATH (`c:\Windows` for example, highly recommended to create [new PATH variable](https://www.computerhope.com/issues/ch000549.htm)).
 
-2. If on Windows, use the [`.2___compress_includes-dir_css_js` BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.2___compress_includes-dir_css_js.bat).
-   - For other OSes or as alternative way, then go to `_includes` directory and paste these commands to the terminal:
+2.
+   1. **For Windows,** use the [`.2___compress_includes-dir_css_js` BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.2___compress_includes-dir_css_js.bat).
+   2. **For other OSes / alternative way,** go to `_includes` directory with terminal and paste these commands:
    ```
    minify -o bottom-scripts.min.js         1a____bottom-scripts.js
    minify -o bottom-scripts-module.min.js  1b____bottom-scripts-module.js
@@ -46,9 +50,10 @@ If you can't connect to `0.0.0.0:4000`, try `localhost:4000` in browser instead 
    minify -o sanitize.min.css              4a____sanitize.css
    ```
    
-While using Jekyll development server, site uses uncompressed CSS & JS files.
+*While using Jekyll development server, site uses **uncompressed** CSS & JS files.*
 
-**Remember to compress CSS & JS files before committing / sending PR!**
+> **Note** \
+> Remember to compress CSS & JS files before committing / sending PR!
 
 ## Credits
 
