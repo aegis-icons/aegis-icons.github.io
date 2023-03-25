@@ -160,7 +160,10 @@ ol > li ul > li li {
     padding: 1.25em;
   }
 
-  .lightbox .close { display: none; }
+  .lightbox .close {
+    backdrop-filter: inherit;
+    display: none;
+  }
 
   .lightbox .close-mobile {
     background: var(--reset-bg);

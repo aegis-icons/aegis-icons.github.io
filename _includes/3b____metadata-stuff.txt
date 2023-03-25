@@ -1,4 +1,4 @@
-<meta name="robots" content="max-snippet:82, max-image-preview:none">
+<meta name="robots" content="max-snippet:-1, max-image-preview:none">
 <meta name="description" content="Download unofficial icon pack with 800+ icons for FOSS Android authenticator Aegis.">
 <meta name="application-name" content="aegis-icons">
 <meta name="apple-mobile-web-app-title" content="aegis-icons">

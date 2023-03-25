@@ -340,24 +340,23 @@ a + .disclaimer { margin-top: 25px; }
 // --- Firefox only tweaks ---
 
 @-moz-document url-prefix() { 
-  // ▼ Lag fixes
-  *:not(.lightbox .close) { backdrop-filter: inherit !important; }
+  // *:not(.lightbox .close) { backdrop-filter: inherit !important; } // Scroll lag fix
 
-  #search-bar    { background: var(--search-bg-no-blur); }
-  #scroll-to-top { background: var(--to-top-bg-no-blur); }
+  // #search-bar    { background: var(--search-bg-no-blur); }
+  // #scroll-to-top { background: var(--to-top-bg-no-blur); }
   
-  // ▼ Mobile Firefox fixes
-  @media (pointer:coarse) {
-    .lightbox .close { backdrop-filter: inherit !important; }
-
-    .list a, .list:empty, .reset {
-      box-shadow: none;
-      transition: box-shadow 1s ease 1s; // Tap focus is different compare to mobile Chromium
-    }
-
-    .list a:active {
-      box-shadow: var(--inset-sh);
-      transition: box-shadow 0s ease; // Tap focus is different compare to mobile Chromium
+  @-moz-document url-prefix() { 
+    // ▼ Mobile Firefox fixes
+    @media (pointer:coarse) {  
+      .list a, .list:empty, .reset {
+        box-shadow: none; // Scroll lag fix
+        transition: box-shadow 1s ease 1s; // Tap focus is different compare to mobile Chromium
+      }
+  
+      .list a:active {
+        box-shadow: var(--inset-sh);
+        transition: box-shadow 0s ease; // Tap focus is different compare to mobile Chromium
+      }
     }
   }
 }

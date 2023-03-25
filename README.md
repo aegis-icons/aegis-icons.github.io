@@ -41,7 +41,7 @@ If you can't connect to `0.0.0.0:4000`, try `localhost:4000` in browser instead 
 2.
    1. **For Windows,** use the [`.2___compress_includes-dir_css_js` BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.2___compress_includes-dir_css_js.bat).
    2. **For other OSes / alternative way,** go to `_includes` directory with terminal and paste these commands:
-   ```
+   ```cmd
    minify -o bottom-scripts.min.js         1a____bottom-scripts.js
    minify -o bottom-scripts-module.min.js  1b____bottom-scripts-module.js
    minify -o modules.min.css               2a____modules.css
