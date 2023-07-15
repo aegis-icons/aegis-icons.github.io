@@ -17,7 +17,7 @@
     // ▼▼ If mobile device
     if (isMobile) { rootElement.scrollTo({ top: headerHeight }); }
     // ▼▼ If PC (and only if scrolled over #gradient-bg)
-    if (!isMobile && (headerHeight <= Math.ceil(window.pageYOffset)) == true) { rootElement.scrollTo({ top: headerHeight }); };
+    if (!isMobile && (headerHeight <= Math.ceil(window.scrollY)) == true) { rootElement.scrollTo({ top: headerHeight }); };
     // ▼ Hide icon count labels when searching
     for (const label of labelAll) {
       label.classList.add('hide');
@@ -38,7 +38,7 @@
       search.value = '';
       lists.forEach(function (list) { list.search(); } );
       // ▼▼ Scroll (only if scrolled over #gradient-bg) and stop before of #gradient-bg
-      if (headerHeight <= Math.ceil(window.pageYOffset) == true) { rootElement.scrollTo({ top: headerHeight }); }
+      if (headerHeight <= Math.ceil(window.scrollY) == true) { rootElement.scrollTo({ top: headerHeight }); }
       for (const label of labelAll) { label.classList.remove('hide'); }
     }
   });
@@ -59,6 +59,6 @@
   // ▼ If at the bottom of page, add class (so it's possible to hide it for mobile with CSS)
   window.onscroll = function(event) {
     // ▼▼ The "+ 150" triggers it 150 px earlier, fixes problem with Firefox Android
-    if ((window.innerHeight + Math.ceil(window.pageYOffset) + 150) >= document.body.offsetHeight) { scrollToTopBtn.classList.add("hide-mobile"); }
+    if ((window.innerHeight + Math.ceil(window.scrollY) + 150) >= document.body.offsetHeight) { scrollToTopBtn.classList.add("hide-mobile"); }
     else { scrollToTopBtn.classList.remove("hide-mobile"); }
   };
