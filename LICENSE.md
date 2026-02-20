@@ -6,6 +6,8 @@ All rights reserved, with these exceptions:
 - Private learning purposes.
 - Forking to improve the code and sending that as pull request here in [aegis-icons.github.io repo](https://github.com/aegis-icons/aegis-icons.github.io).
 
+Any AI or LLM learning is strictly prohibited.
+
 _These assets aren't part of this licensing:_
 - [aegis-icons](https://github.com/aegis-icons/aegis-icons) SVGs (everything in the `icons` directory).
   - **Copyright:** [licensed trademarks and miscellaneous licenses](https://github.com/aegis-icons/aegis-icons#disclaimer).
