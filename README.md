@@ -1,6 +1,6 @@
 # aegis-icons.github.io
 
-Website for our icon set that has very basic Jekyll setup.
+Website for the icon set that has very basic Jekyll setup.
 
 ## Running the local test server
 
@@ -50,7 +50,7 @@ If you can't connect to `0.0.0.0:4000`, try `localhost:4000` in browser instead 
    minify -o sanitize.min.css              4a____sanitize.css
    ```
    
-*While using Jekyll development server, site uses **uncompressed** CSS & JS files.*
+*While using Jekyll development server, the site uses **uncompressed** CSS & JS files.*
 
 > **Note** \
 > Remember to compress CSS & JS files before committing / sending PR!
