@@ -1,10 +1,10 @@
-**Copyright © 2023 Kristian Salonen** (as part of "aegis-icons" project).
+**Copyright © 2026 The aegis-icons Project**.
 
-All rights reserved, except:
-- For copying small parts of the website code.
+All rights reserved, with these exceptions:
+- Copying small parts of the website code.
   - Copying full source code and making slight edits **is not allowed**, this is not a freely usable template for your websites.
-- For private learning purposes.
-- For forking to improve the code and sending that as pull request here in [aegis-icons.github.io repo](https://github.com/aegis-icons/aegis-icons.github.io).
+- Private learning purposes.
+- Forking to improve the code and sending that as pull request here in [aegis-icons.github.io repo](https://github.com/aegis-icons/aegis-icons.github.io).
 
 _These assets aren't part of this licensing:_
 - [aegis-icons](https://github.com/aegis-icons/aegis-icons) SVGs (everything in the `icons` directory).
