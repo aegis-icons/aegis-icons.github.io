@@ -1,6 +1,6 @@
 # aegis-icons.github.io
 
-Website for the icon set that has very basic Jekyll setup.
+Website for the icon set that has a very basic Jekyll setup.
 
 ## Running the local test server
 
@@ -17,18 +17,18 @@ Website for the icon set that has very basic Jekyll setup.
 jekyll serve --incremental --host 0.0.0.0 --port 4000 --open_url
 ```
 
-*After running the BAT or executing the command, it will automatically open local Jekyll server pages in the default browser.*
+*After running the BAT or executing the command, the website will automatically open local Jekyll server pages in the default browser.*
 
-If you can't connect to `0.0.0.0:4000`, try `localhost:4000` in browser instead **or** changing `--host 0.0.0.0` to `--host localhost`.
+If connecting to `0.0.0.0:4000` fails, try `localhost:4000` in the browser instead **or** change `--host 0.0.0.0` to `--host localhost`.
 
 ## Share the server with local network
 
-**Optional!** Only needed if you want to test in your mobile devices etc.
+**Optional!** Only needed for testing on mobile devices etc.
 
 1. Open port `4000` **(TCP protocol)** from router's settings.
-2. Find your **local** IPv4 address of the server PC.
+2. Find the **local** IPv4 address of the server PC.
 3. Start the server.
-4. Go to `http://[SERVER'S-LOCAL-IPv4-ADDRESS]:4000` on your other device.
+4. Navigate to `http://[SERVER'S-LOCAL-IPv4-ADDRESS]:4000` on the other device.
 
 > **Note** \
 > Server's local network sharing won't work if `--host 0.0.0.0` is changed to `--host localhost`.
@@ -53,12 +53,12 @@ If you can't connect to `0.0.0.0:4000`, try `localhost:4000` in browser instead 
 *While using Jekyll development server, the site uses **uncompressed** CSS & JS files.*
 
 > **Note** \
-> Remember to compress CSS & JS files before committing / sending PR!
+> CSS & JS files must be compressed before before opening a pull request!
 
 ## Credits
 
 - **Earhacker** from Reddit for [converting jQuery code to regular JavaScript](https://old.reddit.com/r/CodingHelp/comments/oz5cov/can_somebody_help_me_get_this_converted_from/h7y9cua/) ([referenced code on the site repo](https://github.com/aegis-icons/aegis-icons.github.io/blob/0fd7502a865f5ea7c94f6e77ff01d9da4c085e64/index.html#L210+L232)).
-- **[trotzig](https://github.com/trotzig)** for "micro-optimizing" List.js ([#482 PR at List.js repo](https://github.com/javve/list.js/pull/482)).
+- **[trotzig](https://github.com/trotzig)** for "micro-optimising" List.js ([#482 PR at List.js repo](https://github.com/javve/list.js/pull/482)).
 
 ### Assets
 
