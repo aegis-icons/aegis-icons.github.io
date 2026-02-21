@@ -30,7 +30,7 @@ If connecting to `0.0.0.0:4000` fails, try `localhost:4000` in the browser inste
 3. Start the server.
 4. Navigate to `http://[SERVER'S-LOCAL-IPv4-ADDRESS]:4000` on the other device.
 
-> **Note** \
+> [!NOTE]
 > Server's local network sharing won't work if `--host 0.0.0.0` is changed to `--host localhost`.
 
 ## Compressing CSS and JS files in the `_includes` directory
@@ -52,7 +52,7 @@ If connecting to `0.0.0.0:4000` fails, try `localhost:4000` in the browser inste
    
 *While using Jekyll development server, the site uses **uncompressed** CSS & JS files.*
 
-> **Note** \
+> [!NOTE]
 > CSS & JS files must be compressed before before opening a pull request!
 
 ## Credits
