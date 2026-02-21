@@ -1,5 +1,5 @@
 <p id="issue_guideline-update">
-  Last updated on: 2022-10-26
+  Last updated on: 2026-01-21
 </p>
 
 1. App / site related requests has to **have Aegis-compatible 2FA support** one way or another, this project doesn't make icons outside of Aegis usage.
