@@ -6,7 +6,7 @@
    - Don't lie, we always double-check if requested service has 2FA support. You can add proof for the existence of Aegis-compatible 2FA to the issue form's "Proof of the Aegis-compatible 2FA" section.
      - For the similar icons for general purpose, check out [Simple Icons](https://simpleicons.org/) instead.
 2. **Check that icon you're about to request doesn't already exist by using search on this site** or opened / closed in the GitHub issues.
-   - Icon packs are updated monthly, not every time a new icon is created ([see the pack releases](https://github.com/aegis-icons/aegis-icons/releases)). Icons created after the latest pack update are downloadable on this website.
+   - Icon packs aren't continuously updated in every new icon, ([see the pack releases](https://github.com/aegis-icons/aegis-icons/releases)). Icons created after the latest pack update are downloadable on this website.
 3. Read the issue form **carefully** and **follow the instructions.**
 4. Don't open **more then 5 icon request issues** at the same time.
    - You can request more after **all** of your current requests are filled.
