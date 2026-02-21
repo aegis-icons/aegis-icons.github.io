@@ -1,12 +1,15 @@
 ---
 ---
 
-// - `Clamp` values generated with: https://codesandbox.io/embed/clamp-linear-intepolation-based-on-viewport-width-builder-xgkft?view=preview
-//   (from: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/#aa-for-those-who-dont-mind-that-edge-case)
-//   - Alternatives:
-//     - https://modern-fluid-typography.vercel.app/
-//     - https://royalfig.github.io/fluid-typography-calculator/
-//     - https://min-max-calculator.9elements.com/
+// Clamp calculation: https://www.marcbacon.com/tools/clamp-calculator/
+//   Viewport Range (PX):
+//     - Base: 16
+//     - Min: 335
+//     - Max: 660
+// Syntax example: clamp([min font-size], [viewport calc], [min font-size])
+// Do "clamp calculator" web search to find alternative sites with similar calculators.
+
+// - Always use REM in font-size!
 // - Good font stripper tool: https://transfonter.org/
 // - `unquote("code")` is for SASS ignoring things that it doesn't understand and errors.
 
@@ -18,10 +21,8 @@
   --to-top-bg-no-blur: linear-gradient(180deg, rgba(196,196,196,.6) 0%, rgba(183,181,181,.9) 100%);
   --sh: 0 3px 3px rgba(0,0,0,.35);
   --inset-sh: inset 0 0 0 6px rgba(38,60,217,.85);
+  font-size: 16px;
 }
-
-html
-{ font-size: 16px; }
 
 body, input, button
 { font-family: "Inter","Roboto","Segoe UI",system,-apple-system,".SFNSText-Regular","San Francisco","Helvetica Neue","Lucida Grande",sans-serif; }
@@ -90,12 +91,12 @@ header {
   border-radius: 20px;
   color: #fff;
   display: block;
-  font-size: unquote("clamp(1.05rem, .8064rem + 1.1636vw, 1.25rem)");
+  font-size: unquote("clamp(1.05rem, .741rem + 1.477vw, 1.35rem)");
   margin: 0 auto 15px;
-  max-width: 60%;
-  min-width: 235px;
+  max-width: 50%;
+  min-width: 225px;
   outline: 6px solid transparent;
-  padding: 10px 15px;
+  padding: 20px 15px;
   text-align: center;
   text-decoration: none;
 }
@@ -112,7 +113,7 @@ header {
   border-radius: 7px;
   box-shadow: 0 2px 2px rgba(0,0,0,.25);
   display: block;
-  font-size: .79rem;
+  font-size: .85rem;
   height: 29px;
   line-height: 28.5px;
   margin: 0 auto;
