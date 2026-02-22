@@ -11,7 +11,7 @@
 
 // - Always use REM in font-size!
 // - Good font stripper tool: https://transfonter.org/
-// - `unquote("code")` is for SASS ignoring things that it doesn't understand and errors.
+// - `unquote("code")` is for SASS ignoring things that it doesn't understand and errors. 
 
 :root {
   --blur: blur(10px);
@@ -92,11 +92,12 @@ header {
   color: #fff;
   display: block;
   font-size: unquote("clamp(1.05rem, .741rem + 1.477vw, 1.25rem)");
+  line-height: 1.4;
   margin: 0 auto 15px;
-  max-width: 50%;
+  max-width: 45%;
   min-width: 225px;
   outline: 6px solid transparent;
-  padding: 17px 15px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
 }
@@ -113,7 +114,7 @@ header {
   border-radius: 7px;
   box-shadow: 0 2px 2px rgba(0,0,0,.25);
   display: block;
-  font-size: .82rem;
+  font-size: .8rem;
   height: 29px;
   line-height: 28.5px;
   margin: 0 auto;
@@ -369,6 +370,6 @@ a + .disclaimer { margin-top: 25px; }
 
 @media (min-width: 762px) {
   #gradient-bg   { max-height: 590px; }
-  #download-link { margin: 0 auto 19px; }
+  #download-link { margin: 0 auto 18px; }
   #info-links    { padding-top: 4.5px; }
 }
