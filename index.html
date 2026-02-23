@@ -99,7 +99,7 @@ title: aegis-icons – 2FA icons for Aegis
       <span class="label" id="icon-amount-pri">...</span>
     </h2>
     <div class="list">
-      {% assign image_files = site.static_files | where: "is_primary", true %}
+      {% assign image_files = site.static_files | where: "is_primary", true | sort_natural: "name" %}
       {% for myimage in image_files %}
         {% include 3a____icon-elements.txt %}
       {% endfor %}
@@ -112,7 +112,7 @@ title: aegis-icons – 2FA icons for Aegis
       <span class="label" id="icon-amount-var">...</span>
     </h2> 
     <div class="list">
-      {% assign image_files = site.static_files | where: "is_variation", true %}
+      {% assign image_files = site.static_files | where: "is_variation", true | sort_natural: "name" %}
       {% for myimage in image_files %}
         {% include 3a____icon-elements.txt %}
       {% endfor %}
@@ -125,7 +125,7 @@ title: aegis-icons – 2FA icons for Aegis
       <span class="label" id="icon-amount-gen">...</span>
     </h2>
     <div class="list">
-      {% assign image_files = site.static_files | where: "is_generic", true %}
+      {% assign image_files = site.static_files | where: "is_generic", true | sort_natural: "name" %}
       {% for myimage in image_files %}
         {% include 3a____icon-elements.txt %}
       {% endfor %}
@@ -138,7 +138,7 @@ title: aegis-icons – 2FA icons for Aegis
       <span class="label" id="icon-amount-out">...</span>
     </h2>
     <div class="list">
-      {% assign image_files = site.static_files | where: "is_outdated", true %}
+      {% assign image_files = site.static_files | where: "is_outdated", true | sort_natural: "name" %}
       {% for myimage in image_files %}
         {% include 3a____icon-elements.txt %}
       {% endfor %}
