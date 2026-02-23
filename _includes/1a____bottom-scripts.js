@@ -62,3 +62,18 @@
     if ((window.innerHeight + Math.ceil(window.scrollY) + 150) >= document.body.offsetHeight) { scrollToTopBtn.classList.add("hide-mobile"); }
     else { scrollToTopBtn.classList.remove("hide-mobile"); }
   };
+
+// ▼ Fetch GitHub Repository Description
+  var h1 = document.querySelector('h1');
+  var fallbackDescription = 'Unofficial 2FA entry icons for open source Android authenticator Aegis.';
+
+  fetch('https://api.github.com/repos/aegis-icons/aegis-icons')
+    .then(function (response) {
+      if (!response.ok) { throw new Error('GitHub API request failed'); }
+      return response.json();
+    })
+    .then(function (data) { h1.textContent = data.description || fallbackDescription; })
+    .catch(function (error) {
+      console.error('Error fetching GitHub description:', error);
+      h1.textContent = fallbackDescription;
+    });
