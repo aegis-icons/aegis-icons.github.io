@@ -64,7 +64,7 @@
   };
 
 // ▼ Fetch GitHub Repository Description
-  var h1 = document.querySelector('h1');
+  var h1 = document.getElementById('project-desc');
   var fallbackDescription = 'Unofficial 2FA entry icons for open source Android authenticator Aegis.';
 
   fetch('https://api.github.com/repos/aegis-icons/aegis-icons')
