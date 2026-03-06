@@ -2,8 +2,8 @@ name: Monthly Update Website Icons
 
 on:
   schedule:
-    - cron: '0 0 2 * *'  # Runs at 00:00 UTC on the 2nd day of every month
-  workflow_dispatch:      # Allows manual triggering
+    - cron: '0 0 2 * *'
+  workflow_dispatch:
 
 jobs:
   update-website:
@@ -18,29 +18,19 @@ jobs:
 
       - name: Download latest release
         run: |
+          # Replace with the actual filename from the latest release
           curl -L -o icons.zip https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip
 
-      - name: Extract and organize icons
+      - name: Check downloaded file
+        run: file icons.zip
+
+      - name: Extract and update icons
         run: |
-          # Extract the zip file
           unzip icons.zip -d temp_icons
-
-          # Move and rename folders as needed
-          # Example: Move contents of icons/icons/1_Primary to icons/primary
-          mkdir -p website/icons/primary
-          cp -r temp_icons/icons/icons/1_Primary/* website/icons/primary/
-
-          # Add more cp/mv commands here for other folders as needed
-          # Example: cp -r temp_icons/icons/icons/2_Secondary/* website/icons/secondary/
-
-          # Navigate to the website directory
+          cp -r temp_icons/* website/icons/
           cd website
-
-          # Configure Git
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-
-          # Commit and push changes
           git add icons/
           git commit -m "Update icons to latest release"
           git push
