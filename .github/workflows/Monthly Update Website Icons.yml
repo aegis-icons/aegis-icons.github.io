@@ -2,8 +2,8 @@ name: Monthly Update Website Icons
 
 on:
   schedule:
-    - cron: '0 0 2 * *'
-  workflow_dispatch:
+    - cron: '0 0 2 * *'  # Runs at 00:00 UTC on the 2nd day of every month
+  workflow_dispatch:      # Allows manual triggering
 
 jobs:
   update-website:
@@ -18,19 +18,41 @@ jobs:
 
       - name: Download latest release
         run: |
-          # Replace with the actual filename from the latest release
           curl -L -o icons.zip https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip
 
-      - name: Check downloaded file
-        run: file icons.zip
-
-      - name: Extract and update icons
+      - name: Extract and organize icons
         run: |
+          # Extract the zip file
           unzip icons.zip -d temp_icons
-          cp -r temp_icons/* website/icons/
+
+          # Create target directories if they don't exist
+          mkdir -p website/icons/primary
+          mkdir -p website/icons/variations
+
+          # Move and replace files for primary icons
+          if [ -d "temp_icons/icons/1_Primary" ]; then
+            cp -rf temp_icons/icons/1_Primary/* website/icons/primary/
+          else
+            echo "Error: Source directory temp_icons/icons/1_Primary not found."
+            exit 1
+          fi
+
+          # Move and replace files for variations icons
+          if [ -d "temp_icons/icons/2_Variations" ]; then
+            cp -rf temp_icons/icons/2_Variations/* website/icons/variations/
+          else
+            echo "Error: Source directory temp_icons/icons/2_Variations not found."
+            exit 1
+          fi
+
+          # Navigate to the website directory
           cd website
+
+          # Configure Git
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
+
+          # Commit and push changes
           git add icons/
           git commit -m "Update icons to latest release"
           git push
