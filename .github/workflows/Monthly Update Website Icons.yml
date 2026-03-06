@@ -28,6 +28,8 @@ jobs:
           # Create target directories if they don't exist
           mkdir -p website/icons/primary
           mkdir -p website/icons/variations
+          mkdir -p website/icons/generic
+          mkdir -p website/icons/outdated
 
           # Move and replace files for primary icons
           if [ -d "temp_icons/icons/1_Primary" ]; then
@@ -42,6 +44,22 @@ jobs:
             cp -rf temp_icons/icons/2_Variations/* website/icons/variations/
           else
             echo "Error: Source directory temp_icons/icons/2_Variations not found."
+            exit 1
+          fi
+
+          # Move and replace files for generic icons
+          if [ -d "temp_icons/icons/3_Generic" ]; then
+            cp -rf temp_icons/icons/3_Generic/* website/icons/generic/
+          else
+            echo "Error: Source directory temp_icons/icons/3_Generic not found."
+            exit 1
+          fi
+
+          # Move and replace files for outdated icons
+          if [ -d "temp_icons/icons/4_Outdated" ]; then
+            cp -rf temp_icons/icons/4_Outdated/* website/icons/outdated/
+          else
+            echo "Error: Source directory temp_icons/icons/4_Outdated not found."
             exit 1
           fi
 
