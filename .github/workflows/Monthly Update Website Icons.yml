@@ -1,0 +1,41 @@
+name: Monthly Update Website Icons
+
+on:
+  schedule:
+    - cron: '0 0 2 * *'  # Runs at 00:00 UTC on the 2nd day of every month
+
+jobs:
+  update-website:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website repository
+        uses: actions/checkout@v4
+        with:
+          repository: aegis-icons/aegis-icons.github.io
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: website
+
+      - name: Download latest release
+        run: |
+          # Download the latest release zip file
+          curl -L -o icons.zip https://github.com/aegis-icons/aegis-icons/releases/latest/download/icons.zip
+
+      - name: Extract and update icons
+        run: |
+          # Extract the new icons to a temporary directory
+          unzip icons.zip -d temp_icons
+
+          # Copy new icons to the website directory, overwriting only if files exist
+          cp -r temp_icons/* website/icons/
+
+          # Navigate to the website directory
+          cd website
+
+          # Configure Git
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          # Commit and push changes
+          git add icons/
+          git commit -m "Update icons to latest release"
+          git push
