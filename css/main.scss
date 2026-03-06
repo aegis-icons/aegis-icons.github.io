@@ -6,10 +6,10 @@
 //     - Base: 16
 //     - Min: 335
 //     - Max: 660
-// Syntax example: clamp([min font-size], [viewport calc], [min font-size])
+// Syntax example: clamp([min font-size], [viewport calc], [max font-size])
 // Do "clamp calculator" web search to find alternative sites with similar calculators.
 
-// - Always use REM in font-size!
+// - Always use REM in font-size! (Excect on :root)
 // - Good font stripper tool: https://transfonter.org/
 // - `unquote("code")` is for SASS ignoring things that it doesn't understand and errors. 
 
@@ -294,7 +294,7 @@ footer {
 }
 
 #small-links {
-  font-size: .725rem;
+  font-size: .77rem;
   margin-top: 20px;
 }
 
@@ -306,8 +306,8 @@ img[src="/assets/github.svg"] {
 a + .disclaimer { margin-top: 25px; }
 
 .disclaimer {
-  color: rgba(0,0,0,.7);
-  font-size: .725rem;
+  color: hsl(0 0 15);
+  font-size: .77rem;
   font-style: italic;
 }
 
@@ -318,6 +318,10 @@ a + .disclaimer { margin-top: 25px; }
 
   .list a { transition: box-shadow 1s ease 1.75s; }
   .list a:active { transition: box-shadow .2s ease; }
+}
+
+@media (max-width: 333px) {
+  #small-links { font-size: .725rem !important; }
 }
 
 // --- If browser supports feature ---
