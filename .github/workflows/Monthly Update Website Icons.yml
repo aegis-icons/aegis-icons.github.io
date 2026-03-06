@@ -19,7 +19,7 @@ jobs:
       - name: Download latest release
         run: |
           # Download the latest release zip file
-          curl -L -o icons.zip https://github.com/aegis-icons/aegis-icons/releases/latest/download/icons.zip
+          curl -L -o icons.zip https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip
 
       - name: Extract and update icons
         run: |
