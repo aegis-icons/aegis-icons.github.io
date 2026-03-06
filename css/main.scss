@@ -11,7 +11,7 @@
 
 // - Always use REM in font-size! (Excect on :root)
 // - Good font stripper tool: https://transfonter.org/
-// - `unquote("code")` is for SASS ignoring things that it doesn't understand and errors. 
+// - `unquote("code")` is for GitHub's Jekyll and SASS to ignore parsing things that it doesn't understand and errors. 
 
 :root {
   --blur: blur(10px);
@@ -306,7 +306,7 @@ img[src="/assets/github.svg"] {
 a + .disclaimer { margin-top: 25px; }
 
 .disclaimer {
-  color: hsl(0 0 15);
+  color: unquote("hsl(0 0 15)");
   font-size: .77rem;
   font-style: italic;
 }
