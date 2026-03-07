@@ -20,7 +20,7 @@ jobs:
         run: |
           curl -L -o icons.zip https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip
 
-      - name: Extract and organize icons
+      - name: Extract and organise icons
         run: |
           # Extract the zip file
           unzip icons.zip -d temp_icons
@@ -62,6 +62,9 @@ jobs:
             echo "Error: Source directory temp_icons/icons/4_Outdated not found."
             exit 1
           fi
+
+          # Remove pack.json if it exists
+          find website/icons -name "pack.json" -type f -delete
 
           # Navigate to the website directory
           cd website
