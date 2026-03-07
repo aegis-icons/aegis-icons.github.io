@@ -75,5 +75,9 @@ jobs:
 
           # Commit and push changes
           git add icons/
-          git commit -m "Update icons to latest release"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update icons to latest release"
+            git push
+          fi
