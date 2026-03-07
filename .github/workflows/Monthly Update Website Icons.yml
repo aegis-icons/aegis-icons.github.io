@@ -20,7 +20,7 @@ jobs:
         run: |
           curl -L -o icons.zip https://github.com/aegis-icons/aegis-icons/releases/latest/download/aegis-icons.zip
 
-      - name: Extract and organise icons
+      - name: Extract and organize icons
         run: |
           # Extract the zip file
           unzip icons.zip -d temp_icons
