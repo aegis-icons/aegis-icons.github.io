@@ -1,4 +1,5 @@
 /.jekyll-cache
 /_site
-.jekyll-metadata
 /vendor
+.jekyll-metadata
+Gemfile.lock
