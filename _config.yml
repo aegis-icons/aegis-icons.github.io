@@ -1,10 +1,19 @@
 exclude:
- - .1___start_jekyll_server.bat
- - .2___compress_bottom-scripts.bat
- - get_icons.bat
+ - .sass-cache/
+ - .jekyll-cache/
+ - gemfiles/
+ - Gemfile
+ - Gemfile.lock
+ - node_modules/
+ - vendor/bundle/
+ - vendor/cache/
+ - vendor/gems/
+ - vendor/ruby/
+ - x__excluded/
+ - z__bat-scripts/
+ - z__sh-scripts/
  - LICENSE.md
  - README.md
- - x__excluded/
  
 defaults:
   - scope:
@@ -22,11 +31,6 @@ defaults:
     values:
       image: true
       is_generic: true
-  - scope:
-      path: "icons/outdated"
-    values:
-      image: true
-      is_outdated: true
 
 sass:
   style: compressed

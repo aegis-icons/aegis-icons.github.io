@@ -83,7 +83,7 @@ title: aegis-icons – 2FA icons for Aegis
           <span data-nosnippet>
             Enable JavaScript for search & other functions<br>
             <small>
-              3rd party connections: <a href="https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest">GitHub releases API JSON</a>
+              JS related connections: <a href="https://api.github.com/repos/aegis-icons/aegis-icons/releases/latest">GitHub releases API JSON</a>
             </small>
           </span>
         </div>
@@ -124,19 +124,6 @@ title: aegis-icons – 2FA icons for Aegis
     </h2>
     <div class="list">
       {% assign image_files = site.static_files | where: "is_generic", true | sort_natural: "name" %}
-      {% for myimage in image_files %}
-        {% include 3a____icon-elements.txt %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <div id="outdated">
-    <h2>
-      Outdated
-      <span class="label" id="icon-amount-out">...</span>
-    </h2>
-    <div class="list">
-      {% assign image_files = site.static_files | where: "is_outdated", true | sort_natural: "name" %}
       {% for myimage in image_files %}
         {% include 3a____icon-elements.txt %}
       {% endfor %}
