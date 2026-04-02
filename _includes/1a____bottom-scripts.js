@@ -7,7 +7,7 @@
   const labelAll = document.querySelectorAll('.label');
 
 // ==== List.js search function ====
-  var listNames = ['primary', 'variations', 'generic', 'outdated'];
+  var listNames = ['primary', 'variations', 'generic'];
   var lists = listNames.map(function (name) { return new List(name, { valueNames: ['n'] }); });
 
   var searchTrigger = function (e) {

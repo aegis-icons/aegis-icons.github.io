@@ -3,7 +3,6 @@
   document.getElementById("icon-amount-pri").innerHTML  = document.querySelectorAll('#primary .n').length;
   document.getElementById("icon-amount-var").innerHTML  = document.querySelectorAll('#variations .n').length;
   document.getElementById("icon-amount-gen").innerHTML  = document.querySelectorAll('#generic .n').length;
-  document.getElementById("icon-amount-out").innerHTML  = document.querySelectorAll('#outdated .n').length;
 
 // ==== Parse JSON and print latest release version via repo tag ====
   function successListener() {  
