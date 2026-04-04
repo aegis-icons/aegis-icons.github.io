@@ -4,8 +4,7 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('../fonts/inter-v3-latin-regular.woff2') format('woff2'),
-       url('../fonts/inter-v3-latin-regular.woff') format('woff');
+       url('../fonts/inter-v3-latin-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -14,8 +13,7 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('../fonts/Inter-Italic-win-hint_stripped.woff2') format('woff2'),
-       url('../fonts/Inter-Italic-win-hint_stripped.woff') format('woff');
+       url('../fonts/Inter-Italic-win-hint_stripped.woff2') format('woff2');
   unicode-range: U+0020-007E;
 }
 
@@ -25,8 +23,7 @@
   font-style: normal;
   font-weight: 600;
   src: local(''),
-       url('../fonts/inter-v3-latin-600.woff2') format('woff2'),
-       url('../fonts/inter-v3-latin-600.woff') format('woff');
+       url('../fonts/inter-v3-latin-600.woff2') format('woff2');
 }
 
 @font-face {
@@ -35,6 +32,5 @@
   font-style: italic;
   font-weight: 400;
   src: local(''),
-       url('../fonts/iA-Writer-Duo-S-Italic-stripped.woff2') format('woff2'),
-       url('../fonts/iAWriterDuoS-Italic-stripped.woff') format('woff');
+       url('../fonts/iA-Writer-Duo-S-Italic-stripped.woff2') format('woff2');
 }

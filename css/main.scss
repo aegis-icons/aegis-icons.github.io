@@ -2,16 +2,24 @@
 ---
 
 // Clamp calculation: https://www.marcbacon.com/tools/clamp-calculator/
-//   Viewport Range (PX):
+//   Target values:
+//     - Unit: REM
+//     - Base: 16
+//     - Min: [minimum font-size you allow for element]
+//     - Max: [maximum font-size you allow for element]
+//   Viewport Range:
+//     - Unit: PX
 //     - Base: 16
 //     - Min: 335
 //     - Max: 660
+
 // Syntax example: clamp([min font-size], [viewport calc], [max font-size])
 // Do "clamp calculator" web search to find alternative sites with similar calculators.
 
-// - Always use REM in font-size! (Excect on :root)
-// - Good font stripper tool: https://transfonter.org/
-// - `unquote("code")` is for GitHub's Jekyll and SASS to ignore parsing things that it doesn't understand and errors. 
+// - Always use REM in font-size! (Except on :root)
+// - Good font stripper tool: https://transfonter.org/ (make sure that font license allows that)
+
+// `unquote("code")` is for GitHub Pages Jekyll and SASS to ignore parsing things that it doesn't understand and errors.
 
 :root {
   --blur: blur(10px);
@@ -359,12 +367,12 @@ a + .disclaimer { margin-top: 25px; }
     @media (pointer:coarse) {  
       .list a, .list:empty, .reset {
         box-shadow: none; // Scroll lag fix
-        transition: box-shadow 1s ease 1s; // Tap focus is different compare to mobile Chromium
+        transition: box-shadow 1s ease 1s; // Tap focus is different compared to mobile Chromium
       }
   
       .list a:active {
         box-shadow: var(--inset-sh);
-        transition: box-shadow 0s ease; // Tap focus is different compare to mobile Chromium
+        transition: box-shadow 0s ease; // Tap focus is different compared to mobile Chromium
       }
     }
   }
