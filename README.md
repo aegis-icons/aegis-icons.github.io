@@ -13,7 +13,7 @@ Website for the icon set that has a very basic Jekyll setup.
 
 - **For Windows**, run the `1__get_icons.bat` script *(in the `z__bat-scripts` dir)*.
 - **For Linux (with shell)**, run the `1__get_icons.sh` script *(in the `z__sh-scripts` dir)*.
-  - Give permissions first
+  - Give permissions first:
     ```cmd
     chmod +x 1__get_icons.sh
     ```
@@ -84,7 +84,7 @@ Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify#readm
   - Give permissions first:
     ```cmd
     chmod +x 3___compress_includes-dir_css_js.sh
-    ``
+    ```
 
 - **For other OSes / manual way,** go to `_includes` directory with terminal and paste these commands:
 
