@@ -11,9 +11,12 @@ Website for the icon set that has a very basic Jekyll setup.
 > [!NOTE]
 > Both `aegis-icons.github.io` & `aegis-icons` directories **needs to be side by side in the same root directory.**
 
-- **For Windows**, run the `1__get_icons.bat` script in the `z__bat-scripts` dir.
-- **For Linux (with shell)**, run the `1__get_icons.sh` script in the `z__sh-scripts`
-  - Give permissions first: `chmod +x 1__get_icons.sh`
+- **For Windows**, run the `1__get_icons.bat` script *(in the `z__bat-scripts` dir)*.
+- **For Linux (with shell)**, run the `1__get_icons.sh` script *(in the `z__sh-scripts` dir)*.
+  - Give permissions first
+    ```cmd
+    chmod +x 1__get_icons.sh
+    ```
 - **For other OSes / manual way**, copy-paste `icons` folder from `aegis-icons` dir to website root, **then rename folders**:
   - `1_Primary` ➜ `primary`
   - `2_Variations` ➜ `variations`
@@ -29,19 +32,23 @@ Website for the icon set that has a very basic Jekyll setup.
 > [!IMPORTANT]
 > For setups older then 2026-04-05, you'll need to do the setup again because of `jekyll` to `github-pages` gem change.
 >
-> **Run these in terminal:**
-> 1. `bundle clean --force`
-> 2. `bundle`
+> **Run this in terminal to reinstall:**
+> ```cmd
+> bundle clean --force && bundle
+> ```
 
 ### Start the server
 
-- **For Windows**, run the `2___start_jekyll_server.bat` script.
-- **For Linux (with shell)**, run the `2___start_jekyll_server.sh` script.
-  - Give permissions first: `chmod +x 2__start_jekyll_server.sh`
+- **For Windows**, run the `2___start_jekyll_server.bat` script *(in the `z__bat-scripts` dir)*.
+- **For Linux (with shell)**, run the `2___start_jekyll_server.sh` script *(in the `z__sh-scripts` dir)*.
+  - Give permissions first:
+    ```cmd
+    chmod +x 2__start_jekyll_server.sh
+    ```
 -  **For other OSes / manual way**, execute this terminal command at site's root directory:
-```cmd
-jekyll serve --incremental --host 0.0.0.0 --port 4000 --open_url
-```
+   - ```cmd
+     jekyll serve --incremental --host 0.0.0.0 --port 4000 --open_url
+     ```
 
 *After running the BAT or executing the command, the website will automatically open local Jekyll server pages in the default browser.*
 
@@ -71,21 +78,24 @@ Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify#readm
 
 ### Do the compression
 
-- **For Windows,** use the `3___compress_includes-dir_css_js.bat` script.
+- **For Windows,** use the `3___compress_includes-dir_css_js.bat` script *(in the `z__bat-scripts` dir)*.
 
-- **For Linux (with shell),** use the `3___compress_includes-dir_css_js.sh` script.
-  - Give permissions first: `chmod +x 3___compress_includes-dir_css_js.sh`
+- **For Linux (with shell),** use the `3___compress_includes-dir_css_js.sh` script *(in the `z__sh-scripts` dir)*.
+  - Give permissions first:
+    ```cmd
+    chmod +x 3___compress_includes-dir_css_js.sh
+    ``
 
 - **For other OSes / manual way,** go to `_includes` directory with terminal and paste these commands:
 
-   ```cmd
-   minify -o bottom-scripts.min.js         1a____bottom-scripts.js
-   minify -o bottom-scripts-module.min.js  1b____bottom-scripts-module.js
-   minify -o modules.min.css               2a____modules.css
-   minify -o noscript-style.min.css        2b____noscript-style.css
-   minify -o fonts.min.css                 2c____fonts.css
-   minify -o sanitize.min.css              4a____sanitize.css
-   ```
+   - ```cmd
+     minify -o bottom-scripts.min.js         1a____bottom-scripts.js
+     minify -o bottom-scripts-module.min.js  1b____bottom-scripts-module.js
+     minify -o modules.min.css               2a____modules.css
+     minify -o noscript-style.min.css        2b____noscript-style.css
+     minify -o fonts.min.css                 2c____fonts.css
+     minify -o sanitize.min.css              4a____sanitize.css
+     ```
    
 *While using Jekyll development server, the site uses **uncompressed** CSS & JS files.*
 
