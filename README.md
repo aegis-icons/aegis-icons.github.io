@@ -48,10 +48,10 @@ Website for the icon set that has a very basic Jekyll setup.
     ```
 -  **For other OSes / manual way**, execute this terminal command at site's root directory:
    - ```cmd
-     jekyll serve --incremental --host 0.0.0.0 --port 4000 --open_url
+     bundle exec jekyll serve --incremental --host 0.0.0.0 --port 4000 --open_url
      ```
 
-*After running the BAT or executing the command, the website will automatically open local Jekyll server pages in the default browser.*
+*After running the script or executing the command, the website will automatically open local Jekyll server pages in the default browser.*
 
 #### Troubleshooting
 
