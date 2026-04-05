@@ -19,7 +19,7 @@
 // - Always use REM in font-size! (Except on :root)
 // - Good font stripper tool: https://transfonter.org/ (make sure that font license allows that)
 
-// `unquote("code")` is for GitHub Pages Jekyll and SASS to ignore parsing things that it doesn't understand and errors.
+// `unquote("code")` is for GitHub Pages powered Jekyll and SASS to ignore parsing things that it doesn't understand and errors.
 
 :root {
   --blur: blur(10px);
@@ -219,7 +219,7 @@ header {
   background: var(--reset-bg-act);
 }
 
-#primary, #variations, #generic, #outdated {
+#primary, #variations, #generic {
   max-width: 1500px;
   padding: 0 20px;
 }
@@ -227,7 +227,7 @@ header {
 #primary
 { margin: unquote("min(1500px, 5%, 35px) auto 0"); }
 
-#variations, #generic, #outdated
+#variations, #generic
 { margin: unquote("min(1000px, 7%, 35px) auto 0"); }
 
 .label {

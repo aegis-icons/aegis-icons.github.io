@@ -14,8 +14,8 @@ title: aegis-icons – 2FA icons for Aegis
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }}</title>
-  {% include 3b____metadata-stuff.txt %}
-  {% include 3c____favicon-stuff.txt %}
+  {% include 3b____metadata-stuff.htm %}
+  {% include 3c____favicon-stuff.htm %}
   <style>
     {% if jekyll.environment == "development" %}
       {% include 2a____modules.css %}
@@ -99,7 +99,7 @@ title: aegis-icons – 2FA icons for Aegis
     <div class="list">
       {% assign image_files = site.static_files | where: "is_primary", true | sort_natural: "name" %}
       {% for myimage in image_files %}
-        {% include 3a____icon-elements.txt %}
+        {% include 3a____icon-elements.htm %}
       {% endfor %}
     </div>
   </div>
@@ -112,7 +112,7 @@ title: aegis-icons – 2FA icons for Aegis
     <div class="list">
       {% assign image_files = site.static_files | where: "is_variation", true | sort_natural: "name" %}
       {% for myimage in image_files %}
-        {% include 3a____icon-elements.txt %}
+        {% include 3a____icon-elements.htm %}
       {% endfor %}
     </div>
   </div>
@@ -125,7 +125,7 @@ title: aegis-icons – 2FA icons for Aegis
     <div class="list">
       {% assign image_files = site.static_files | where: "is_generic", true | sort_natural: "name" %}
       {% for myimage in image_files %}
-        {% include 3a____icon-elements.txt %}
+        {% include 3a____icon-elements.htm %}
       {% endfor %}
     </div>
   </div>
