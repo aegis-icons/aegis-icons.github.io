@@ -26,7 +26,7 @@ Website for the icon set that has a very basic Jekyll setup.
 
 #### Installations
 
-1. [Install Ruby & Jekyll with guides here](https://jekyllrb.com/docs/installation/#guides).
+1. [Install Ruby, Bundler & Jekyll with guides here](https://jekyllrb.com/docs/installation/#guides).
 2. Run `bundle` in the terminal at site's root directory.
 
 > [!IMPORTANT]
