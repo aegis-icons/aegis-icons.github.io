@@ -27,7 +27,7 @@ Website for the icon set that has a very basic Jekyll setup.
 #### Installations
 
 1. [Install Ruby, Bundler & Jekyll with guides here](https://jekyllrb.com/docs/installation/#guides).
-2. Run `bundle` in the terminal at site's root directory.
+2. Run `bundle install` in the terminal at site's root directory.
 
 > [!IMPORTANT]
 > For setups older then 2026-04-05, you'll need to do the setup again because of `jekyll` to `github-pages` gem change.
@@ -35,7 +35,7 @@ Website for the icon set that has a very basic Jekyll setup.
 > **Run these in the terminal at site's root directory to reinstall:**
 > ```cmd
 > bundle clean --force
-> bundle
+> bundle install
 > ```
 
 ### Start the server
