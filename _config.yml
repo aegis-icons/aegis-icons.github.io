@@ -17,17 +17,17 @@ exclude:
  
 defaults:
   - scope:
-      path: "icons/primary"
+      path: "icons/p"
     values:
       image: true
       is_primary: true
   - scope:
-      path: "icons/variations"
+      path: "icons/v"
     values:
       image: true
       is_variation: true
   - scope:
-      path: "icons/generic"
+      path: "icons/g"
     values:
       image: true
       is_generic: true

@@ -18,9 +18,9 @@ Website for the icon set that has a very basic Jekyll setup.
     chmod +x 1__get_icons.sh
     ```
 - **For other OSes / manual way**, copy-paste `icons` folder from `aegis-icons` dir to website root, **then rename folders**:
-  - `1_Primary` ➜ `primary`
-  - `2_Variations` ➜ `variations`
-  - `3_Generic` ➜ `generic`
+  - `1_Primary` ➜ `p`
+  - `2_Variations` ➜ `v`
+  - `3_Generic` ➜ `g`
 
 > Remember, if you want the latest icons to the site, you'll need to do these steps again.
 
@@ -55,7 +55,10 @@ Website for the icon set that has a very basic Jekyll setup.
 
 #### Troubleshooting
 
-If connecting to `0.0.0.0:4000` fails, try `localhost:4000` in the browser instead **or** change `--host 0.0.0.0` to `--host localhost`.
+- **Connection to`0.0.0.0:4000` fails:**
+  - Try `localhost:4000` in the browser instead **or** change `--host 0.0.0.0` to `--host localhost`.
+- **Some assets on the site are broken:**
+  - Stop Ruby & Jekyll, remove `_site` folder, run Jekyll again.
 
 ## Share the server with local network
 
