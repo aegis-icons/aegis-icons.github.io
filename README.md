@@ -22,7 +22,7 @@ Website for the icon set that has a very basic Jekyll setup.
   - `2_Variations` ➜ `variations`
   - `3_Generic` ➜ `generic`
 
-*Remember, if you want the latest icons to the site, you'll need to do these steps again.*
+> Remember, if you want the latest icons to the site, you'll need to do these steps again.
 
 #### Installations
 
@@ -51,7 +51,7 @@ Website for the icon set that has a very basic Jekyll setup.
      bundle exec jekyll serve --incremental --host 0.0.0.0 --port 4000 --open_url
      ```
 
-*After running the script or executing the command, the website will automatically open local Jekyll server pages in the default browser.*
+> After running the script or executing the command, the website will automatically open local Jekyll server pages in the default browser.
 
 #### Troubleshooting
 
