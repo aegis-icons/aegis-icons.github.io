@@ -24,9 +24,9 @@ Website for the icon set that has a very basic Jekyll setup.
 
 *Remember, if you want the latest icons to the site, you'll need to do these steps again.*
 
-#### Installations
+#### Installation
 
-1. [Install Ruby and Jekyll with guides here](https://jekyllrb.com/docs/installation/#guides).
+1. [Install Ruby with guides here](https://jekyllrb.com/docs/installation/#guides) (skip the Jekyll installation).
 2. Run `bundle` in the terminal at site's root directory.
 
 > [!IMPORTANT]
