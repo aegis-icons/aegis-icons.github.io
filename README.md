@@ -24,17 +24,18 @@ Website for the icon set that has a very basic Jekyll setup.
 
 *Remember, if you want the latest icons to the site, you'll need to do these steps again.*
 
-#### Installation
+#### Installations
 
-1. [Install Ruby with guides here](https://jekyllrb.com/docs/installation/#guides) (skip the Jekyll installation).
+1. [Install Ruby & Jekyll with guides here](https://jekyllrb.com/docs/installation/#guides).
 2. Run `bundle` in the terminal at site's root directory.
 
 > [!IMPORTANT]
 > For setups older then 2026-04-05, you'll need to do the setup again because of `jekyll` to `github-pages` gem change.
 >
-> **Run this in terminal to reinstall:**
+> **Run these in the terminal at site's root directory to reinstall:**
 > ```cmd
-> bundle clean --force && bundle
+> bundle clean --force
+> bundle
 > ```
 
 ### Start the server
