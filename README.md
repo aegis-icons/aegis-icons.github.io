@@ -6,24 +6,52 @@ Website for the icon set that has a very basic Jekyll setup.
 
 ### Setup
 
+#### Get the icons
+
+> [!NOTE]
+> Both `aegis-icons.github.io` & `aegis-icons` directories **needs to be side by side in the same root directory.**
+
+- **For Windows**, run the `1__get_icons.bat` script in the `z__bat-scripts` dir.
+- **For Linux (with shell)**, run the `1__get_icons.sh` script in the `z__sh-scripts`
+  - Give permissions first: `chmod +x 1__get_icons.sh`
+- **For other OSes / manual way**, copy-paste `icons` folder from `aegis-icons` dir to website root, **then rename folders**:
+  - `1_Primary` ➜ `primary`
+  - `2_Variations` ➜ `variations`
+  - `3_Generic` ➜ `generic`
+
+*Remember, if you want the latest icons to the site, you'll need to do these steps again.*
+
+#### Installations
+
 1. [Install Ruby and Jekyll with guides here](https://jekyllrb.com/docs/installation/#guides).
 2. Run `bundle` in the terminal at site's root directory.
 
+> [!IMPORTANT]
+> For setups older then 2026-04-05, you'll need to do the setup again because of `jekyll` to `github-pages` gem change.
+>
+> **Run these in terminal:**
+> 1. `bundle clean --force`
+> 2. `bundle`
+
 ### Start the server
 
-1. **For Windows**, run [`.1___start_jekyll_server` BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.1___start_jekyll_server.bat).
-2.  **For other OSes / alternative way**, execute this terminal command at site's root directory:
+- **For Windows**, run the `2___start_jekyll_server.bat` script.
+- **For Linux (with shell)**, run the `2___start_jekyll_server.sh` script.
+  - Give permissions first: `chmod +x 2__start_jekyll_server.sh`
+-  **For other OSes / manual way**, execute this terminal command at site's root directory:
 ```cmd
 jekyll serve --incremental --host 0.0.0.0 --port 4000 --open_url
 ```
 
 *After running the BAT or executing the command, the website will automatically open local Jekyll server pages in the default browser.*
 
+#### Troubleshooting
+
 If connecting to `0.0.0.0:4000` fails, try `localhost:4000` in the browser instead **or** change `--host 0.0.0.0` to `--host localhost`.
 
 ## Share the server with local network
 
-**Optional!** Only needed for testing on mobile devices etc.
+> **Optional!** Only needed for testing on mobile devices etc.
 
 1. Open port `4000` **(TCP protocol)** from router's settings.
 2. Find the **local** IPv4 address of the server PC.
@@ -35,12 +63,21 @@ If connecting to `0.0.0.0:4000` fails, try `localhost:4000` in the browser inste
 
 ## Compressing CSS and JS files in the `_includes` directory
 
-1. Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify#readme) with your prefered way.
-   - **On Windows**, download [binary](https://github.com/tdewolff/minify/releases/latest) (`minify_windows_amd64.zip`) and add that .exe to the folder that's on the PATH (`c:\Windows` for example, highly recommended to create [new PATH variable](https://www.computerhope.com/issues/ch000549.htm)).
+### Installation
 
-2.
-   1. **For Windows,** use the [`.2___compress_includes-dir_css_js` BAT script](https://github.com/aegis-icons/aegis-icons.github.io/blob/main/.2___compress_includes-dir_css_js.bat).
-   2. **For other OSes / alternative way,** go to `_includes` directory with terminal and paste these commands:
+Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify#readme) with your prefered way or based of OS.
+
+> **On Windows**, download [binary](https://github.com/tdewolff/minify/releases/latest) (`minify_windows_amd64.zip`) and add that .exe to the folder that's on the PATH (`c:\Windows` for example, highly recommended to create [new PATH variable](https://www.computerhope.com/issues/ch000549.htm)).
+
+### Do the compression
+
+- **For Windows,** use the `3___compress_includes-dir_css_js.bat` script.
+
+- **For Linux (with shell),** use the `3___compress_includes-dir_css_js.sh` script.
+  - Give permissions first: `chmod +x 3___compress_includes-dir_css_js.sh`
+
+- **For other OSes / manual way,** go to `_includes` directory with terminal and paste these commands:
+
    ```cmd
    minify -o bottom-scripts.min.js         1a____bottom-scripts.js
    minify -o bottom-scripts-module.min.js  1b____bottom-scripts-module.js
@@ -52,7 +89,7 @@ If connecting to `0.0.0.0:4000` fails, try `localhost:4000` in the browser inste
    
 *While using Jekyll development server, the site uses **uncompressed** CSS & JS files.*
 
-> [!NOTE]
+> [!IMPORTANT]
 > CSS & JS files must be compressed before before opening a pull request!
 
 ## Credits
