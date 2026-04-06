@@ -12,7 +12,7 @@ Website for the icon set that has a very basic Jekyll setup.
 > Both `aegis-icons.github.io` & `aegis-icons` directories **needs to be side by side in the same root directory.**
 
 - **For Windows**, run the `1__get_icons.bat` script *(in the `z__bat-scripts` dir)*.
-- **For Linux (with shell)**, run the `1__get_icons.sh` script *(in the `z__sh-scripts` dir)*.
+- **For Linux (with bash)**, run the `1__get_icons.sh` script *(in the `z__sh-scripts` dir)*.
   - Give permissions first:
     ```cmd
     chmod +x 1__get_icons.sh
@@ -40,8 +40,8 @@ Website for the icon set that has a very basic Jekyll setup.
 
 ### Start the server
 
-- **For Windows**, run the `2___start_jekyll_server.bat` script *(in the `z__bat-scripts` dir)*.
-- **For Linux (with shell)**, run the `2___start_jekyll_server.sh` script *(in the `z__sh-scripts` dir)*.
+- **For Windows**, run the `2__start_jekyll_server.bat` script *(in the `z__bat-scripts` dir)*.
+- **For Linux (with bash)**, run the `2__start_jekyll_server.sh` script *(in the `z__sh-scripts` dir)*.
   - Give permissions first:
     ```cmd
     chmod +x 2__start_jekyll_server.sh
@@ -59,6 +59,8 @@ Website for the icon set that has a very basic Jekyll setup.
   - Try `localhost:4000` in the browser instead **or** change `--host 0.0.0.0` to `--host localhost`.
 - **Some assets on the site are broken:**
   - Stop Ruby & Jekyll, remove `_site` folder, run Jekyll again.
+- **Jekyll won't launch:**
+  - Run `bundle clean --force` in the terminal at lab's root directory, run Jekyll again.
 
 ## Share the server with local network
 
@@ -82,12 +84,12 @@ Install [Minify](https://github.com/tdewolff/minify/tree/master/cmd/minify#readm
 
 ### Do the compression
 
-- **For Windows,** use the `3___compress_includes-dir_css_js.bat` script *(in the `z__bat-scripts` dir)*.
+- **For Windows,** use the `3__compress_includes-dir_css_js.bat` script *(in the `z__bat-scripts` dir)*.
 
-- **For Linux (with shell),** use the `3___compress_includes-dir_css_js.sh` script *(in the `z__sh-scripts` dir)*.
+- **For Linux (with bash),** use the `3__compress_includes-dir_css_js.sh` script *(in the `z__sh-scripts` dir)*.
   - Give permissions first:
     ```cmd
-    chmod +x 3___compress_includes-dir_css_js.sh
+    chmod +x 3__compress_includes-dir_css_js.sh
     ```
 
 - **For other OSes / manual way,** go to `_includes` directory with terminal and paste these commands:
