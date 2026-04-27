@@ -328,8 +328,15 @@ a + .disclaimer { margin-top: 25px; }
   .list a:active { transition: box-shadow .2s ease; }
 }
 
-@media (max-width: 333px) {
-  #small-links { font-size: .725rem !important; }
+@media (max-width: 600px) {
+  .disclaimer { line-height: 1.9 !important; }
+  
+  .disclaimer + .disclaimer { margin-top: 20px; }
+  
+  #small-links {
+    font-size: .725rem !important;
+    margin-top: 23px !important;
+  }
 }
 
 // --- If browser supports feature ---
