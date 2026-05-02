@@ -1,5 +1,6 @@
 <!-- AI transparency: starting point for this page was generated with AI (basic skeleton HTML/CSS, file selection and preview JS), because author doesn't know how to write JS and isn't programmer. Rest is human made. -->
 
+<!DOCTYPE html>
 <html data-icon-grid="grid-normal">
 <head>
 <title>Icon grid preview – aegis-icons</title>
@@ -65,7 +66,7 @@
   </ul>
 
   <div id="drop-area">
-    <b>Drag & drop SVG file here</b> or click here to select it
+    <b>CTRL+V image from clipboard</b>, drag & drop or click here to select SVG file
     <input type="file" id="file-input" accept=".svg" style="display: none;">
   </div>
   
@@ -135,7 +136,38 @@
       reader.readAsDataURL(file);
     }
   });
+
+  // Handle clipboard paste (Ctrl+V / Cmd+V)
+  document.addEventListener('paste', e => {
+    e.preventDefault();
+    const items = e.clipboardData?.items;
+    if (!items) return;
+
+    for (let item of items) {
+      if (item.type === 'text/html') {
+        item.getAsString(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const img = doc.querySelector('img');
+          const svg = doc.querySelector('svg');
+          
+          if (img && img.src) {
+            preview.src = img.src;
+            preview.style.visibility = 'inherit';
+          } else if (svg) {
+            const svgString = new XMLSerializer().serializeToString(svg);
+            const blob = new Blob([svgString], { type: 'image/svg+xml' });
+            const url = URL.createObjectURL(blob);
+            preview.src = url;
+            preview.style.visibility = 'inherit';
+          }
+        });
+        break;
+      }
+    }
+  });
 </script>
 </body>
 
 </html>
+
