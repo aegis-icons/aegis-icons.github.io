@@ -49,8 +49,6 @@
   
   html[data-icon-grid="grid-inverted"] #icon-grid
   { background: url(z_icon_grid_inverted_colors.svg) center no-repeat; }
-  
-
 </style>
 </head>
 
@@ -146,7 +144,16 @@
     if (!items) return;
 
     for (let item of items) {
-      if (item.type === 'text/html') {
+      if (item.type === 'image/svg+xml') {
+        const blob = item.getAsFile();
+        const reader = new FileReader();
+        reader.onload = () => {
+          preview.src = reader.result;
+          preview.style.visibility = 'inherit';
+        };
+        reader.readAsDataURL(blob);
+        break;
+      } else if (item.type === 'text/html') {
         item.getAsString(html => {
           const parser = new DOMParser();
           const doc = parser.parseFromString(html, 'text/html');
@@ -158,9 +165,8 @@
             preview.style.visibility = 'inherit';
           } else if (svg) {
             const svgString = new XMLSerializer().serializeToString(svg);
-            const blob = new Blob([svgString], { type: 'image/svg+xml' });
-            const url = URL.createObjectURL(blob);
-            preview.src = url;
+            const dataUrl = 'data:image/svg+xml;base64,' + btoa(svgString);
+            preview.src = dataUrl;
             preview.style.visibility = 'inherit';
           }
         });
@@ -172,4 +178,3 @@
 </body>
 
 </html>
-
